@@ -1,20 +1,23 @@
 ﻿using System.Web.Mvc;
-using Parliament.Interact.Core.Services;
+using Parliament.Interact.Web.Models;
+using Parliament.Interact.Web.ViewModelBuilders;
 
 namespace Parliament.Interact.Web.Controllers
 {
     public class IssuesController : Controller
     {
-        private readonly IIssueService _issueService;
+        private readonly IIssueViewModelBuilder _issueViewModelBuilder;
 
-        public IssuesController(IIssueService issueService)
+        public IssuesController(IIssueViewModelBuilder issueViewModelBuilder)
         {
-            _issueService = issueService;
+            _issueViewModelBuilder = issueViewModelBuilder;
         }
 
         public ActionResult Index()
         {
-            return View();
+            var model = _issueViewModelBuilder.Build();
+
+            return View(model);
         }
     }
 }

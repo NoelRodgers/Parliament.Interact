@@ -1,18 +1,14 @@
-﻿@model dynamic
+﻿@model IList<Parliament.Interact.Web.Models.IssueViewModel>
 
 @{
     Layout = null;
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <title>title</title>
-</head>
-<body>
-<div>
-      
+<div class="container-fluid">
+    <ol>
+        @foreach (var issue in Model)
+        {
+            <li>@issue.Title</li>
+        }
+    </ol>
 </div>
-</body>
-</html>
