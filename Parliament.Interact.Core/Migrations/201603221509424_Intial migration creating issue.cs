@@ -1,0 +1,28 @@
+namespace Parliament.Interact.Core.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class Intialmigrationcreatingissue : DbMigration
+    {
+        public override void Up()
+        {
+            CreateTable(
+                "dbo.Issues",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Description = c.String(),
+                        Title = c.String(),
+                        LogicalOrder = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+        }
+        
+        public override void Down()
+        {
+            DropTable("dbo.Issues");
+        }
+    }
+}

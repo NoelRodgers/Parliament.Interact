@@ -62,6 +62,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\ActionItem.cs" />
+    <Compile Include="Domain\Context\InteractDbContext.cs" />
+    <Compile Include="Domain\Issue.cs" />
+    <Compile Include="Migrations\201603221509424_Intial migration creating issue.cs" />
+    <Compile Include="Migrations\201603221509424_Intial migration creating issue.Designer.cs">
+      <DependentUpon>201603221509424_Intial migration creating issue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603221516092_added action items to table.cs" />
+    <Compile Include="Migrations\201603221516092_added action items to table.Designer.cs">
+      <DependentUpon>201603221516092_added action items to table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603221523569_added foreign key relationship between issue and actionItem.cs" />
+    <Compile Include="Migrations\201603221523569_added foreign key relationship between issue and actionItem.Designer.cs">
+      <DependentUpon>201603221523569_added foreign key relationship between issue and actionItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603221540311_added issue action items.cs" />
+    <Compile Include="Migrations\201603221540311_added issue action items.Designer.cs">
+      <DependentUpon>201603221540311_added issue action items.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -73,6 +93,20 @@
       <Project>{a43982c3-100b-43d1-a547-99f4d38dcfbe}</Project>
       <Name>Parliament.Common</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201603221509424_Intial migration creating issue.resx">
+      <DependentUpon>201603221509424_Intial migration creating issue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603221516092_added action items to table.resx">
+      <DependentUpon>201603221516092_added action items to table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603221523569_added foreign key relationship between issue and actionItem.resx">
+      <DependentUpon>201603221523569_added foreign key relationship between issue and actionItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603221540311_added issue action items.resx">
+      <DependentUpon>201603221540311_added issue action items.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
