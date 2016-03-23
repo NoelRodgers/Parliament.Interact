@@ -19,20 +19,18 @@
             <h1 class="text-center">Interact</h1>
             <h2 class="text-center">Take action on Trending issues</h2>
         </header>
-        <div class="container-fluid body-content">
             @RenderBody()
-            <footer>
-                <div class="col-xs-6 col-centered footer-description">
-                    <p>Trending issues ar aggregated from a number of statistical sources.</p>
-                    <p>This allows us to curate guides and specific actions for issues currently</p>
-                    <p>in the public eye. The Interact page updates on a bi-weekly basis to</p>
-                    <p>reflect these trends.</p>
-                </div>
-                <div class="col-xs-4 col-centered footer-title">
-                    <p>Accessibility | &copy; @DateTime.Now.Year - Parliament.uk</p>
-                </div>
-            </footer>
-        </div>
+        <footer>
+            <div class="footer-description">
+                <p>Trending issues ar aggregated from a number of statistical sources.</p>
+                <p>This allows us to curate guides and specific actions for issues currently</p>
+                <p>in the public eye. The Interact page updates on a bi-weekly basis to</p>
+                <p>reflect these trends.</p>
+            </div>
+            <div class="footer-title">
+                <p>Accessibility | &copy; @DateTime.Now.Year - Parliament.uk</p>
+            </div>
+        </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
