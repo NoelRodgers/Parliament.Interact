@@ -1,5 +1,10 @@
-﻿body * {
+﻿﻿body * {
     font-family: 'Verdana', sans-serif;
+}
+
+/* Header section */
+.header-links div {
+    display: inline;
 }
 
 /* Accordion Section */
@@ -48,4 +53,18 @@
     padding-left: 0;
 }
 
-/*-----------------------*/
+/* footer section*/
+.footer-description {
+    padding-top: 120px;
+}
+
+.footer-title {
+    padding-top: 55px;
+}
+
+/* helper classes */
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
