@@ -3,6 +3,7 @@
 }
 
 /* Accordion Section */
+
 .panel-group * {
     font-family: 'Lato', sans-serif;
 }
@@ -32,6 +33,10 @@
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+}
+
+.panel-heading-button .btn {
+    font-weight: bold;
 }
 
 .panel-heading .last-panel-heading-column {
