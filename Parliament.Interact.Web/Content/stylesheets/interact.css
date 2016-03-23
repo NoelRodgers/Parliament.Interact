@@ -7,10 +7,6 @@
 
 /* Header section */
 
-/*.header-links {
-    width: 350px;
-}*/
-
 .header-links li {
     display: inline;
     padding: 5px;
@@ -27,6 +23,12 @@
 .header-links li a {
     text-decoration: none;
     color: #333333;
+}
+
+.header-logo {
+    display: block;
+    max-width: 770px;
+    margin: 0 auto;
 }
 
 .strapline {
