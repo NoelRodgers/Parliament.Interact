@@ -27,6 +27,8 @@
 .strapline {
     font-family: 'Lato', sans-serif;
     font-size: 30px;
+    margin: 50px 0 70px 0;
+    font-weight: bold;
 }
 
 /* Accordion Section */
@@ -112,9 +114,9 @@
     text-align: center;
 }
 
-/* Media queries for responsive font sizes */
+/* Media queries for responsive styling */
 
-@media (max-width: 992px) { /* check breakpoint size - this is for a tablet */
+@media (max-width: 992px) { /* this is for a tablet */
 
     .header-links {
         display: none;
@@ -138,4 +140,51 @@
         font-size: 26px;
     }
 }
+
+@media (max-width: 480px) { /* check breakpoint size - this is for a mobile */
+    body {
+        font-size: 13px;
+    }
+
+    .header-links {
+        display: none;
+    }
+
+    .strapline {
+        font-size: 17px;
+        color: #000000;
+    }
+
+    .panel-heading {
+        padding-left: 0;
+        height: 80px;
+    }
+
+    .panel-header {
+        padding-right: 0;
+    }
+
+    .panel-heading h1 {
+        font-size: 18px;
+    }
+
+    .panel-header-index {
+        margin-right: 10px;
+    }
+
+    .panel-heading-button .btn {
+        font-size: 15px;
+        color: #333333;
+    }
+
+    .footer-description {
+        width: 290px;
+    }
+
+    .footer-title {
+        width: 260px;
+    }
+}
+
+
 
