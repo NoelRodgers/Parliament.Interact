@@ -7,8 +7,23 @@
     font-family: 'Lato', sans-serif;
 }
 
+.panel-group > .issues-panel {
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.panel-heading {
+    height: 120px;
+    padding-top: 0;
+}
+
+.panel-heading h1 {
+    font-size: 30px;    
+}
+
 .panel-heading .panel-heading-button {
     padding-right: 0;
+    margin: 43px 0;
 }
 
 .panel-heading .last-panel-heading-column {
