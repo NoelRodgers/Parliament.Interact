@@ -1,10 +1,20 @@
-﻿﻿body * {
+﻿body {
     font-family: 'Verdana', sans-serif;
+    background-color: #deebeb;
+    font-size: 16px;
+    color: #333333
 }
 
 /* Header section */
 .header-links div {
     display: inline;
+    color: #333333;
+    font-size: 16px;  
+}
+
+.strapline {
+    font-family: 'Lato', sans-serif;
+    font-size: 30px;
 }
 
 /* Accordion Section */
@@ -24,7 +34,7 @@
 }
 
 .panel-heading h1 {
-    font-size: 30px;    
+    font-size: 60px;    
 }
 
 .panel-heading .panel-header {
@@ -42,12 +52,22 @@
 
 .panel-heading-button .btn {
     font-weight: bold;
+    color: #333333;
+    font-size: 30px;
+    background-color: #ffffff;
+    background-image:
+    linear-gradient(
+      #ffffff, #ececec
+    );
 }
 
 .panel-heading .last-panel-heading-column {
     padding-left: 0;
 }
 
+.panel-group .panel {
+    background: #ffffff;
+}
 /* footer section*/
 .footer-description {
     width: 580px;
@@ -62,4 +82,27 @@
     text-align: center;
 }
 
+
+/* Media queries for responsive font sizes */
+
+@media (max-width: 992px) { /* check breakpoint size - this is for a tablet */
+    .strapline {
+        font-size: 34px;
+        color: #000000;
+    }
+
+    .panel-heading h1 {
+        font-size: 40px;
+    }
+
+    .panel-heading-button .btn {
+        font-size: 30px;
+        color: #333333;
+    }
+
+    body {
+        font-size: 26px;
+        color: #333333;
+    }
+}
 
