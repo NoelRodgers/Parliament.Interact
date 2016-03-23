@@ -50,23 +50,16 @@
 
 /* footer section*/
 .footer-description {
+    width: 580px;
     padding-top: 120px;
+    margin: 0 auto;
 }
 
 .footer-title {
+    width: 320px;
     padding-top: 55px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-/* helper classes */
-.row-centered {
-    text-align:center;
-}
-.col-centered {
-    display:inline-block;
-    float:none;
-    /* reset the text-align */
-    text-align:left;
-    /* inline-block space fix */
-    margin-right:-4px;
-}
 
