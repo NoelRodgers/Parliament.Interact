@@ -3,12 +3,40 @@
 }
 
 /* Accordion Section */
+
 .panel-group * {
     font-family: 'Lato', sans-serif;
 }
 
+.panel-group > .issues-panel {
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.panel-heading {
+    height: 120px;
+    padding-top: 0;
+}
+
+.panel-heading h1 {
+    font-size: 30px;    
+}
+
+.panel-heading .panel-header {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 .panel-heading .panel-heading-button {
     padding-right: 0;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.panel-heading-button .btn {
+    font-weight: bold;
 }
 
 .panel-heading .last-panel-heading-column {
