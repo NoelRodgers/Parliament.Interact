@@ -1,7 +1,18 @@
-﻿/* Header section */
+﻿
+
+﻿body * {
+    font-family: 'Verdana', sans-serif;
+}
+
+/* Header section */
 
 .header-links div {
     display: inline;
+
+/* Accordion Section */
+.panel-group * {
+    font-family: 'Lato', sans-serif;
+>>>>>>> 768f42a6f5388363308869aa4784991e54051edb
 }
 
 .panel-heading .panel-heading-button {
@@ -28,3 +39,4 @@
     float: none;
     margin: 0 auto;
 }
+
