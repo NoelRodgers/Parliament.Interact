@@ -21,9 +21,17 @@
     font-size: 30px;    
 }
 
+.panel-heading .panel-header {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 .panel-heading .panel-heading-button {
     padding-right: 0;
-    margin: 43px 0;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .panel-heading .last-panel-heading-column {
