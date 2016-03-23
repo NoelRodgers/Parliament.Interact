@@ -5,10 +5,32 @@
 }
 
 <div class="container-fluid">
-    <ol>
-        @foreach (var issue in Model)
-        {
-            <li>@issue.Title</li>
-        }
-    </ol>
+    <div class="col-xs-12">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
+            @foreach (var issue in Model)
+            {
+                var collapseId = "collapse" + issue.Id;
+                var headingId = "heading" + issue.Id;
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <div class="col-xs-9">
+                            <h4 class="panel-title">@issue.Title</h4>
+                        </div>
+                        <div class="panel-heading-button col-xs-2">
+                            <a class="btn btn-primary btn-block" role="button" data-toggle="collapse" data-parent="#accordion" href="#@collapseId" aria-expanded="false" aria-controls="@collapseId">
+                                Open
+                            </a>
+                        </div>
+                        <div class="col-xs-1 last-panel-heading-column"></div>
+                    </div>
+                    <div id="@collapseId" class="panel-collapse collapse" role="tabpanel" aria-labelledby="@headingId">
+                        <div class="panel-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
 </div>
