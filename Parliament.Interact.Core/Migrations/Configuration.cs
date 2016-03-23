@@ -19,6 +19,8 @@ namespace Parliament.Interact.Core.Migrations
 
         protected override void Seed(Parliament.Interact.Core.Domain.Context.InteractDbContext context)
         {
+            context.ActionItems.RemoveRange(context.ActionItems);
+            context.Issues.RemoveRange(context.Issues);
             List<ActionItem> actionItems = new List<ActionItem>
             {
                 new ActionItem { Title = "Contact your MP" },
@@ -37,6 +39,22 @@ namespace Parliament.Interact.Core.Migrations
                     {
                         Title = "Test Issue 2",
                         Description = "Description of Test Issue 2",
+                        ActionItems = actionItems.WhereToList(x => x.Title == "Contact your MP")
+                    },
+                    new Issue
+                    {
+                        Title = "Test Issue 3",
+                        Description = "Description of Test Issue 3",
+                        ActionItems = actionItems.WhereToList(x => x.Title == "Contact your MP")
+                    }, new Issue
+                    {
+                        Title = "Test Issue 4",
+                        Description = "Description of Test Issue 4",
+                        ActionItems = actionItems.WhereToList(x => x.Title == "Contact your MP")
+                    }, new Issue
+                    {
+                        Title = "Test Issue 5",
+                        Description = "Description of Test Issue 5",
                         ActionItems = actionItems.WhereToList(x => x.Title == "Contact your MP")
                     });
             //  This method will be called after migrating to the latest version.
