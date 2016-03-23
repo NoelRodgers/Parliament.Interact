@@ -7,15 +7,34 @@
 <div class="container-fluid">
     <div class="col-xs-12">
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
+            @{
+                var issueIndex = 1;
+            }
             @foreach (var issue in Model)
             {
                 var collapseId = "collapse" + issue.Id;
                 var headingId = "heading" + issue.Id;
+                var panelHeaderColourClass = "";
+
+                if (issueIndex % 3 == 0)
+                {
+                    panelHeaderColourClass = "orangeHeaderBackground";
+                }
+
+                if (issueIndex % 3 == 1)
+                {
+                    panelHeaderColourClass = "blueHeaderBackground";
+                }
+
+                if (issueIndex % 3 == 2)
+                {
+                    panelHeaderColourClass = "purpleHeaderBackground";
+                }
 
                 <div class="issues-panel panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingOne">
+                    <div class="panel-heading @panelHeaderColourClass" role="tab" id="headingOne">
                         <div class="panel-header col-xs-9">
-                            <h1 class="panel-title">@issue.Title</h1>
+                            <h1 class="panel-title"><span class="panel-header-index">#@issueIndex</span> @issue.Title</h1>
                         </div>
                         <div class="panel-heading-button col-xs-2">
                             <a class="btn btn-default btn-block" role="button" data-toggle="collapse" data-parent="#accordion" href="#@collapseId" aria-expanded="false" aria-controls="@collapseId">
@@ -30,6 +49,7 @@
                         </div>
                     </div>
                 </div>
+                issueIndex += 1;
             }
         </div>
     </div>
