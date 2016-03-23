@@ -37,6 +37,11 @@
 
 .panel-heading-button .btn {
     font-weight: bold;
+    background-color: #ffffff;
+    background-image:
+    linear-gradient(
+      #ffffff, #ececec
+    );
 }
 
 .panel-heading .last-panel-heading-column {
