@@ -30,11 +30,27 @@
 
 .panel-heading {
     height: 120px;
-    padding-top: 0;
+}
+
+.panel-heading.orangeHeaderBackground {
+    background-color: #b14d07;
+}
+
+.panel-heading.blueHeaderBackground {
+    background-color: #589e9e;
+}
+
+.panel-heading.purpleHeaderBackground {
+    background-color: #6e6095;
 }
 
 .panel-heading h1 {
-    font-size: 60px;    
+    font-size: 60px;
+    color: #ffffff;   
+}
+
+.panel-header-index {
+    margin-right: 40px;
 }
 
 .panel-heading .panel-header {
@@ -68,7 +84,9 @@
 .panel-group .panel {
     background: #ffffff;
 }
+
 /* footer section*/
+
 .footer-description {
     padding-top: 120px;
 }
@@ -78,9 +96,11 @@
 }
 
 /* helper classes */
+
 .row-centered {
     text-align:center;
 }
+
 .col-centered {
     display:inline-block;
     float:none;
