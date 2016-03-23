@@ -6,10 +6,22 @@
 }
 
 /* Header section */
+
+.header-links {
+    width: 350px;
+}
+
 .header-links div {
-    display: inline;
-    color: #333333;
+    display: inline-block;
+    padding: 5px;
     font-size: 16px;  
+    color: #589e9e;
+    font-weight: bold;
+}
+
+.header-links div a {
+    text-decoration: none;
+    color: #333333;
 }
 
 .strapline {
@@ -88,31 +100,26 @@
 /* footer section*/
 
 .footer-description {
+    width: 580px;
     padding-top: 120px;
+    margin: 0 auto;
 }
 
 .footer-title {
+    width: 520px;
     padding-top: 55px;
-}
-
-/* helper classes */
-
-.row-centered {
-    text-align:center;
-}
-
-.col-centered {
-    display:inline-block;
-    float:none;
-    /* reset the text-align */
-    text-align:left;
-    /* inline-block space fix */
-    margin-right:-4px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 /* Media queries for responsive font sizes */
 
 @media (max-width: 992px) { /* check breakpoint size - this is for a tablet */
+
+    .header-links {
+        display: none;
+    }
+
     .strapline {
         font-size: 34px;
         color: #000000;
