@@ -90,3 +90,26 @@
     margin-right:-4px;
 }
 
+/* Media queries for responsive font sizes */
+
+@media (max-width: 992px) { /* check breakpoint size - this is for a tablet */
+    .strapline {
+        font-size: 34px;
+        color: #000000;
+    }
+
+    .panel-heading h1 {
+        font-size: 40px;
+    }
+
+    .panel-heading-button .btn {
+        font-size: 30px;
+        color: #333333;
+    }
+
+    body {
+        font-size: 26px;
+        color: #333333;
+    }
+}
+
