@@ -29,6 +29,7 @@
     display: block;
     max-width: 770px;
     margin: 0 auto;
+    padding-top: 100px;
 }
 
 .strapline {
@@ -208,6 +209,7 @@ footer div span {
     }
 
     .header-logo {
+        padding-top: 50px;
         max-width: 315px;
     }
 }
