@@ -142,8 +142,16 @@ footer div span {
         color: #000000;
     }
 
+    .panel-group > .issues-panel {
+        margin-bottom: 25px;    
+    }
+
     .panel-heading h1 {
         font-size: 40px;
+    }
+
+    .panel-heading .panel-heading-button {
+        padding-right: 15px;    
     }
 
     .panel-heading-button .btn {
@@ -160,7 +168,7 @@ footer div span {
     }
 }
 
-@media (max-width: 480px) { /* check breakpoint size - this is for a mobile */
+@media (max-width: 480px) { /* this is for a mobile */
     body {
         font-size: 13px;
     }
@@ -172,6 +180,10 @@ footer div span {
     .strapline {
         font-size: 17px;
         color: #000000;
+    }
+
+    .panel-group > .issues-panel {
+        margin-bottom: 15px;    
     }
 
     .panel-heading {
