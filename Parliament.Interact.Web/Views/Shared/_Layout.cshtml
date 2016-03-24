@@ -10,29 +10,10 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-<header>
-    <div class="col-xs-12 pull-right">
-        <ul class="header-links pull-right">
-            <li><a href="#">Back to parliament.uk</a></li>
-            <li><a href="#">About</a></li>
-        </ul>
-    </div>
+    @Html.Partial("_Header")
+    @RenderBody()
+    @Html.Partial("_Footer")
 
-    <h1 class="text-center">Interact</h1>
-    <h2 class="strapline text-center">Take action on Trending issues</h2>
-</header>
-            @RenderBody()
-        <footer>
-            <div class="footer-description">
-                <p>Trending issues are aggregated from a number of statistical sources. 
-                    This allows us to curate guides and specific actions for issues 
-                    currently in the public eye. The Interact page updates on a bi-weekly 
-                    basis to reflect these trends.</p>
-            </div>
-            <div class="footer-title">
-                <p>Accessibility <span>|</span> &copy; @DateTime.Now.Year - Parliament.uk</p>
-            </div>
-        </footer>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
