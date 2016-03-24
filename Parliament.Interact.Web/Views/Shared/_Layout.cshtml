@@ -11,12 +11,14 @@
 </head>
 <body>
     @Html.Partial("_Header")
+    @Html.Partial("_Modal")
     @RenderBody()
     @Html.Partial("_Footer")
 
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/src")
     @RenderSection("scripts", required: false)
 </body>
 </html>
