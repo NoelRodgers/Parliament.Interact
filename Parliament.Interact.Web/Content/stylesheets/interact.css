@@ -32,6 +32,16 @@
     padding-top: 100px;
 }
 
+.logo-beta-box {
+    position: absolute;
+    left: 870px;
+    top: 100px;
+    width: 65px;
+    border: 2px solid #589e9e;
+    border-radius: 2px;
+    color: #589e9e;
+}
+
 .strapline {
     font-family: 'Lato', sans-serif;
     font-size: 30px;
