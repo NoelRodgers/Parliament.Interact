@@ -7,10 +7,6 @@
 
 /* Header section */
 
-/*.header-links {
-    width: 350px;
-}*/
-
 .header-links li {
     display: inline;
     padding: 5px;
@@ -127,6 +123,11 @@ footer div span {
     padding-top: 55px;
     margin: 0 auto;
     text-align: center;
+}
+
+/* Modal */
+.modal {
+    display: none;
 }
 
 /* Media queries for responsive styling */
