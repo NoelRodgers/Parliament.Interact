@@ -16,15 +16,19 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 
+using NLog;
 using Parliament.Common.IoC;
 
 namespace Parliament.Interact.Web.DependencyResolution {
     using StructureMap;
 	
     public static class IoC {
+
         public static IContainer Initialize()
         {
-            return Bootstrapper.Build();
+            var container = Bootstrapper.Build();
+            LogManager.GetCurrentClassLogger().Debug(container.WhatDoIHave());
+            return container;
         }
     }
 }
