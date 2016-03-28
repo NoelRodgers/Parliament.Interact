@@ -25,21 +25,30 @@
         color: #333333;
     }
 
-.header-logo {
+.logo {
+    position: relative;
+}
+
+.logo-image {
     display: block;
-    max-width: 770px;
+    position: relative;
+    max-width: 62%;
     margin: 0 auto;
     padding-top: 100px;
 }
 
 .logo-beta-box {
     position: absolute;
-    left: 870px;
-    top: 100px;
+    margin-left: 81%;
+    top: 135px;
     width: 65px;
     border: 2px solid #589e9e;
-    border-radius: 2px;
+    border-radius: 5px;
     color: #589e9e;
+    text-align: center;
+    font-size: 14px;
+    padding: 2px 0;
+    letter-spacing: -1px;
 }
 
 .strapline {
@@ -169,8 +178,13 @@ footer div span {
         line-height: 30px;
     }
 
-    .header-logo {
-        max-width: 630px;
+    .logo-image {
+        max-width: 65%;
+    }
+
+    .logo-beta-box {
+        margin-left: 83%;
+        top: 95px;
     }
 }
 
@@ -218,8 +232,13 @@ footer div span {
         width: 290px;
     }
 
-    .header-logo {
+    .logo-image {
         padding-top: 50px;
-        max-width: 315px;
+        max-width: 75%;
+    }
+
+    .logo-beta-box {
+        margin-left: 73%;
+        top: 10px;
     }
 }
