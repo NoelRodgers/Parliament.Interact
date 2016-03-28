@@ -10,20 +10,15 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <header>
-        <h1 class="text-center">Interact</h1>
-        <h2 class="text-center">Take action on top issues</h2>
-    </header>
-    <div class="container-fluid body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Interact</p>
-        </footer>
-    </div>
+    @Html.Partial("_Header")
+    @Html.Partial("_Modal")
+    @RenderBody()
+    @Html.Partial("_Footer")
+
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/src")
     @RenderSection("scripts", required: false)
 </body>
 </html>

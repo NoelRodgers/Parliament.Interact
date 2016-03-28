@@ -32,29 +32,29 @@ namespace Parliament.Interact.Core.Migrations
             context.Issues.AddOrUpdate(
                    new Issue
                    {
-                       Title = "Test Issue 1",
+                       Title = "EU Referendum",
                        Description = "Description of Test Issue 1",
                        ActionItems = actionItems
                    },
                     new Issue
                     {
-                        Title = "Test Issue 2",
+                        Title = "Refugees & Asylum",
                         Description = "Description of Test Issue 2",
                         ActionItems = actionItems.WhereToList(x => x.ViewName == ActionViewName.ContactYourMP)
                     },
                     new Issue
                     {
-                        Title = "Test Issue 3",
+                        Title = "Investigatory Powers",
                         Description = "Description of Test Issue 3",
                         ActionItems = actionItems.WhereToList(x => x.ViewName == ActionViewName.ContactYourMP)
                     }, new Issue
                     {
-                        Title = "Test Issue 4",
+                        Title = "Academy Schools",
                         Description = "Description of Test Issue 4",
                         ActionItems = actionItems.WhereToList(x => x.ViewName == ActionViewName.ContactYourMP)
                     }, new Issue
                     {
-                        Title = "Test Issue 5",
+                        Title = "Housing & Planning",
                         Description = "Description of Test Issue 5",
                         ActionItems = actionItems.WhereToList(x => x.ViewName == ActionViewName.ContactYourMP)
                     });
