@@ -1,8 +1,13 @@
 ﻿$(document).ready(function () {
     //setTimeout(callModal, 3000);
 
-    function callModal() {
-        $(".modal").modal();
-    }
+    $(".shareIcons").jsSocials({
+        showLabel: false,
+        showCount: false,
+        shares: ["twitter", "facebook"]
+    });
 });
 
+function callModal() {
+    $(".modal").modal();
+}

@@ -15,6 +15,8 @@ namespace Parliament.Interact.Core.Migrations
 
         protected override void Seed(InteractDbContext context)
         {
+            context.IssueTimeLines.RemoveRange(context.IssueTimeLines);
+            context.FurtherReadings.RemoveRange(context.FurtherReadings);
             context.IssueActions.RemoveRange(context.IssueActions);
             context.ActionItems.RemoveRange(context.ActionItems);
             context.Issues.RemoveRange(context.Issues);
@@ -130,7 +132,7 @@ namespace Parliament.Interact.Core.Migrations
                 new IssueAction
                 {
                     Issue = issues[4],
-                    ActionItem = actionItems[0]
+                    ActionItem = actionItems[2]
                 }
             };
 

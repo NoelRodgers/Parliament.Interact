@@ -12,6 +12,7 @@ namespace Parliament.Interact.Web.Models
 
         public List<FurtherReadingViewModel> FurtherReadings { get; set; }
         
+        public List<ActionItemViewModel> ActionsItems { get; set; }
         public List<TimeLineViewModel> TimeLines { get; set; } 
     }
 }

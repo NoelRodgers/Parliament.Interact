@@ -11,8 +11,11 @@ namespace Parliament.Interact.Core.Services
         {
             using (var context = new InteractDbContext())
             {
-                return context.Issues.Include("TimeLines")
+                return context.Issues
+                              .Include("TimeLines")
                               .Include("FurtherReadings")
+                              .Include("IssueActions")
+                              .Include("IssueActions.ActionItem")
                               .OrderBy(issue => issue.LogicalOrder)
                               .Take(5).ToList();
             }
