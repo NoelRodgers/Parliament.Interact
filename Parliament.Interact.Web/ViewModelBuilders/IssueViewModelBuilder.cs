@@ -64,6 +64,28 @@ namespace Parliament.Interact.Web.ViewModelBuilders
             return model;
         }
 
+        private string AssignBackGroundColorClass(int logicalOrderId)
+        {
+            if (logicalOrderId % 3 == 0)
+            {
+                return "orangeHeaderBackground";
+            }
+
+            if (logicalOrderId % 3 == 1)
+            {
+                return "blueHeaderBackground";
+            }
+
+            if (logicalOrderId % 3 == 2)
+            {
+                return "purpleHeaderBackground";
+            }
+            else
+            {
+                return "";
+            }
+        }
+
         private IssueViewModel BuildIssueViewModel(Issue issue)
         {
             return new IssueViewModel
@@ -71,6 +93,8 @@ namespace Parliament.Interact.Web.ViewModelBuilders
                 Content = issue.Content,
                 Id = issue.Id,
                 Title = issue.Title,
+                LogicalOrderId = issue.LogicalOrder,
+                BackgroundColorClass = AssignBackGroundColorClass(issue.LogicalOrder),
                 FurtherReadings = issue.FurtherReadings.SelectToList(BuildFurtherReadingViewModel),
                 TimeLines = issue.TimeLines.SelectToList(BuildTimeLineViewModel)
             };
