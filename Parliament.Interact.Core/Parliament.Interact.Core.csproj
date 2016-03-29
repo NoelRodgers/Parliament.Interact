@@ -112,6 +112,10 @@
     <Compile Include="Migrations\201603291005529_Added a linker class as required by the new content specific items.Designer.cs">
       <DependentUpon>201603291005529_Added a linker class as required by the new content specific items.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201603291040240_Changed Description to Content and added type ntext.cs" />
+    <Compile Include="Migrations\201603291040240_Changed Description to Content and added type ntext.Designer.cs">
+      <DependentUpon>201603291040240_Changed Description to Content and added type ntext.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\IIssueService.cs" />
@@ -154,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603291005529_Added a linker class as required by the new content specific items.resx">
       <DependentUpon>201603291005529_Added a linker class as required by the new content specific items.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603291040240_Changed Description to Content and added type ntext.resx">
+      <DependentUpon>201603291040240_Changed Description to Content and added type ntext.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
