@@ -30,27 +30,27 @@ namespace Parliament.Interact.Core.Migrations
                 new Issue
                 {
                     Title = "EU Referendum",
-                    Description = "Description of Test Issue 1",
+                    Content = "Description of Test Issue 1",
                 },
                 new Issue
                 {
                     Title = "Refugees & Asylum",
-                    Description = "Description of Test Issue 2"
+                    Content = "Description of Test Issue 2"
                 },
                 new Issue
                 {
                     Title = "Investigatory Powers",
-                    Description = "Description of Test Issue 3"
+                    Content = "Description of Test Issue 3"
                 },
                 new Issue
                 {
                     Title = "Academy Schools",
-                    Description = "Description of Test Issue 4"
+                    Content = "Description of Test Issue 4"
                 },
                 new Issue
                 {
                     Title = "Housing & Planning",
-                    Description = "Description of Test Issue 5"
+                    Content = "Description of Test Issue 5"
                 }
             };
 
