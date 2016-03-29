@@ -179,6 +179,7 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\FontAwesomeBundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\StructuremapMvc.cs" />
     <Compile Include="Controllers\IssuesController.cs" />
@@ -201,10 +202,15 @@
     <Compile Include="ViewModelBuilders\IssueViewModelBuilder.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\fontawesome\font-awesome.css" />
+    <Content Include="Content\fontawesome\font-awesome.min.css" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\img\interact_logo_WEB.svg" />
     <Content Include="Content\stylesheets\bootstrap.css" />
     <Content Include="Content\stylesheets\bootstrap.min.css" />
     <Content Include="Content\stylesheets\interact.css" />
+    <Content Include="Content\stylesheets\jsSocial\jssocials-theme-flat.css" />
+    <Content Include="Content\stylesheets\jsSocial\jssocials.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -219,6 +225,12 @@
     <Content Include="NLog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\stylesheets\jsSocial\jssocials.css.map" />
+    <Content Include="Content\stylesheets\jsSocial\jssocials-theme-flat.css.map" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
     <None Include="Properties\PublishProfiles\DevCI.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -231,6 +243,8 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\jsSocial\jssocials.js" />
+    <Content Include="Scripts\jsSocial\jssocials.min.js" />
     <Content Include="Scripts\src\issues.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
