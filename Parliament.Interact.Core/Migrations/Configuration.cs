@@ -25,6 +25,25 @@ namespace Parliament.Interact.Core.Migrations
                 new ActionItem {ViewName = ActionViewName.Petitions}
             };
 
+            var timelines = new List<IssueTimeLine>
+            {
+                new IssueTimeLine
+                {
+                    TimelineType = TimeLineType.Past,
+                    HTMLContent = "<p>Debated last week in the House of Commons.</p>"
+                },
+                new IssueTimeLine
+                {
+                    TimelineType = TimeLineType.Present,
+                    HTMLContent = "<p>Debating this week in the House of Commons.</p>"
+                },
+                new IssueTimeLine
+                {
+                    TimelineType = TimeLineType.Future,
+                    HTMLContent = "<p>Debating next week in the House of Commons.</p>"
+                }
+            };
+
             var issues = new List<Issue>
             {
                 new Issue
@@ -50,7 +69,8 @@ namespace Parliament.Interact.Core.Migrations
                 new Issue
                 {
                     Title = "Academy Schools",
-                    Content = "<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>"
+                    Content = "<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>",
+                    TimeLines = timelines
                 }
             };
 

@@ -193,6 +193,7 @@
     </Compile>
     <Compile Include="Models\ActionItemViewModel.cs" />
     <Compile Include="Models\IssueViewModel.cs" />
+    <Compile Include="Models\TimeLineViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModelBuilders\ActionsItemViewModelBuilder.cs" />
     <Compile Include="ViewModelBuilders\IActionsViewModelBuilder.cs" />

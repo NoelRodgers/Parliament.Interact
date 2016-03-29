@@ -8,6 +8,6 @@ namespace Parliament.Interact.Web.Models
         public string Title { get; set; }
         public string Content { get; set; }
         public int Id { get; set; }
-        public IList<IssueTimeLine> TimeLines { get; set; } 
+        public List<TimeLineViewModel> TimeLines { get; set; } 
     }
 }
