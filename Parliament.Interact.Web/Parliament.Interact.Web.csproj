@@ -253,6 +253,7 @@
     <Content Include="Views\Home\_ContactYourMP.cshtml" />
     <Content Include="Views\Issues\_IntroductionContent.cshtml" />
     <Content Include="Views\Issues\_IssueTimeLine.cshtml" />
+    <Content Include="Views\Issues\_IssueTimeLineItem.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
