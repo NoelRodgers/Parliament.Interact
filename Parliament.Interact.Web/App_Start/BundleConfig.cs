@@ -29,7 +29,7 @@ namespace Parliament.Interact.Web
             bundles.Add(new ScriptBundle("~/bundles/src").Include(
                        "~/Scripts/src/issues.js"));
 
-            bundles.Add(new ScriptBundle("~/Content/jsSocial").IncludeDirectory(
+            bundles.Add(new StyleBundle("~/Content/jsSocial").IncludeDirectory(
                         "~/Content/stylesheets/jsSocial", "*.css"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
