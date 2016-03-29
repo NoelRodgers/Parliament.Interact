@@ -23,8 +23,14 @@ namespace Parliament.Interact.Web
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/jsSocial").IncludeDirectory(
+                "~/Scripts/jsSocial", "*.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/src").Include(
                        "~/Scripts/src/issues.js"));
+
+            bundles.Add(new ScriptBundle("~/Content/jsSocial").IncludeDirectory(
+                        "~/Content/stylesheets/jsSocial", "*.css"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/stylesheets/bootstrap.css",
