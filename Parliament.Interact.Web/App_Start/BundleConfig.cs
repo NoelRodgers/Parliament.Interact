@@ -27,9 +27,9 @@ namespace Parliament.Interact.Web
                        "~/Scripts/src/issues.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css",
-                      "~/Content/interact.css"));
+                      "~/Content/stylesheets/bootstrap.css",
+                      "~/Content/stylesheets/site.css",
+                      "~/Content/stylesheets/interact.css"));
         }
     }
 }
