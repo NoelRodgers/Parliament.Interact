@@ -250,6 +250,7 @@
     <Content Include="Views\Issues\_PanelBody.cshtml" />
     <Content Include="Views\Shared\_Modal.cshtml" />
     <Content Include="Views\Home\_ContactYourMP.cshtml" />
+    <Content Include="Views\Home\_Petitions.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

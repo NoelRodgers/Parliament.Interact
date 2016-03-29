@@ -9,10 +9,12 @@ namespace Parliament.Interact.Web.ViewModelBuilders
     public class IssueViewModelBuilder : IIssueViewModelBuilder
     {
         private readonly IIssueService _issueService;
+        private readonly IActionsItemViewModelBuilder _actionsViewModelBuilder;
 
-        public IssueViewModelBuilder(IIssueService issueService)
+        public IssueViewModelBuilder(IIssueService issueService, IActionsItemViewModelBuilder actionsViewModelBuilder)
         {
             _issueService = issueService;
+            _actionsViewModelBuilder = actionsViewModelBuilder;
         }
 
         public IList<IssueViewModel> Build()
@@ -33,7 +35,8 @@ namespace Parliament.Interact.Web.ViewModelBuilders
             {
                 Description = issue.Description,
                 Id = issue.Id,
-                Title = issue.Title
+                Title = issue.Title,
+                ActionsItems = _actionsViewModelBuilder.Build(issue.ActionItems.SelectToList(x => x.ViewName).ToArray())
             };
         }
     }

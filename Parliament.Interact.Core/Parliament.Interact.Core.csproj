@@ -39,6 +39,10 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <HintPath>..\packages\NLog.4.2.3\lib\net45\NLog.dll</HintPath>
       <Private>True</Private>
@@ -54,6 +58,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -68,6 +73,9 @@
     <Compile Include="ActionsViewFactory\IActionsViewModelFactoryItem.cs" />
     <Compile Include="ActionsViewFactory\Items\ContactYourMPViewModelBuilder.cs" />
     <Compile Include="ActionsViewFactory\Items\Models\ContactYourMPModel.cs" />
+    <Compile Include="ActionsViewFactory\Items\Models\PetitionItemModel.cs" />
+    <Compile Include="ActionsViewFactory\Items\Models\PetitionsModel.cs" />
+    <Compile Include="ActionsViewFactory\Items\PetitionsViewModelBuilder.cs" />
     <Compile Include="Domain\ActionItem.cs" />
     <Compile Include="Domain\Context\InteractDbContext.cs" />
     <Compile Include="Domain\Issue.cs" />
@@ -113,6 +121,12 @@
       <DependentUpon>201603291005529_Added a linker class as required by the new content specific items.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Petitions\Contract\PetitionContract.cs" />
+    <Compile Include="Petitions\IPetition.cs" />
+    <Compile Include="Petitions\IPetitionsService.cs" />
+    <Compile Include="Petitions\PetitionsService.cs" />
+    <Compile Include="Petitions\Petititon.cs" />
+    <Compile Include="Petitions\Settings\PetitionsSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\IIssueService.cs" />
     <Compile Include="Services\IssueService.cs" />
@@ -156,6 +170,7 @@
       <DependentUpon>201603291005529_Added a linker class as required by the new content specific items.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
