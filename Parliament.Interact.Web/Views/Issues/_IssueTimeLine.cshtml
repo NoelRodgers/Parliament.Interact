@@ -1,13 +1,8 @@
 ﻿@model Parliament.Interact.Web.Models.IssueViewModel
 
 <div>
-    @if (Model.TimeLines != null) {
-        foreach (var timeLineItem in Model.TimeLines)
-        {
-            <div class="col-md-4">
-                @Html.Raw(timeLineItem.HTMLContent)
-            </div>
-        }
+    @foreach (var timeLineItem in Model.TimeLines)
+    {
+        @Html.Partial("_IssueTimeLineItem", timeLineItem)
     }
-
 </div>

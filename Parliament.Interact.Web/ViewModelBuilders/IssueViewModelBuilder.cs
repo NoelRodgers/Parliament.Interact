@@ -29,11 +29,29 @@ namespace Parliament.Interact.Web.ViewModelBuilders
 
         private TimeLineViewModel BuildTimeLineViewModel(IssueTimeLine timeline)
         {
-            return new TimeLineViewModel
+            var model = new TimeLineViewModel
             {
                 TimelineType = timeline.TimelineType,
-                HTMLContent = timeline.HTMLContent
+                HTMLContent = timeline.HTMLContent,
             };
+
+            var title = "";
+            if (model.TimelineType == TimeLineType.Past)
+            {
+                title = "What's happened";
+            }
+            if (model.TimelineType == TimeLineType.Present)
+            {
+                title = "What's happening";
+            }
+            if (model.TimelineType == TimeLineType.Future)
+            {
+                title = "What's happening next";
+            }
+
+            model.Title = title;
+
+            return model;
         }
         private IssueViewModel BuildIssueViewModel(Issue issue)
         {

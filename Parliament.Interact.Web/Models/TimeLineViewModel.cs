@@ -7,5 +7,6 @@ namespace Parliament.Interact.Web.Models
         public TimeLineType TimelineType { get; set; }
 
         public string HTMLContent { get; set; }
+        public string Title { get; set; }
     }
 }
