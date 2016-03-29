@@ -1,5 +1,10 @@
 ﻿@model Parliament.Interact.Web.Models.IssueViewModel
 
 <div class="further-readings">
-    hello world
+    @foreach(var reading in Model.FurtherReadings)
+    {
+        <div>@reading.LinkName</div>
+        <div>@reading.LinkUrl</div>
+        <div>@reading.DisplayExternalIcon</div>
+    }
 </div>
