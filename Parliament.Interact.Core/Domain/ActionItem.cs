@@ -11,6 +11,6 @@ namespace Parliament.Interact.Core.Domain
 
         public ActionViewName ViewName { get; set; }
 
-        public List<Issue> Issues { get; set; }
+        public List<IssueAction> IssueActions { get; set; }
     }
 }

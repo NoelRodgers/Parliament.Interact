@@ -1,63 +1,91 @@
 using System.Collections.Generic;
-using System.ComponentModel;
-using Parliament.Common.Extensions;
 using Parliament.Interact.Core.ActionsViewFactory.Enum;
 using Parliament.Interact.Core.Domain;
+using System.Data.Entity.Migrations;
+using Parliament.Interact.Core.Domain.Context;
 
 namespace Parliament.Interact.Core.Migrations
 {
-    using System;
-    using System.Data.Entity;
-    using System.Data.Entity.Migrations;
-    using System.Linq;
-
-    internal sealed class Configuration : DbMigrationsConfiguration<Parliament.Interact.Core.Domain.Context.InteractDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<InteractDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(Parliament.Interact.Core.Domain.Context.InteractDbContext context)
+        protected override void Seed(InteractDbContext context)
         {
+            context.IssueActions.RemoveRange(context.IssueActions);
             context.ActionItems.RemoveRange(context.ActionItems);
             context.Issues.RemoveRange(context.Issues);
-            List<ActionItem> actionItems = new List<ActionItem>
+            var actionItems = new List<ActionItem>
             {
-                new ActionItem { ViewName = ActionViewName.ContactYourMP},
-                new ActionItem { ViewName = ActionViewName.Links },
-                new ActionItem { ViewName = ActionViewName.Petitions }
+                new ActionItem {ViewName = ActionViewName.ContactYourMP},
+                new ActionItem {ViewName = ActionViewName.Links},
+                new ActionItem {ViewName = ActionViewName.Petitions}
             };
 
-            context.Issues.AddOrUpdate(
-                   new Issue
-                   {
-                       Title = "EU Referendum",
-                       Description = "Description of Test Issue 1",
-                       ActionItems = actionItems
-                   },
-                    new Issue
-                    {
-                        Title = "Refugees & Asylum",
-                        Description = "Description of Test Issue 2",
-                        ActionItems = actionItems.WhereToList(x => x.ViewName == ActionViewName.ContactYourMP)
-                    },
-                    new Issue
-                    {
-                        Title = "Investigatory Powers",
-                        Description = "Description of Test Issue 3",
-                        ActionItems = actionItems.WhereToList(x => x.ViewName == ActionViewName.ContactYourMP)
-                    }, new Issue
-                    {
-                        Title = "Academy Schools",
-                        Description = "Description of Test Issue 4",
-                        ActionItems = actionItems.WhereToList(x => x.ViewName == ActionViewName.ContactYourMP)
-                    }, new Issue
-                    {
-                        Title = "Housing & Planning",
-                        Description = "Description of Test Issue 5",
-                        ActionItems = actionItems.WhereToList(x => x.ViewName == ActionViewName.ContactYourMP)
-                    });
+            var issues = new List<Issue>
+            {
+                new Issue
+                {
+                    Title = "EU Referendum",
+                    Description = "Description of Test Issue 1",
+                },
+                new Issue
+                {
+                    Title = "Refugees & Asylum",
+                    Description = "Description of Test Issue 2"
+                },
+                new Issue
+                {
+                    Title = "Investigatory Powers",
+                    Description = "Description of Test Issue 3"
+                },
+                new Issue
+                {
+                    Title = "Academy Schools",
+                    Description = "Description of Test Issue 4"
+                },
+                new Issue
+                {
+                    Title = "Housing & Planning",
+                    Description = "Description of Test Issue 5"
+                }
+            };
+
+            var issueActions = new List<IssueAction>
+            {
+                new IssueAction
+                {
+                    Issue = issues[0],
+                    ActionItem = actionItems[0]
+                },
+                new IssueAction
+                {
+                    Issue = issues[1],
+                    ActionItem = actionItems[0]
+                },
+                new IssueAction
+                {
+                    Issue = issues[2],
+                    ActionItem = actionItems[0]
+                },
+                new IssueAction
+                {
+                    Issue = issues[3],
+                    ActionItem = actionItems[0]
+                },
+                new IssueAction
+                {
+                    Issue = issues[4],
+                    ActionItem = actionItems[0]
+                }
+            };
+
+            context.Issues.AddOrUpdate(issues.ToArray());
+            context.ActionItems.AddOrUpdate(actionItems.ToArray());
+            context.IssueActions.AddOrUpdate(issueActions.ToArray());
         }
     }
 }
