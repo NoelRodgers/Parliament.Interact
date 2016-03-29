@@ -1,0 +1,15 @@
+﻿@model Parliament.Interact.Web.Models.IssueViewModel
+
+<div class="further-readings col-md-12">
+    <h2>Further Reading</h2>
+    @foreach(var reading in Model.FurtherReadings)
+    {
+        <div>
+            <a href=@reading.LinkUrl>@reading.LinkName</a>
+            @if(reading.DisplayExternalIcon == true)
+            {
+                <img src="#"/>
+            }
+        </div>
+    }
+</div>
