@@ -251,6 +251,7 @@
     <Content Include="Views\Shared\_Modal.cshtml" />
     <Content Include="Views\Home\_ContactYourMP.cshtml" />
     <Content Include="Views\Issues\_IntroductionContent.cshtml" />
+    <Content Include="Views\Issues\_IssueTimeLine.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

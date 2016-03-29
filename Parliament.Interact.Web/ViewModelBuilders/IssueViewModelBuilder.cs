@@ -33,7 +33,8 @@ namespace Parliament.Interact.Web.ViewModelBuilders
             {
                 Content = issue.Content,
                 Id = issue.Id,
-                Title = issue.Title
+                Title = issue.Title,
+                TimeLines = issue.TimeLines
             };
         }
     }
