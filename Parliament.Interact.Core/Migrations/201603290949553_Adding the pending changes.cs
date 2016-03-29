@@ -3,7 +3,7 @@ namespace Parliament.Interact.Core.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class addedIssueFurtherReadingstoIssue : DbMigration
+    public partial class Addingthependingchanges : DbMigration
     {
         public override void Up()
         {

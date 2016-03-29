@@ -71,6 +71,8 @@
     <Compile Include="Domain\ActionItem.cs" />
     <Compile Include="Domain\Context\InteractDbContext.cs" />
     <Compile Include="Domain\Issue.cs" />
+    <Compile Include="Domain\IssueTimeLine.cs" />
+    <Compile Include="Domain\TimeLineEnumerable.cs" />
     <Compile Include="Domain\IssueFurtherReading.cs" />
     <Compile Include="IoC\InteractIoC.cs" />
     <Compile Include="Migrations\201603221509424_Intial migration creating issue.cs" />
@@ -93,9 +95,17 @@
     <Compile Include="Migrations\201603231556044_Altering Title to use enum.Designer.cs">
       <DependentUpon>201603231556044_Altering Title to use enum.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201603290925431_added IssueFurtherReadings to Issue.cs" />
-    <Compile Include="Migrations\201603290925431_added IssueFurtherReadings to Issue.Designer.cs">
-      <DependentUpon>201603290925431_added IssueFurtherReadings to Issue.cs</DependentUpon>
+    <Compile Include="Migrations\201603290924414_Created migration for IssueTimeLine.cs" />
+    <Compile Include="Migrations\201603290924414_Created migration for IssueTimeLine.Designer.cs">
+      <DependentUpon>201603290924414_Created migration for IssueTimeLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603290934189_Changed type of HTMLContent to nText.cs" />
+    <Compile Include="Migrations\201603290934189_Changed type of HTMLContent to nText.Designer.cs">
+      <DependentUpon>201603290934189_Changed type of HTMLContent to nText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603290949553_Adding the pending changes.cs" />
+    <Compile Include="Migrations\201603290949553_Adding the pending changes.Designer.cs">
+      <DependentUpon>201603290949553_Adding the pending changes.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -128,8 +138,14 @@
     <EmbeddedResource Include="Migrations\201603231556044_Altering Title to use enum.resx">
       <DependentUpon>201603231556044_Altering Title to use enum.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201603290925431_added IssueFurtherReadings to Issue.resx">
-      <DependentUpon>201603290925431_added IssueFurtherReadings to Issue.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201603290924414_Created migration for IssueTimeLine.resx">
+      <DependentUpon>201603290924414_Created migration for IssueTimeLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603290934189_Changed type of HTMLContent to nText.resx">
+      <DependentUpon>201603290934189_Changed type of HTMLContent to nText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603290949553_Adding the pending changes.resx">
+      <DependentUpon>201603290949553_Adding the pending changes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

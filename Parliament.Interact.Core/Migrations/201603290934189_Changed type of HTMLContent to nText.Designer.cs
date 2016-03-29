@@ -7,13 +7,13 @@ namespace Parliament.Interact.Core.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class addedIssueFurtherReadingstoIssue : IMigrationMetadata
+    public sealed partial class ChangedtypeofHTMLContenttonText : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(addedIssueFurtherReadingstoIssue));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(ChangedtypeofHTMLContenttonText));
         
         string IMigrationMetadata.Id
         {
-            get { return "201603290925431_added IssueFurtherReadings to Issue"; }
+            get { return "201603290934189_Changed type of HTMLContent to nText"; }
         }
         
         string IMigrationMetadata.Source
