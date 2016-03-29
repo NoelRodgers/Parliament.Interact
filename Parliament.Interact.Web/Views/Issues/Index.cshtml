@@ -7,34 +7,15 @@
 <div class="container-fluid">
     <div class="col-xs-12">
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
-            @{
-                var issueIndex = 1;
-            }
             @foreach (var issue in Model)
             {
                 var collapseId = "collapse" + issue.Id;
                 var headingId = "heading" + issue.Id;
-                var panelHeaderColourClass = "";
-
-                if (issueIndex % 3 == 0)
-                {
-                    panelHeaderColourClass = "orangeHeaderBackground";
-                }
-
-                if (issueIndex % 3 == 1)
-                {
-                    panelHeaderColourClass = "blueHeaderBackground";
-                }
-
-                if (issueIndex % 3 == 2)
-                {
-                    panelHeaderColourClass = "purpleHeaderBackground";
-                }
 
                 <div class="issues-panel panel panel-default">
-                    <div class="panel-heading @panelHeaderColourClass" role="tab" id="headingOne">
-                        <div class="panel-header col-xs-7">
-                            <h1 class="panel-title"><span class="panel-header-index">#@issueIndex</span> @issue.Title</h1>
+                    <div class="panel-heading @issue.BackgroundColorClass" role="tab" id="headingOne">
+                        <div class="panel-header col-xs-9">
+                            <h1 class="panel-title"><span class="panel-header-index">#@issue.LogicalOrderId</span> @issue.Title</h1>
                         </div>
                         <div class="col-xs-2 shareIcons">
                         </div>
@@ -49,7 +30,6 @@
                         @Html.Partial("_PanelBody", issue)
                     </div>
                 </div>
-                issueIndex += 1;
             }
         </div>
     </div>

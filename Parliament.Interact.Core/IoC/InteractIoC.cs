@@ -13,7 +13,8 @@ namespace Parliament.Interact.Core.IoC
     {
         public InteractIoC()
         {
-           // For<IActionsViewModelFactoryItem>().Add<ContactYourMPViewModelBuilder>();
+            For<IActionsViewModelFactoryItem>().Add<ContactYourMPViewModelBuilder>();
+            For<IActionsViewModelFactoryItem>().Add<PetitionsViewModelBuilder>();
         }
     }
 }

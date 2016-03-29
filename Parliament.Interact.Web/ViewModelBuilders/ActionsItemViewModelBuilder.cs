@@ -27,7 +27,7 @@ namespace Parliament.Interact.Web.ViewModelBuilders
             return new ActionItemViewModel
             {
                 Title = item.Title,
-                ActionView = item.ActionView,
+                ActionView = "Actions/{0}".FormatString(item.ActionView),
                 ActionModel = item.BuildViewModel()
             };
         }

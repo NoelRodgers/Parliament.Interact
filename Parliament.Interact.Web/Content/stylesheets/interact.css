@@ -64,6 +64,15 @@
     font-family: 'Lato', sans-serif;
 }
 
+.parl-button-group {
+    margin-top: 10px;
+}
+
+.parl-button-group a {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
 .panel-group > .issues-panel {
     border-radius: 8px;
     margin-bottom: 40px;

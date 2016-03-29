@@ -9,10 +9,12 @@ namespace Parliament.Interact.Web.ViewModelBuilders
     public class IssueViewModelBuilder : IIssueViewModelBuilder
     {
         private readonly IIssueService _issueService;
+        private readonly IActionsItemViewModelBuilder _actionsViewModelBuilder;
 
-        public IssueViewModelBuilder(IIssueService issueService)
+        public IssueViewModelBuilder(IIssueService issueService, IActionsItemViewModelBuilder actionsViewModelBuilder)
         {
             _issueService = issueService;
+            _actionsViewModelBuilder = actionsViewModelBuilder;
         }
 
         public IList<IssueViewModel> Build()
@@ -25,6 +27,16 @@ namespace Parliament.Interact.Web.ViewModelBuilders
         {
             var issue = _issueService.GetIssueById(id);
             return BuildIssueViewModel(issue);
+        }
+
+        private FurtherReadingViewModel BuildFurtherReadingViewModel(IssueFurtherReading reading)
+        {
+            return new FurtherReadingViewModel
+            {
+                    LinkName = reading.LinkName,
+                    LinkUrl = reading.LinkUrl,
+                    DisplayExternalIcon = reading.DisplayExternalIcon
+            };
         }
 
         private TimeLineViewModel BuildTimeLineViewModel(IssueTimeLine timeline)
@@ -53,6 +65,29 @@ namespace Parliament.Interact.Web.ViewModelBuilders
 
             return model;
         }
+
+        private string AssignBackGroundColorClass(int logicalOrderId)
+        {
+            if (logicalOrderId % 3 == 0)
+            {
+                return "orangeHeaderBackground";
+            }
+
+            if (logicalOrderId % 3 == 1)
+            {
+                return "blueHeaderBackground";
+        }
+
+            if (logicalOrderId % 3 == 2)
+            {
+                return "purpleHeaderBackground";
+            }
+            else
+            {
+                return "";
+            }
+        }
+
         private IssueViewModel BuildIssueViewModel(Issue issue)
         {
             return new IssueViewModel
@@ -60,7 +95,11 @@ namespace Parliament.Interact.Web.ViewModelBuilders
                 Content = issue.Content,
                 Id = issue.Id,
                 Title = issue.Title,
-                TimeLines = issue.TimeLines.SelectToList(BuildTimeLineViewModel)
+                LogicalOrderId = issue.LogicalOrder,
+                BackgroundColorClass = AssignBackGroundColorClass(issue.LogicalOrder),
+                FurtherReadings = issue.FurtherReadings.SelectToList(BuildFurtherReadingViewModel),
+                TimeLines = issue.TimeLines.SelectToList(BuildTimeLineViewModel),
+                ActionsItems = _actionsViewModelBuilder.Build(issue.IssueActions.SelectToList(x => x.ActionItem.ViewName).ToArray())
             };
         }
     }
