@@ -241,6 +241,10 @@ footer div span {
         color: #333333;
     }
 
+    .panel-heading .panel-heading-button {
+        padding-right: 0;    
+    }
+
     .footer-description {
         width: 290px;
     }
