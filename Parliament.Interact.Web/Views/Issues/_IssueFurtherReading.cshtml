@@ -5,10 +5,10 @@
     @foreach(var reading in Model.FurtherReadings)
     {
         <div>
-            <a href=@reading.LinkUrl>@reading.LinkName</a>
+            <a href=@reading.LinkUrl target="_blank">@reading.LinkName</a>
             @if(reading.DisplayExternalIcon == true)
             {
-                <img src="#"/>
+                <i class="fa fa-external-link"></i>
             }
         </div>
     }
