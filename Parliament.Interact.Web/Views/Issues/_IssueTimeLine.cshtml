@@ -1,10 +1,10 @@
 ﻿@model Parliament.Interact.Web.Models.IssueViewModel
 
-<div class="row">
+<div>
     @if (Model.TimeLines != null) {
         foreach (var timeLineItem in Model.TimeLines)
         {
-            <div class="col-md-3">
+            <div class="col-md-4">
                 @Html.Raw(timeLineItem.HTMLContent)
             </div>
         }
