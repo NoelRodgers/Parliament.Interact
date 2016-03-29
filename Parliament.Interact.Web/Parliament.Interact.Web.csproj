@@ -193,6 +193,7 @@
     </Compile>
     <Compile Include="Models\ActionItemViewModel.cs" />
     <Compile Include="Models\IssueViewModel.cs" />
+    <Compile Include="Models\TimeLineViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModelBuilders\ActionsItemViewModelBuilder.cs" />
     <Compile Include="ViewModelBuilders\IActionsViewModelBuilder.cs" />
@@ -251,6 +252,7 @@
     <Content Include="Views\Shared\_Modal.cshtml" />
     <Content Include="Views\Home\_ContactYourMP.cshtml" />
     <Content Include="Views\Issues\_IntroductionContent.cshtml" />
+    <Content Include="Views\Issues\_IssueTimeLine.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
