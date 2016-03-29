@@ -29,13 +29,22 @@ namespace Parliament.Interact.Web.ViewModelBuilders
             return BuildIssueViewModel(issue);
         }
 
+        private TimeLineViewModel BuildTimeLineViewModel(IssueTimeLine timeline)
+        {
+            return new TimeLineViewModel
+            {
+                TimelineType = timeline.TimelineType,
+                HTMLContent = timeline.HTMLContent
+            };
+        }
         private IssueViewModel BuildIssueViewModel(Issue issue)
         {
             return new IssueViewModel
             {
-                Description = issue.Description,
+                Content = issue.Content,
                 Id = issue.Id,
                 Title = issue.Title,
+                TimeLines = issue.TimeLines.SelectToList(BuildTimeLineViewModel),
                 ActionsItems = _actionsViewModelBuilder.Build(issue.ActionItems.SelectToList(x => x.ViewName).ToArray())
             };
         }

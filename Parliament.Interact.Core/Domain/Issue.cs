@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Parliament.Interact.Core.Domain
 {
@@ -8,7 +9,8 @@ namespace Parliament.Interact.Core.Domain
         [Key]
         public int Id { get;set; }
 
-        public string Description { get; set; }
+        [Column(TypeName = "ntext")]
+        public string Content { get; set; }
         public string Title { get; set; }
         public int LogicalOrder { get; set; }
         public List<ActionItem> ActionItems { get; set; } 
