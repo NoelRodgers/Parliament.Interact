@@ -18,6 +18,9 @@ namespace Parliament.Interact.Core.Migrations
             context.IssueActions.RemoveRange(context.IssueActions);
             context.ActionItems.RemoveRange(context.ActionItems);
             context.Issues.RemoveRange(context.Issues);
+            context.FurtherReadings.RemoveRange(context.FurtherReadings);
+            context.IssueTimeLines.RemoveRange(context.IssueTimeLines);
+
             var actionItems = new List<ActionItem>
             {
                 new ActionItem {ViewName = ActionViewName.ContactYourMP},
@@ -41,6 +44,28 @@ namespace Parliament.Interact.Core.Migrations
                 {
                     TimelineType = TimeLineType.Future,
                     HTMLContent = "<p>Debating next week in the House of Commons.</p>"
+                }
+            };
+
+            var furtherReadings = new List<IssueFurtherReading>
+            {
+                new IssueFurtherReading
+                {
+                    LinkName = "link name 1",
+                    LinkUrl = "###",
+                    DisplayExternalIcon = true
+                },
+                new IssueFurtherReading
+                {
+                    LinkName = "link name 2",
+                    LinkUrl = "###",
+                    DisplayExternalIcon = true
+                },
+                new IssueFurtherReading
+                {
+                    LinkName = "link name 3",
+                    LinkUrl = "###",
+                    DisplayExternalIcon = false
                 }
             };
 
@@ -70,7 +95,8 @@ namespace Parliament.Interact.Core.Migrations
                 {
                     Title = "Academy Schools",
                     Content = "<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>",
-                    TimeLines = timelines
+                    TimeLines = timelines,
+                    FurtherReadings = furtherReadings
                 }
             };
 

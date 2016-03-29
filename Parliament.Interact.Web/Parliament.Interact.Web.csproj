@@ -192,6 +192,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ActionItemViewModel.cs" />
+    <Compile Include="Models\FurtherReadingViewModel.cs" />
     <Compile Include="Models\IssueViewModel.cs" />
     <Compile Include="Models\TimeLineViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -248,9 +249,10 @@
     <Content Include="Views\Issues\Index.cshtml" />
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
-    <Content Include="Views\Shared\_PanelBody.cshtml" />
     <Content Include="Views\Shared\_Modal.cshtml" />
     <Content Include="Views\Home\_ContactYourMP.cshtml" />
+    <Content Include="Views\Issues\_IssueFurtherReading.cshtml" />
+    <Content Include="Views\Shared\_PanelBody.cshtml" />
     <Content Include="Views\Issues\_IntroductionContent.cshtml" />
     <Content Include="Views\Issues\_IssueTimeLine.cshtml" />
     <Content Include="Views\Issues\_IssueTimeLineItem.cshtml" />
