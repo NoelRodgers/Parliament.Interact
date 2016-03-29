@@ -9,6 +9,7 @@ namespace Parliament.Interact.Web.Models
         public int Id { get; set; }
 
         public List<FurtherReadingViewModel> FurtherReadings { get; set; }
-
+        
+        public List<TimeLineViewModel> TimeLines { get; set; } 
     }
 }

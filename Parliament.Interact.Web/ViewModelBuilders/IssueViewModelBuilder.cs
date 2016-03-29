@@ -37,6 +37,15 @@ namespace Parliament.Interact.Web.ViewModelBuilders
             };
         }
 
+        private TimeLineViewModel BuildTimeLineViewModel(IssueTimeLine timeline)
+        {
+            return new TimeLineViewModel
+            {
+                TimelineType = timeline.TimelineType,
+                HTMLContent = timeline.HTMLContent
+            };
+        }
+
         private IssueViewModel BuildIssueViewModel(Issue issue)
         {
             return new IssueViewModel
@@ -44,7 +53,8 @@ namespace Parliament.Interact.Web.ViewModelBuilders
                 Content = issue.Content,
                 Id = issue.Id,
                 Title = issue.Title,
-                FurtherReadings = issue.FurtherReadings.SelectToList(BuildFurtherReadingViewModel)
+                FurtherReadings = issue.FurtherReadings.SelectToList(BuildFurtherReadingViewModel),
+                TimeLines = issue.TimeLines.SelectToList(BuildTimeLineViewModel)
             };
         }
     }

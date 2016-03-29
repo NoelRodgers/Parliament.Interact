@@ -8,7 +8,7 @@ namespace Parliament.Interact.Core.Domain
         [Key]
         public int Id { get; set; }
 
-        public TimeLine Timeline { get; set; }
+        public TimeLineType TimelineType { get; set; }
 
         [Column(TypeName = "ntext")]
         public string HTMLContent { get; set; }

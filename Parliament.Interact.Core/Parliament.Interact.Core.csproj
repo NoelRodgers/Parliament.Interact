@@ -116,6 +116,10 @@
     <Compile Include="Migrations\201603291040240_Changed Description to Content and added type ntext.Designer.cs">
       <DependentUpon>201603291040240_Changed Description to Content and added type ntext.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201603291128179_Changed name of TimeLine to TimeLineType.cs" />
+    <Compile Include="Migrations\201603291128179_Changed name of TimeLine to TimeLineType.Designer.cs">
+      <DependentUpon>201603291128179_Changed name of TimeLine to TimeLineType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\IIssueService.cs" />
@@ -161,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603291040240_Changed Description to Content and added type ntext.resx">
       <DependentUpon>201603291040240_Changed Description to Content and added type ntext.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603291128179_Changed name of TimeLine to TimeLineType.resx">
+      <DependentUpon>201603291128179_Changed name of TimeLine to TimeLineType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

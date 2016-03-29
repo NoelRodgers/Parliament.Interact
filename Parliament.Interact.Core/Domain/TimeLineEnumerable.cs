@@ -1,6 +1,6 @@
 ﻿namespace Parliament.Interact.Core.Domain
 {
-    public enum TimeLine
+    public enum TimeLineType
     {
         Past = 0,
         Present = 1,
