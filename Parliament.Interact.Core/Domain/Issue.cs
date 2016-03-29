@@ -13,5 +13,7 @@ namespace Parliament.Interact.Core.Domain
         public int LogicalOrder { get; set; }
 
         public List<ActionItem> ActionItems { get; set; } 
+
+        public List<IssueTimeLine> TimeLines { get; set; } 
     }
 }
