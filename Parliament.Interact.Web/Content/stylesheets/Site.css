@@ -22,12 +22,3 @@ select,
 textarea {
     max-width: 280px;
 }
-
-.parl-button-group {
-    margin-top: 10px;
-}
-
-.parl-button-group a {
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
