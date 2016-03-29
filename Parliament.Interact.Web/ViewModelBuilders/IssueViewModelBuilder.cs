@@ -27,6 +27,16 @@ namespace Parliament.Interact.Web.ViewModelBuilders
             return BuildIssueViewModel(issue);
         }
 
+        private FurtherReadingViewModel BuildFurtherReadingViewModel(IssueFurtherReading reading)
+        {
+            return new FurtherReadingViewModel
+            {
+                    LinkName = reading.LinkName,
+                    LinkUrl = reading.LinkUrl,
+                    DisplayExternalIcon = reading.DisplayExternalIcon
+            };
+        }
+
         private IssueViewModel BuildIssueViewModel(Issue issue)
         {
             return new IssueViewModel
@@ -34,6 +44,7 @@ namespace Parliament.Interact.Web.ViewModelBuilders
                 Content = issue.Content,
                 Id = issue.Id,
                 Title = issue.Title,
+                FurtherReadings = issue.FurtherReadings.SelectToList(BuildFurtherReadingViewModel)
             };
         }
     }
