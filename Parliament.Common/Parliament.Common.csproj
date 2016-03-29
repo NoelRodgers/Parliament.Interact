@@ -88,7 +88,7 @@
     <Compile Include="Parser\TypeParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Serialization\XmlUtility.cs" />
-    <Compile Include="ContentReader\IContentReaderService.cs" />
+    <Compile Include="ContentReader\IUriContentReaderService.cs" />
     <Compile Include="Versioning\IVersionManager.cs" />
     <Compile Include="Versioning\VersionManager.cs" />
   </ItemGroup>
