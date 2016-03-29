@@ -31,7 +31,7 @@ namespace Parliament.Interact.Web.ViewModelBuilders
         {
             return new IssueViewModel
             {
-                Description = issue.Content,
+                Content = issue.Content,
                 Id = issue.Id,
                 Title = issue.Title
             };
