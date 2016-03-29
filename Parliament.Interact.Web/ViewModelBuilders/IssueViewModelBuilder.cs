@@ -45,7 +45,7 @@ namespace Parliament.Interact.Web.ViewModelBuilders
                 Id = issue.Id,
                 Title = issue.Title,
                 TimeLines = issue.TimeLines.SelectToList(BuildTimeLineViewModel),
-                ActionsItems = _actionsViewModelBuilder.Build(issue.ActionItems.SelectToList(x => x.ViewName).ToArray())
+                ActionsItems = _actionsViewModelBuilder.Build(issue.IssueActions.SelectToList(x => x.ActionItem.ViewName).ToArray())
             };
         }
     }

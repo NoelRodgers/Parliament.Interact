@@ -181,7 +181,6 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\StructuremapMvc.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IssuesController.cs" />
     <Compile Include="DependencyResolution\ControllerConvention.cs" />
     <Compile Include="DependencyResolution\DefaultRegistry.cs" />
@@ -244,16 +243,16 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Issues\Index.cshtml" />
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
     <Content Include="Views\Shared\_PanelBody.cshtml" />
     <Content Include="Views\Shared\_Modal.cshtml" />
-    <Content Include="Views\Home\_ContactYourMP.cshtml" />
-    <Content Include="Views\Home\_Petitions.cshtml" />
+    <Content Include="Views\Issues\Actions\_ContactYourMP.cshtml" />
+    <Content Include="Views\Issues\Actions\_Petitions.cshtml" />
     <Content Include="Views\Issues\_IntroductionContent.cshtml" />
     <Content Include="Views\Issues\_IssueTimeLine.cshtml" />
+    <Content Include="Views\Issues\_Actions.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

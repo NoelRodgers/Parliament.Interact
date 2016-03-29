@@ -128,6 +128,10 @@
     <Compile Include="Migrations\201603291128179_Changed name of TimeLine to TimeLineType.Designer.cs">
       <DependentUpon>201603291128179_Changed name of TimeLine to TimeLineType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201603291308258_Altering Issues domain object to correctly connect to the IssueActions linker table.cs" />
+    <Compile Include="Migrations\201603291308258_Altering Issues domain object to correctly connect to the IssueActions linker table.Designer.cs">
+      <DependentUpon>201603291308258_Altering Issues domain object to correctly connect to the IssueActions linker table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Petitions\Contract\PetitionContract.cs" />
     <Compile Include="Petitions\IPetition.cs" />
@@ -182,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603291128179_Changed name of TimeLine to TimeLineType.resx">
       <DependentUpon>201603291128179_Changed name of TimeLine to TimeLineType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603291308258_Altering Issues domain object to correctly connect to the IssueActions linker table.resx">
+      <DependentUpon>201603291308258_Altering Issues domain object to correctly connect to the IssueActions linker table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

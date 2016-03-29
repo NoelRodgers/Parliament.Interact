@@ -1,0 +1,17 @@
+﻿@model Parliament.Interact.Web.Models.IssueViewModel
+
+<div class="parl-action-items col-xs-12">
+    <h2>Actions</h2>
+    @foreach (var action in Model.ActionsItems)
+    {
+        <div class="parl-action-item">
+            <h3>@action.Title</h3>
+            <div class="parl-action-time">
+
+            </div>
+            <div class="parl-action-content">
+                @Html.Partial(action.ActionView, action.ActionModel)
+            </div>
+        </div>
+    }
+</div>

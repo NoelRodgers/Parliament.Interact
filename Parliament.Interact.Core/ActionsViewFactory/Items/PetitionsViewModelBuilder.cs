@@ -1,8 +1,10 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using Parliament.Common.Extensions;
+using Parliament.Common.Interfaces;
 using Parliament.Interact.Core.ActionsViewFactory.Enum;
 using Parliament.Interact.Core.ActionsViewFactory.Items.Models;
 using Parliament.Interact.Core.Petitions;
+using Parliament.Interact.Core.Petitions.Settings;
 
 namespace Parliament.Interact.Core.ActionsViewFactory.Items
 {
@@ -10,10 +12,12 @@ namespace Parliament.Interact.Core.ActionsViewFactory.Items
     public class PetitionsViewModelBuilder : IActionsViewModelFactoryItem
     {
         private readonly IPetitionsService _service;
+        private PetitionsSettings _settings;
 
-        public PetitionsViewModelBuilder(IPetitionsService service)
+        public PetitionsViewModelBuilder(IPetitionsService service, IConfigurationBuilder configurationBuilder)
         {
             _service = service;
+            _settings = configurationBuilder.GetConfiguration<PetitionsSettings>("Petitions");
         }
 
         public ActionViewName ActionName { get { return ActionViewName.Petitions; } }
@@ -27,7 +31,10 @@ namespace Parliament.Interact.Core.ActionsViewFactory.Items
             var petitions = _service.GetTopPetitionsForPhrase("Academy Schools");
             return new PetitionsModel
             {
-                Petitions = petitions.SelectToListIndex(BuildPetitionViewModel)
+                Petitions = petitions.SelectToListIndex(BuildPetitionViewModel),
+                MaxCount = _settings.MaxCount,
+                CreateUrl = _settings.BaseUrl + _settings.CreateUrlPart,
+                ViewAllUrl = _service.GetViewAllSearchLink("Academy Schools")
             };
         }
 
