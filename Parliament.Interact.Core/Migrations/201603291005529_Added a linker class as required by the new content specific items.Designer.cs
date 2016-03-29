@@ -13,7 +13,7 @@ namespace Parliament.Interact.Core.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201603290929437_Added a linker class as required by the new content specific items"; }
+            get { return "201603291005529_Added a linker class as required by the new content specific items"; }
         }
         
         string IMigrationMetadata.Source

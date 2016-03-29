@@ -10,19 +10,45 @@
 .header-links li {
     display: inline;
     padding: 5px;
-    font-size: 16px;  
+    font-size: 16px;
     color: #589e9e;
     list-style-type: none;
 }
 
-.header-links li:first-child {
-    border-right: 2px solid #589e9e;
-    padding-right: 10px;
+    .header-links li:first-child {
+        border-right: 2px solid #589e9e;
+        padding-right: 10px;
+    }
+
+    .header-links li a {
+        text-decoration: none;
+        color: #333333;
+    }
+
+.logo {
+    position: relative;
 }
 
-.header-links li a {
-    text-decoration: none;
-    color: #333333;
+.logo-image {
+    display: block;
+    position: relative;
+    max-width: 62%;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+.logo-beta-box {
+    position: absolute;
+    margin-left: 81%;
+    top: 135px;
+    width: 65px;
+    border: 2px solid #589e9e;
+    border-radius: 5px;
+    color: #589e9e;
+    text-align: center;
+    font-size: 14px;
+    padding: 2px 0;
+    letter-spacing: -1px;
 }
 
 .strapline {
@@ -47,22 +73,22 @@
     height: 120px;
 }
 
-.panel-heading.orangeHeaderBackground {
-    background-color: #b14d07;
-}
+    .panel-heading.orangeHeaderBackground {
+        background-color: #b14d07;
+    }
 
-.panel-heading.blueHeaderBackground {
-    background-color: #589e9e;
-}
+    .panel-heading.blueHeaderBackground {
+        background-color: #589e9e;
+    }
 
-.panel-heading.purpleHeaderBackground {
-    background-color: #6e6095;
-}
+    .panel-heading.purpleHeaderBackground {
+        background-color: #6e6095;
+    }
 
-.panel-heading h1 {
-    font-size: 60px;
-    color: #ffffff;   
-}
+    .panel-heading h1 {
+        font-size: 60px;
+        color: #ffffff;
+    }
 
 .panel-header-index {
     margin-right: 40px;
@@ -85,10 +111,7 @@
     color: #333333;
     font-size: 30px;
     background-color: #ffffff;
-    background-image:
-    linear-gradient(
-      #ffffff, #ececec
-    );
+    background-image: linear-gradient( #ffffff, #ececec );
 }
 
 .panel-heading .last-panel-heading-column {
@@ -167,6 +190,15 @@ footer div span {
     footer div p {
         line-height: 30px;
     }
+
+    .logo-image {
+        max-width: 65%;
+    }
+
+    .logo-beta-box {
+        margin-left: 83%;
+        top: 95px;
+    }
 }
 
 @media (max-width: 480px) { /* this is for a mobile */
@@ -216,7 +248,14 @@ footer div span {
     .footer-title {
         width: 290px;
     }
+
+    .logo-image {
+        padding-top: 50px;
+        max-width: 75%;
+    }
+
+    .logo-beta-box {
+        margin-left: 73%;
+        top: 10px;
+    }
 }
-
-
-
