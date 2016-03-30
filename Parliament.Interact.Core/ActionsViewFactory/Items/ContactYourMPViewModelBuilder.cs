@@ -5,11 +5,12 @@ using Parliament.Interact.Core.ActionsViewFactory.Enum;
 using Parliament.Interact.Core.ActionsViewFactory.Items.Models;
 using Parliament.MPContact;
 using Parliament.MPContact.Settings;
+using Parliament.Common.Extensions;
 
 namespace Parliament.Interact.Core.ActionsViewFactory.Items
 {
     [SuppressMessage("ReSharper", "ConvertPropertyToExpressionBody")] //Supressed as if we let Resharper do that it will break if we try to build on msbuild with our .NET Version!
-    public class ContactYourMPViewModelBuilder : IActionsViewModelFactoryItem
+    public class ContactYourMPViewModelBuilder : IActionsViewModelFactoryItemWithInputModel
     {
         private readonly IMemberContactService _service;
         private MemberSettings _settings;
@@ -25,10 +26,19 @@ namespace Parliament.Interact.Core.ActionsViewFactory.Items
         public string ActionView { get { return "_ContactYourMP"; } }
         public object BuildViewModel()
         {
-            var memberData = _service.GetMember("RG45AF"); //hard-coded for now to check
-            return new ContactYourMPModel
+            return new ContactYourMPModel();
+        }
+
+        public object BuildViewModel<T>(T inputModel)
+        {
+            if (typeof(T) != typeof(string)) throw new InvalidOperationException("The model {0} is not supported for this operation".FormatString(typeof(T).AssemblyQualifiedName));
+            var postcode = inputModel.ToString();
+
+            var memberData = _service.GetMember(postcode);
+
+            return new ContactYourMPResultModel
             {
-                Link = _service.BuildLink(memberData)
+                RedirectLink = _service.BuildLink(memberData)
             };
         }
     }

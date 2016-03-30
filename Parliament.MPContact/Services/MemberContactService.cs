@@ -4,6 +4,7 @@ using Parliament.MPContact.Settings;
 using Parliament.Common.Extensions;
 using Parliament.Common.Serialization;
 using Parliament.MPContact.Contracts;
+using System.Linq;
 
 namespace Parliament.MPContact.Services
 {
@@ -34,8 +35,11 @@ namespace Parliament.MPContact.Services
 
         public string BuildLink(MemberContract data)
         {
-            var id = data.Member.Id;
-            var name = data.Member.DisplayName;
+            var firstMember = data.Members.FirstOrDefault();
+            if (firstMember == null) return null;
+
+            var id = firstMember.Id;
+            var name = firstMember.DisplayName;
             var formattedName = name.ToLower().Replace(" ", "-");
 
             return "http://www.parliament.uk/biographies/commons/" + formattedName + "/" + id;

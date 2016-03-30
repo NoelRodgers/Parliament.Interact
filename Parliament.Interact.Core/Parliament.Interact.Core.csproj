@@ -73,6 +73,7 @@
     <Compile Include="ActionsViewFactory\IActionsViewModelFactoryItem.cs" />
     <Compile Include="ActionsViewFactory\Items\ContactYourMPViewModelBuilder.cs" />
     <Compile Include="ActionsViewFactory\Items\Models\ContactYourMPModel.cs" />
+    <Compile Include="ActionsViewFactory\Items\Models\ContactYourMPResultModel.cs" />
     <Compile Include="ActionsViewFactory\Items\Models\PetitionItemModel.cs" />
     <Compile Include="ActionsViewFactory\Items\Models\PetitionsModel.cs" />
     <Compile Include="ActionsViewFactory\Items\PetitionsViewModelBuilder.cs" />

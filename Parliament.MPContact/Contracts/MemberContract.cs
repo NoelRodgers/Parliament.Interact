@@ -9,7 +9,7 @@ namespace Parliament.MPContact.Contracts
     public class MemberContract
     {
             [XmlElement("Member")]
-            public Member Member { get; set; }
+            public List<Member> Members { get; set; }
 
     }
 

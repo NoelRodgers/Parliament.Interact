@@ -5,9 +5,14 @@ namespace Parliament.Interact.Core.ActionsViewFactory
 {
     public interface IActionsViewModelFactoryItem : IPluggable
     {
-        ActionViewName ActionName { get;  }
+        ActionViewName ActionName { get; }
         string Title { get; }
         string ActionView { get; }
-        object BuildViewModel(); 
+        object BuildViewModel();
+    }
+
+    public interface IActionsViewModelFactoryItemWithInputModel : IActionsViewModelFactoryItem
+    {
+        object BuildViewModel<T>(T inputModel);
     }
 }

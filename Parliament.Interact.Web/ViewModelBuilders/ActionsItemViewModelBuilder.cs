@@ -18,7 +18,7 @@ namespace Parliament.Interact.Web.ViewModelBuilders
 
         public List<ActionItemViewModel> Build(params ActionViewName[] actionNames)
         {
-            var actions = _actionsModelFactory.GetActionsByName(actionNames.ToList());
+            var actions = _actionsModelFactory.GetActionsByName<IActionsViewModelFactoryItem>(actionNames);
             return actions.SelectToList(BuildActionItemViewModel);
         }
 

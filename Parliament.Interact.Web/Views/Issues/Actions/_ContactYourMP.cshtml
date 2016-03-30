@@ -1,6 +1,8 @@
 ﻿@model Parliament.Interact.Core.ActionsViewFactory.Items.Models.ContactYourMPModel
-
-<div class="parl-contact-your-mp parl-action">
-    <input id="postcode" type="text" placeholder="Postcode" />
-    <button id="postcode-button">Go</button>
-</div>
+@using (Html.BeginForm("GetMPLink", "Issues"))
+{
+    <div class="parl-contact-your-mp parl-action">
+        @Html.TextBoxFor(x => x.Postcode)
+        <input type="submit" id="postcode-button" value="Go" />
+    </div>
+}

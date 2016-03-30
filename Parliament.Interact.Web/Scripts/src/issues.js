@@ -7,17 +7,17 @@
         shares: ["twitter", "facebook"]
     });
 
-    $('#postcode-button').click(function () {
-        var postcodeValue = $('#postcode').val();
-        $.ajax({
-            type: "POST",
-            url: "Issues/GetMPLink",
-            dataType: "text",
-            data: { value: postcodeValue }
-        }).error(function () {
-            console.log("it's gone horribly wrong");
-        });
-    });
+    //$('#postcode-button').click(function () {
+    //    var postcodeValue = $('#postcode').val();
+    //    $.ajax({
+    //        type: "POST",
+    //        url: "Issues/GetMPLink",
+    //        dataType: "text",
+    //        data: { value: postcodeValue }
+    //    }).error(function () {
+    //        console.log("it's gone horribly wrong");
+    //    });
+    //});
 });
 
 function callModal() {
