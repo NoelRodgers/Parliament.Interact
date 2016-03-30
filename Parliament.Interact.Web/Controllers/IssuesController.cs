@@ -32,15 +32,20 @@ namespace Parliament.Interact.Web.Controllers
             var action = _actionsModelFactory.GetActionsByName<IActionsViewModelFactoryItemWithInputModel>(ActionViewName.ContactYourMP);
             if (string.IsNullOrEmpty(model.Postcode))
             {
-                return PartialView("~/Views/Issues/Actions/_ContactYourMP.cshtml");
+                ModelState.Clear();
+                model.ErrorMessage = "Please enter a valid postcode.";
+                return PartialView("~/Views/Issues/Actions/_ContactYourMP.cshtml", model);
             }
             var result = (ContactYourMPResultModel)action.First().BuildViewModel(model.Postcode);
             if (string.IsNullOrEmpty(result.RedirectLink))
             {
-                return PartialView("~/Views/Issues/Actions/_ContactYourMP.cshtml");
+                model.Postcode = "";
+                model.ErrorMessage = "Please enter a valid postcode.";
+                ModelState.Clear();
+                return PartialView("~/Views/Issues/Actions/_ContactYourMP.cshtml", model);
             }
 
-            return new RedirectResult(result.RedirectLink, true);
+            return JavaScript("window.location = '" + result.RedirectLink + "'");
         }
     }
 }
