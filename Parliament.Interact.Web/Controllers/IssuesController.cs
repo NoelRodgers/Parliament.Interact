@@ -19,5 +19,12 @@ namespace Parliament.Interact.Web.Controllers
 
             return View(model);
         }
+
+        [HttpPost]
+        public ActionResult GetMPLink(string value)
+        {
+            var postcode = value;
+            return RedirectToAction("Index");
+        }
     }
 }
