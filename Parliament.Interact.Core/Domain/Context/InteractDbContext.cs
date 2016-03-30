@@ -10,5 +10,7 @@ namespace Parliament.Interact.Core.Domain.Context
         public DbSet<IssueFurtherReading> FurtherReadings { get; set; }
 
         public DbSet<IssueAction> IssueActions { get; set; }
+        public DbSet<ActionContent> ActionContents { get; set; } 
+        public DbSet<IssueActionContent> IssueActionContents { get; set; } 
     }
 }
