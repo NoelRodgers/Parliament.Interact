@@ -152,6 +152,10 @@
       <Project>{a43982c3-100b-43d1-a547-99f4d38dcfbe}</Project>
       <Name>Parliament.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Parliament.MPContact\Parliament.MPContact.csproj">
+      <Project>{37572a90-6096-4b85-acd2-9bffde79342c}</Project>
+      <Name>Parliament.MPContact</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201603221509424_Intial migration creating issue.resx">

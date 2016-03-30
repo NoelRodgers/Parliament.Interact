@@ -1,9 +1,12 @@
-﻿using Parliament.MPContact.Services;
+﻿using Parliament.MPContact.Contracts;
+using Parliament.MPContact.Services;
 
 namespace Parliament.MPContact
 {
     public interface IMemberContactService
     {
-        IMember GetMember(string postcode);
+        MemberContract GetMember(string postcode);
+
+        string BuildLink(MemberContract data);
     }
 }

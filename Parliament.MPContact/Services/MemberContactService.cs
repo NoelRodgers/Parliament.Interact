@@ -3,13 +3,14 @@ using Parliament.Common.Interfaces;
 using Parliament.MPContact.Settings;
 using Parliament.Common.Extensions;
 using Parliament.Common.Serialization;
+using Parliament.MPContact.Contracts;
 
 namespace Parliament.MPContact.Services
 {
     public class MemberContactService : IMemberContactService
     {
 
-        private const string _urlFormat = "{0}/fymp={1}";
+        private const string _urlFormat = "http://data.parliament.uk/membersdataplatform/services/mnis/members/query/fymp={0}"; // change to use base url from settings
         private readonly IUriContentReaderService _contentReaderService;
         private readonly MemberSettings _settings;
 
@@ -19,16 +20,25 @@ namespace Parliament.MPContact.Services
             _settings = configurationBuilder.GetConfiguration<MemberSettings>("Members");
         }
 
-        public IMember GetMember(string postcode)
+        public MemberContract GetMember(string postcode)
         {
-            var url = _urlFormat.FormatString(_settings.BaseUrl, postcode);
+            var url = _urlFormat.FormatString(postcode); // change to pass _settings.baseurl
 
             var xmlResult = _contentReaderService.Read(url);
 
-            var data = XmlUtility.DeserializeXml<Member>(xmlResult);
+            var data = XmlUtility.DeserializeXml<MemberContract>(xmlResult);
 
             return data;
 
+        }
+
+        public string BuildLink(MemberContract data)
+        {
+            var id = data.Member.Id;
+            var name = data.Member.DisplayName;
+            var formattedName = name.ToLower().Replace(" ", "-");
+
+            return "http://www.parliament.uk/biographies/commons/" + formattedName + "/" + id;
         }
     }
 }
