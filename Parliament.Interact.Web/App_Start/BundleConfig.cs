@@ -23,6 +23,9 @@ namespace Parliament.Interact.Web
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/unobtrusiveAjax").Include(
+                        "~/Scripts/jquery.unobtrusive-ajax.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/jsSocial").IncludeDirectory(
                 "~/Scripts/jsSocial", "*.js"));
 
