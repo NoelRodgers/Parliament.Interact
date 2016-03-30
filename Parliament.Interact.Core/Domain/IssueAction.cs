@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Parliament.Interact.Core.Domain
 {
@@ -10,5 +11,7 @@ namespace Parliament.Interact.Core.Domain
         public Issue Issue { get; set; }
 
         public ActionItem ActionItem { get; set; }
+
+        public List<IssueActionContent> IssueActionContents { get; set; } 
     }
 }
