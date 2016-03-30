@@ -29,8 +29,17 @@ namespace Parliament.Interact.Web.Controllers
         [HttpPost]
         public ActionResult GetMPLink(ContactYourMPModel model)
         {
+            if(string.IsNullOrEmpty(model.Postcode))
+            {
+                return Redirect("Index");
+            }
             var action = _actionsModelFactory.GetActionsByName<IActionsViewModelFactoryItemWithInputModel>(ActionViewName.ContactYourMP);
             var result = (ContactYourMPResultModel)action.First().BuildViewModel(model.Postcode);
+            if (string.IsNullOrEmpty(result.RedirectLink))
+            {
+                return Redirect("Index");
+            }
+
             return new RedirectResult(result.RedirectLink, true);
         }
     }

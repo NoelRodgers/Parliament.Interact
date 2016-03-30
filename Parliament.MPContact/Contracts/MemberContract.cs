@@ -10,7 +10,6 @@ namespace Parliament.MPContact.Contracts
     {
             [XmlElement("Member")]
             public List<Member> Members { get; set; }
-
     }
 
     [XmlRoot("Member")]

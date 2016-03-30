@@ -11,7 +11,8 @@ namespace Parliament.MPContact.Services
     public class MemberContactService : IMemberContactService
     {
 
-        private const string _urlFormat = "http://data.parliament.uk/membersdataplatform/services/mnis/members/query/fymp={0}"; // change to use base url from settings
+        private const string _urlMNISFormat = "{0}services/mnis/members/query/fymp={1}";
+        private const string _urlParliamentFormat = "{0}/biographies/commons/{1}/{2}";
         private readonly IUriContentReaderService _contentReaderService;
         private readonly MemberSettings _settings;
 
@@ -23,7 +24,7 @@ namespace Parliament.MPContact.Services
 
         public MemberContract GetMember(string postcode)
         {
-            var url = _urlFormat.FormatString(postcode); // change to pass _settings.baseurl
+            var url = _urlMNISFormat.FormatString(_settings.BaseUrl, postcode);
 
             var xmlResult = _contentReaderService.Read(url);
 
@@ -42,7 +43,9 @@ namespace Parliament.MPContact.Services
             var name = firstMember.DisplayName;
             var formattedName = name.ToLower().Replace(" ", "-");
 
-            return "http://www.parliament.uk/biographies/commons/" + formattedName + "/" + id;
+            var link = _urlParliamentFormat.FormatString(_settings.BiographyBaseUrl, formattedName, id);
+
+            return link;
         }
     }
 }
