@@ -133,6 +133,11 @@ namespace Parliament.Interact.Core.Migrations
                 {
                     Issue = issues[4],
                     ActionItem = actionItems[2]
+                },
+                new IssueAction
+                {
+                    Issue = issues[4],
+                    ActionItem = actionItems[0]
                 }
             };
 

@@ -2,6 +2,6 @@
 {
     public class ContactYourMPModel
     {
-         
+        public string Postcode { get; set; }
     }
 }

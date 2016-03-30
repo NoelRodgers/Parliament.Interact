@@ -73,6 +73,7 @@
     <Compile Include="ActionsViewFactory\IActionsViewModelFactoryItem.cs" />
     <Compile Include="ActionsViewFactory\Items\ContactYourMPViewModelBuilder.cs" />
     <Compile Include="ActionsViewFactory\Items\Models\ContactYourMPModel.cs" />
+    <Compile Include="ActionsViewFactory\Items\Models\ContactYourMPResultModel.cs" />
     <Compile Include="ActionsViewFactory\Items\Models\PetitionItemModel.cs" />
     <Compile Include="ActionsViewFactory\Items\Models\PetitionsModel.cs" />
     <Compile Include="ActionsViewFactory\Items\PetitionsViewModelBuilder.cs" />
@@ -151,6 +152,10 @@
     <ProjectReference Include="..\Parliament.Common\Parliament.Common.csproj">
       <Project>{a43982c3-100b-43d1-a547-99f4d38dcfbe}</Project>
       <Name>Parliament.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Parliament.MPContact\Parliament.MPContact.csproj">
+      <Project>{37572a90-6096-4b85-acd2-9bffde79342c}</Project>
+      <Name>Parliament.MPContact</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
