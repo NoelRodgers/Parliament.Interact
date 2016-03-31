@@ -2,7 +2,7 @@
 
 <div class="parl-petitions parl-action">
     <div class="parl-top-petitions">
-        <h4>Top @Model.MaxCount Open Petitions</h4>
+        <h5>Top @Model.MaxCount relevant petitions on petition.parliament.uk</h5>
         <div class="parl-petition-items">
             @foreach (var petition in Model.Petitions)
             {
@@ -21,7 +21,7 @@
         </div>
     </div>
     <div class="parl-button-group">
-        <a class="btn btn-success" href="@Model.ViewAllUrl">View all petitions</a>
-        <a class="btn btn-success" href="@Model.CreateUrl">Create new petitions</a>
+        <a class="btn btn-success" href="@Model.ViewAllUrl">VIEW RELEVANT PETITIONS</a>
+        <a class="btn btn-success" href="@Model.CreateUrl">START A NEW PETITION</a>
     </div>
 </div>
