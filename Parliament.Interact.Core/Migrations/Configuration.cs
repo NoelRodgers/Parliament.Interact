@@ -27,9 +27,60 @@ namespace Parliament.Interact.Core.Migrations
 
             var actionItems = new List<ActionItem>
             {
-                new ActionItem {ViewName = ActionViewName.ContactYourMP},
-                new ActionItem {ViewName = ActionViewName.Links},
-                new ActionItem {ViewName = ActionViewName.Petitions}
+                new ActionItem {ViewName = ActionViewName.ContactYourMP, ActionContents = new List<ActionContent>()
+                {
+                    new ActionContent()
+                    {
+                        Key = "Title",
+                        Content = "Contact your MP"
+                    },
+                    new ActionContent()
+                    {
+                        Key = "Eta",
+                        Content = "1 hour"
+                    },
+                    new ActionContent()
+                    {
+                        Key = "BasicContent",
+                        Content = "Basic Content for MP contact"
+                    }
+                }  },
+                new ActionItem {ViewName = ActionViewName.Links, ActionContents = new List<ActionContent>()
+                {
+                    new ActionContent()
+                    {
+                        Key = "Title",
+                        Content = "Links"
+                    },
+                    new ActionContent()
+                    {
+                        Key = "Eta",
+                        Content = "10 minutes"
+                    },
+                    new ActionContent()
+                    {
+                        Key = "BasicContent",
+                        Content = "Basic Content for Links"
+                    }
+                }},
+                new ActionItem {ViewName = ActionViewName.Petitions, ActionContents = new List<ActionContent>()
+                {
+                    new ActionContent()
+                    {
+                        Key = "Title",
+                        Content = "Petitions"
+                    },
+                    new ActionContent()
+                    {
+                        Key = "Eta",
+                        Content = "15 minutes"
+                    },
+                    new ActionContent()
+                    {
+                        Key = "BasicContent",
+                        Content = "Basic Content for Petitions"
+                    }
+                }}
             };
 
             var timelines = new List<IssueTimeLine>
@@ -136,6 +187,16 @@ namespace Parliament.Interact.Core.Migrations
                         {
                             Key = "LinkName",
                             Content = "Parliament Website"
+                        },
+                        new IssueActionContent
+                        {
+                            Key = "Eta",
+                            Content = "10 minutes"
+                        },
+                        new IssueActionContent
+                        {
+                            Key = "BasicContent",
+                            Content = "Example of basic content"
                         }
                     }
                 },
