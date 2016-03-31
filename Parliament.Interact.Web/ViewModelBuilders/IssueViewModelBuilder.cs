@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
 using Parliament.Common.Extensions;
 using Parliament.Interact.Core.Domain;
 using Parliament.Interact.Core.Services;
@@ -76,7 +79,7 @@ namespace Parliament.Interact.Web.ViewModelBuilders
             if (logicalOrderId % 3 == 1)
             {
                 return "blueHeaderBackground";
-        }
+            }
 
             if (logicalOrderId % 3 == 2)
             {
@@ -90,6 +93,23 @@ namespace Parliament.Interact.Web.ViewModelBuilders
 
         private IssueViewModel BuildIssueViewModel(Issue issue)
         {
+            var type = "";
+            if (issue.ImageType == ImageTypeEnumerable.Jpeg)
+            {
+                type = "jpg";
+            }
+            if (issue.ImageType == ImageTypeEnumerable.Svg)
+            {
+                type = "svg";
+            }
+            if (issue.ImageType == ImageTypeEnumerable.Png)
+            {
+                type = "png";
+            }
+            if (issue.ImageType == ImageTypeEnumerable.Gif)
+            {
+                type = "gif";
+            }
             return new IssueViewModel
             {
                 Content = issue.Content,
@@ -99,7 +119,10 @@ namespace Parliament.Interact.Web.ViewModelBuilders
                 BackgroundColorClass = AssignBackGroundColorClass(issue.LogicalOrder),
                 FurtherReadings = issue.FurtherReadings.SelectToList(BuildFurtherReadingViewModel),
                 TimeLines = issue.TimeLines.SelectToList(BuildTimeLineViewModel),
-                ActionsItems = _actionsViewModelBuilder.Build(issue.IssueActions.SelectToList(x => x.ActionItem.ViewName).ToArray())
+                ActionsItems = _actionsViewModelBuilder.Build(issue.IssueActions.SelectToList(x => x.ActionItem.ViewName).ToArray()),
+                DbImageBase64 = issue.Image,
+                ImageType = type,
+                HasImage = issue.Image != null
             };
         }
     }

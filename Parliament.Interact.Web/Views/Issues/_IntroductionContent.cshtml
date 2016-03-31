@@ -3,4 +3,10 @@
 <div class="col-xs-12">
     <h2>What Is @Model.Title?</h2>
     @Html.Raw(Model.Content)
+
+    @if (Model.HasImage)
+    {
+        <img src="@Url.Action("GetImageFile", "Issues", new { issueId = Model.Id })" />
+
+    }
 </div>

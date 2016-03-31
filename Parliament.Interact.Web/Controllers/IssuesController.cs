@@ -1,4 +1,7 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Drawing;
+using System.IO;
+using System.Web.Mvc;
 using Parliament.Interact.Web.Models;
 using Parliament.Interact.Web.ViewModelBuilders;
 using Parliament.Interact.Core.ActionsViewFactory;
@@ -22,8 +25,14 @@ namespace Parliament.Interact.Web.Controllers
         public ActionResult Index()
         {
             var model = _issueViewModelBuilder.Build();
-
             return View(model);
+        }
+
+        public ActionResult GetImageFile(int issueId)
+        {
+            var model = _issueViewModelBuilder.Build(issueId);
+            var type = "image/" + model.ImageType;
+            return File(model.DbImageBase64, type);
         }
 
         [HttpPost]
