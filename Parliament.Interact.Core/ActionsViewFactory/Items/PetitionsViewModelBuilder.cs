@@ -2,6 +2,7 @@
 using Parliament.Common.Extensions;
 using Parliament.Common.Interfaces;
 using Parliament.Interact.Core.ActionsViewFactory.Enum;
+using Parliament.Interact.Core.ActionsViewFactory.Items.Base;
 using Parliament.Interact.Core.ActionsViewFactory.Items.Models;
 using Parliament.Interact.Core.Petitions;
 using Parliament.Interact.Core.Petitions.Settings;
@@ -10,7 +11,7 @@ using Parliament.Interact.Core.Domain;
 namespace Parliament.Interact.Core.ActionsViewFactory.Items
 {
     [SuppressMessage("ReSharper", "ConvertPropertyToExpressionBody")] //Supressed as if we let Resharper do that it will break if we try to build on msbuild with our .NET Version!
-    public class PetitionsViewModelBuilder : IActionsViewModelFactoryItem
+    public class PetitionsViewModelBuilder : ActionsItemViewModelBuilderBase, IActionsViewModelFactoryItem
     {
         private readonly IPetitionsService _service;
         private PetitionsSettings _settings;
@@ -21,14 +22,13 @@ namespace Parliament.Interact.Core.ActionsViewFactory.Items
             _settings = configurationBuilder.GetConfiguration<PetitionsSettings>("Petitions");
         }
 
-        public ActionViewName ActionName { get { return ActionViewName.Petitions; } }
-
-        public string Title { get { return "Sign a Petition"; } }
+        public override ActionViewName ActionName { get { return ActionViewName.Petitions; } }
 
         public string ActionView { get { return "_Petitions"; } }
 
         public object BuildViewModel(Issue issue)
         {
+            Build(issue);
             var petitions = _service.GetTopPetitionsForPhrase("Academy Schools");
             return new PetitionsModel
             {
