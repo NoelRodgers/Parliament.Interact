@@ -272,6 +272,7 @@
     <Content Include="Views\Issues\_IssueTimeLine.cshtml" />
     <Content Include="Views\Issues\_IssueTimeLineItem.cshtml" />
     <Content Include="Views\Issues\_Actions.cshtml" />
+    <Content Include="Views\Issues\_IssueImageView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -16,7 +16,7 @@ namespace Parliament.Interact.Core.Domain
 
         public byte[] Image { get; set; }
 
-        public ImageTypeEnumerable ImageType { get;set;}
+        public string ImageType { get;set;}
         public List<IssueAction> IssueActions { get; set; } 
         public List<IssueTimeLine> TimeLines { get; set; } 
         public List<IssueFurtherReading> FurtherReadings { get; set; }

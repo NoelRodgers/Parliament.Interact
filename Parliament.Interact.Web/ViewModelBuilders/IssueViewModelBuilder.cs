@@ -93,23 +93,6 @@ namespace Parliament.Interact.Web.ViewModelBuilders
 
         private IssueViewModel BuildIssueViewModel(Issue issue)
         {
-            var type = "";
-            if (issue.ImageType == ImageTypeEnumerable.Jpeg)
-            {
-                type = "jpg";
-            }
-            if (issue.ImageType == ImageTypeEnumerable.Svg)
-            {
-                type = "svg";
-            }
-            if (issue.ImageType == ImageTypeEnumerable.Png)
-            {
-                type = "png";
-            }
-            if (issue.ImageType == ImageTypeEnumerable.Gif)
-            {
-                type = "gif";
-            }
             return new IssueViewModel
             {
                 Content = issue.Content,
@@ -121,7 +104,7 @@ namespace Parliament.Interact.Web.ViewModelBuilders
                 TimeLines = issue.TimeLines.SelectToList(BuildTimeLineViewModel),
                 ActionsItems = _actionsViewModelBuilder.Build(issue.IssueActions.SelectToList(x => x.ActionItem.ViewName).ToArray()),
                 DbImageBase64 = issue.Image,
-                ImageType = type,
+                ImageType = issue.ImageType,
                 HasImage = issue.Image != null
             };
         }

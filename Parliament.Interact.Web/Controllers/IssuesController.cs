@@ -31,8 +31,7 @@ namespace Parliament.Interact.Web.Controllers
         public ActionResult GetImageFile(int issueId)
         {
             var model = _issueViewModelBuilder.Build(issueId);
-            var type = "image/" + model.ImageType;
-            return File(model.DbImageBase64, type);
+            return File(model.DbImageBase64, model.ImageType);
         }
 
         [HttpPost]

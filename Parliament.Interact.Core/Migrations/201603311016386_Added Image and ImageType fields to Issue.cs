@@ -8,7 +8,7 @@ namespace Parliament.Interact.Core.Migrations
         public override void Up()
         {
             AddColumn("dbo.Issues", "Image", c => c.Binary());
-            AddColumn("dbo.Issues", "ImageType", c => c.Int(nullable: false));
+            AddColumn("dbo.Issues", "ImageType", c => c.String());
         }
         
         public override void Down()

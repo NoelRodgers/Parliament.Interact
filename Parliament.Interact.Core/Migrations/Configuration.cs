@@ -3,6 +3,7 @@ using Parliament.Interact.Core.ActionsViewFactory.Enum;
 using Parliament.Interact.Core.Domain;
 using System.Data.Entity.Migrations;
 using System.IO;
+using System.Web;
 using Parliament.Interact.Core.Domain.Context;
 
 namespace Parliament.Interact.Core.Migrations
@@ -73,7 +74,7 @@ namespace Parliament.Interact.Core.Migrations
             };
 
             var originalImage = System.Drawing.Image.FromFile("c:\\school.jpg");
-            var dbImageType = ImageTypeEnumerable.Jpeg;
+            var dbImageType = MimeMapping.GetMimeMapping("c:\\school.jpg");
             byte[] dbImage;
     
             using (var ms = new MemoryStream())
