@@ -34,6 +34,8 @@ namespace Parliament.Interact.Web.ViewModelBuilders
             };
 
             model.Title = item.Title;
+            model.Eta = item.Eta;
+            model.BasicContent = model.BasicContent;
             return model;
         }
     }

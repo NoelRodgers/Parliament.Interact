@@ -37,7 +37,7 @@ namespace Parliament.Interact.Core.Migrations
                     new ActionContent()
                     {
                         Key = "Eta",
-                        Content = "1 hour"
+                        Content = "Approx 15mins"
                     },
                     new ActionContent()
                     {
@@ -68,12 +68,12 @@ namespace Parliament.Interact.Core.Migrations
                     new ActionContent()
                     {
                         Key = "Title",
-                        Content = "Petitions"
+                        Content = "Sign or start a petition"
                     },
                     new ActionContent()
                     {
                         Key = "Eta",
-                        Content = "15 minutes"
+                        Content = "Approx 5mins"
                     },
                     new ActionContent()
                     {
