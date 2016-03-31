@@ -15,6 +15,8 @@ namespace Parliament.Interact.Core.Migrations
 
         protected override void Seed(InteractDbContext context)
         {
+            context.ActionContents.RemoveRange(context.ActionContents);
+            context.IssueActionContents.RemoveRange(context.IssueActionContents);
             context.IssueTimeLines.RemoveRange(context.IssueTimeLines);
             context.FurtherReadings.RemoveRange(context.FurtherReadings);
             context.IssueActions.RemoveRange(context.IssueActions);
@@ -113,6 +115,19 @@ namespace Parliament.Interact.Core.Migrations
                 {
                     Issue = issues[0],
                     ActionItem = actionItems[0]
+                },
+                new IssueAction
+                {
+                    Issue = issues[4],
+                    ActionItem = actionItems[1],
+                    IssueActionContents = new List<IssueActionContent>
+                    {
+                        new IssueActionContent
+                        {
+                            Key = "Link",
+                            Content = "www.google.co.uk"
+                        }
+                    }
                 },
                 new IssueAction
                 {

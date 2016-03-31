@@ -4,6 +4,7 @@ using Parliament.Common.Extensions;
 using Parliament.Interact.Core.ActionsViewFactory;
 using Parliament.Interact.Core.ActionsViewFactory.Enum;
 using Parliament.Interact.Web.Models;
+using Parliament.Interact.Core.Domain;
 
 namespace Parliament.Interact.Web.ViewModelBuilders
 {
@@ -16,19 +17,19 @@ namespace Parliament.Interact.Web.ViewModelBuilders
             _actionsModelFactory = actionsModelFactory;
         }
 
-        public List<ActionItemViewModel> Build(params ActionViewName[] actionNames)
+        public List<ActionItemViewModel> Build(Issue issue, params ActionViewName[] actionNames)
         {
             var actions = _actionsModelFactory.GetActionsByName<IActionsViewModelFactoryItem>(actionNames);
-            return actions.SelectToList(BuildActionItemViewModel);
+            return actions.SelectToList(x => BuildActionItemViewModel(x, issue));
         }
 
-        public ActionItemViewModel BuildActionItemViewModel(IActionsViewModelFactoryItem item)
+        public ActionItemViewModel BuildActionItemViewModel(IActionsViewModelFactoryItem item, Issue issue)
         {
             return new ActionItemViewModel
             {
                 Title = item.Title,
                 ActionView = "Actions/{0}".FormatString(item.ActionView),
-                ActionModel = item.BuildViewModel()
+                ActionModel = item.BuildViewModel(issue)
             };
         }
     }

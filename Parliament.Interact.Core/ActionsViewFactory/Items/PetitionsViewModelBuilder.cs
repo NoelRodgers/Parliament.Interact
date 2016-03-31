@@ -5,6 +5,7 @@ using Parliament.Interact.Core.ActionsViewFactory.Enum;
 using Parliament.Interact.Core.ActionsViewFactory.Items.Models;
 using Parliament.Interact.Core.Petitions;
 using Parliament.Interact.Core.Petitions.Settings;
+using Parliament.Interact.Core.Domain;
 
 namespace Parliament.Interact.Core.ActionsViewFactory.Items
 {
@@ -26,7 +27,7 @@ namespace Parliament.Interact.Core.ActionsViewFactory.Items
 
         public string ActionView { get { return "_Petitions"; } }
 
-        public object BuildViewModel()
+        public object BuildViewModel(Issue issue)
         {
             var petitions = _service.GetTopPetitionsForPhrase("Academy Schools");
             return new PetitionsModel

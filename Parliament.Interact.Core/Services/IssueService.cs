@@ -16,6 +16,8 @@ namespace Parliament.Interact.Core.Services
                               .Include("FurtherReadings")
                               .Include("IssueActions")
                               .Include("IssueActions.ActionItem")
+                              .Include("IssueActions.IssueActionContents")
+                              .Include("IssueActions.ActionItem.ActionContents")
                               .OrderBy(issue => issue.LogicalOrder)
                               .Take(5).ToList();
             }
