@@ -38,6 +38,7 @@ namespace Parliament.Interact.Web.ViewModelBuilders
             {
                     LinkName = reading.LinkName,
                     LinkUrl = reading.LinkUrl,
+                    Description = reading.Description,
                     DisplayExternalIcon = reading.DisplayExternalIcon
             };
         }

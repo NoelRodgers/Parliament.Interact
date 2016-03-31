@@ -9,6 +9,7 @@ namespace Parliament.Interact.Core.Domain
 
         public string LinkName { get; set; }
         public string LinkUrl { get; set; }
+        public string Description { get; set; }
         public bool DisplayExternalIcon { get; set; }
     }
 }

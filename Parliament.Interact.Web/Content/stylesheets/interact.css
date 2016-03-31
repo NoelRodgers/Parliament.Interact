@@ -190,6 +190,25 @@ footer div span {
     text-align: center;
 }
 
+/* Further reading links section*/
+
+.further-readings h2 {
+    padding-top: 33px;
+}
+
+.further-reading-link {
+    color: #589e9e;
+}
+
+.further-reading-link a {
+    color: #589e9e;
+    text-decoration: underline;
+}
+
+.further-reading-link-list-item {
+    margin-left: -22px;
+}
+
 /* Modal */
 .modal {
     display: none;
