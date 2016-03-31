@@ -100,17 +100,17 @@ namespace Parliament.Interact.Core.Migrations
                 new IssueTimeLine
                 {
                     TimelineType = TimeLineType.Past,
-                    HTMLContent = "<p></p>"
+                    HTMLContent = "<p>On 16 March the Chancellor, George Osborne, presented his Budget to Parliament and announced that by the end of 2020, every school in England should be an academy or free school – or be in the process of becoming one.</p>"
                 },
                 new IssueTimeLine
                 {
                     TimelineType = TimeLineType.Present,
-                    HTMLContent = "<p></p>"
+                    HTMLContent = "<p>The House of Commons Education Committee is running an inquiry into the performance, accountability & governance of Multi-Academy Trusts. <a href='http://www.parliament.uk/business/committees/committees-a-z/commons-select/education-committee/inquiries/parliament-2015/multi-academy-trusts-15-16/'>Inquiry: Multi - Academy Trusts</a> <i class='fa fa-external'></i></p>"
                 },
                 new IssueTimeLine
                 {
                     TimelineType = TimeLineType.Future,
-                    HTMLContent = "<p></p>"
+                    HTMLContent = "<p>On 27 April, the Education Select Committee is due to question Nicky Morgan, Secretary of State for Education, on the Government's policy 'Educational Excellence Everywhere' which includes the proposal for every school to become a free school or academy.</p>"
                 }
             };
 
@@ -203,27 +203,27 @@ namespace Parliament.Interact.Core.Migrations
                         new IssueActionContent
                         {
                             Key = "Title",
-                            Content = "Visit the parliament website"
+                            Content = "Contribute to the inquiry"
                         },
                         new IssueActionContent
                         {
                             Key = "Link",
-                            Content = "http://www.parliament.uk"
+                            Content = "http://www.parliament.uk/business/committees/committees-a-z/commons-select/education-committee/inquiries/parliament-2015/multi-academy-trusts-15-16/"
                         },
                         new IssueActionContent
                         {
                             Key = "LinkName",
-                            Content = "Parliament Website"
+                            Content = "Submit Evidence"
                         },
                         new IssueActionContent
                         {
                             Key = "Eta",
-                            Content = "10 minutes"
+                            Content = "Over 1hr"
                         },
                         new IssueActionContent
                         {
                             Key = "BasicContent",
-                            Content = "Example of basic content"
+                            Content = "<p>Send your views on groups of academy schools (Multiple-Academy Trusts) to the House of Commons Education Committee. The Committee can use information you provide to help it question Ministers or make recommendations to Government.</p>"
                         }
                     }
                 },

@@ -53,15 +53,15 @@ namespace Parliament.Interact.Web.ViewModelBuilders
             var title = "";
             if (model.TimelineType == TimeLineType.Past)
             {
-                title = "What's happened";
+                title = "What has happened?";
             }
             if (model.TimelineType == TimeLineType.Present)
             {
-                title = "What's happening";
+                title = "What's happening now?";
             }
             if (model.TimelineType == TimeLineType.Future)
             {
-                title = "What's happening next";
+                title = "What's about to happen?";
             }
 
             model.Title = title;
