@@ -1,5 +1,6 @@
 ﻿using Parliament.Common.Interfaces;
 using Parliament.Interact.Core.ActionsViewFactory.Enum;
+using Parliament.Interact.Core.Domain;
 
 namespace Parliament.Interact.Core.ActionsViewFactory
 {
@@ -8,7 +9,7 @@ namespace Parliament.Interact.Core.ActionsViewFactory
         ActionViewName ActionName { get; }
         string Title { get; }
         string ActionView { get; }
-        object BuildViewModel();
+        object BuildViewModel(Issue issue);
     }
 
     public interface IActionsViewModelFactoryItemWithInputModel : IActionsViewModelFactoryItem

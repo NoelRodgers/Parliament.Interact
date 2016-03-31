@@ -102,10 +102,10 @@ namespace Parliament.Interact.Web.ViewModelBuilders
                 BackgroundColorClass = AssignBackGroundColorClass(issue.LogicalOrder),
                 FurtherReadings = issue.FurtherReadings.SelectToList(BuildFurtherReadingViewModel),
                 TimeLines = issue.TimeLines.SelectToList(BuildTimeLineViewModel),
-                ActionsItems = _actionsViewModelBuilder.Build(issue.IssueActions.SelectToList(x => x.ActionItem.ViewName).ToArray()),
                 DbImageBase64 = issue.Image,
                 ImageType = issue.ImageType,
-                HasImage = issue.Image != null
+                HasImage = issue.Image != null,
+                ActionsItems = _actionsViewModelBuilder.Build(issue, issue.IssueActions.SelectToList(x => x.ActionItem.ViewName).ToArray())
             };
         }
     }

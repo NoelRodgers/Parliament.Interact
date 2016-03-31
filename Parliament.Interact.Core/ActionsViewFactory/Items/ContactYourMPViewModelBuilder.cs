@@ -6,6 +6,7 @@ using Parliament.Interact.Core.ActionsViewFactory.Items.Models;
 using Parliament.MPContact;
 using Parliament.MPContact.Settings;
 using Parliament.Common.Extensions;
+using Parliament.Interact.Core.Domain;
 
 namespace Parliament.Interact.Core.ActionsViewFactory.Items
 {
@@ -24,7 +25,7 @@ namespace Parliament.Interact.Core.ActionsViewFactory.Items
         public ActionViewName ActionName { get { return ActionViewName.ContactYourMP; } }
         public string Title { get { return "Contact your MP"; } }
         public string ActionView { get { return "_ContactYourMP"; } }
-        public object BuildViewModel()
+        public object BuildViewModel(Issue issue)
         {
             return new ContactYourMPModel();
         }
