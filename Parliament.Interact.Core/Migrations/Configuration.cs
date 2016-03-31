@@ -44,7 +44,7 @@ namespace Parliament.Interact.Core.Migrations
                     new ActionContent()
                     {
                         Key = "BasicContent",
-                        Content = "Basic Content for MP contact"
+                        Content = "<p>Write to your MP about academy schools. Your MP represents you. They can raise your concerns in Parliament and question Government.</p>"
                     }
                 }  },
                 new ActionItem {ViewName = ActionViewName.Links, ActionContents = new List<ActionContent>()
@@ -80,7 +80,7 @@ namespace Parliament.Interact.Core.Migrations
                     new ActionContent()
                     {
                         Key = "BasicContent",
-                        Content = "Basic Content for Petitions"
+                        Content = "<p>Sign or Start a petition about academy schools. The Government must respond to petitions that get 10,000 signatures. A petition that receives 100,000 signatures may be debated in Parliament.</p>"
                     }
                 }}
             };
@@ -125,16 +125,6 @@ namespace Parliament.Interact.Core.Migrations
                     DisplayExternalIcon = false
                 }
             };
-
-            var originalImage = System.Drawing.Image.FromFile("c:\\school.jpg");
-            var dbImageType = MimeMapping.GetMimeMapping("c:\\school.jpg");
-            byte[] dbImage;
-    
-            using (var ms = new MemoryStream())
-            {
-                originalImage.Save(ms, originalImage.RawFormat);
-                dbImage = ms.ToArray();
-            }
 
         var issues = new List<Issue>
             {
