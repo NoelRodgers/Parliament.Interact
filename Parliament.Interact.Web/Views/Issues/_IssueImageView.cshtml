@@ -1,0 +1,6 @@
+﻿@model Parliament.Interact.Web.Models.IssueViewModel
+
+@if (Model.HasImage)
+{
+    <img class="issue-content-img" src="@Url.Action("GetImageFile", "Issues", new { issueId = Model.Id })" />
+}

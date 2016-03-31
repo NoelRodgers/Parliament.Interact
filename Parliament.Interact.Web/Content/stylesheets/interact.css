@@ -111,22 +111,22 @@
     padding-left: 20px;
 }
 
-    .panel-heading.orangeHeaderBackground {
-        background-color: #b14d07;
-    }
+.panel-heading.orangeHeaderBackground {
+    background-color: #b14d07;
+}
 
-    .panel-heading.blueHeaderBackground {
-        background-color: #589e9e;
-    }
+.panel-heading.blueHeaderBackground {
+    background-color: #589e9e;
+}
 
-    .panel-heading.purpleHeaderBackground {
-        background-color: #6e6095;
-    }
+.panel-heading.purpleHeaderBackground {
+    background-color: #6e6095;
+}
 
-    .panel-heading h1 {
-        font-size: 60px;
-        color: #ffffff;
-    }
+.panel-heading h1 {
+    font-size: 60px;
+    color: #ffffff;
+}
 
 .panel-header-index {
     margin-right: 40px;
@@ -160,6 +160,10 @@
     background: #ffffff;
 }
 
+.issue-content-img {
+    width: 100%;
+    height: auto;
+}
 /* footer section*/
 
 footer div p {
