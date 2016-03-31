@@ -2,5 +2,10 @@
 
 <div class="col-xs-12">
     <h2>What Is @Model.Title?</h2>
-    @Html.Raw(Model.Content)
+    <div class="col-md-6">
+        @Html.Raw(Model.Content)
+    </div>
+    <div class="col-md-6">
+        @Html.Partial("_IssueImageView", Model);
+    </div>
 </div>

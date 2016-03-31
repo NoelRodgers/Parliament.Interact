@@ -58,7 +58,9 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -147,6 +149,14 @@
     <Compile Include="Migrations\201603301556431_Added IssueActionContent model.Designer.cs">
       <DependentUpon>201603301556431_Added IssueActionContent model.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201603311016386_Added Image and ImageType fields to Issue.cs" />
+    <Compile Include="Migrations\201603311016386_Added Image and ImageType fields to Issue.Designer.cs">
+      <DependentUpon>201603311016386_Added Image and ImageType fields to Issue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603311402180_Merge migration.cs" />
+    <Compile Include="Migrations\201603311402180_Merge migration.Designer.cs">
+      <DependentUpon>201603311402180_Merge migration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Petitions\Contract\PetitionContract.cs" />
     <Compile Include="Petitions\IPetition.cs" />
@@ -215,8 +225,16 @@
     <EmbeddedResource Include="Migrations\201603301556431_Added IssueActionContent model.resx">
       <DependentUpon>201603301556431_Added IssueActionContent model.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603311016386_Added Image and ImageType fields to Issue.resx">
+      <DependentUpon>201603311016386_Added Image and ImageType fields to Issue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603311402180_Merge migration.resx">
+      <DependentUpon>201603311402180_Merge migration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Migrations\school.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
