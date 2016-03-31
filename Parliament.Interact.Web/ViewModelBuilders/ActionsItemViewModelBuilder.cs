@@ -25,12 +25,16 @@ namespace Parliament.Interact.Web.ViewModelBuilders
 
         public ActionItemViewModel BuildActionItemViewModel(IActionsViewModelFactoryItem item, Issue issue)
         {
-            return new ActionItemViewModel
+            // ReSharper disable once UseObjectOrCollectionInitializer
+            // Suppressed as Title is sometimes built from BuildViewModel
+            var model = new ActionItemViewModel
             {
-                Title = item.Title,
                 ActionView = "Actions/{0}".FormatString(item.ActionView),
                 ActionModel = item.BuildViewModel(issue)
             };
+
+            model.Title = item.Title;
+            return model;
         }
     }
 }

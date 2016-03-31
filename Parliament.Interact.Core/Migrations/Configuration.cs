@@ -125,7 +125,7 @@ namespace Parliament.Interact.Core.Migrations
                         new IssueActionContent
                         {
                             Key = "Title",
-                            Content = "Submission Deadline is Monday 25 April 2016"
+                            Content = "Visit the parliament website"
                         },
                         new IssueActionContent
                         {
@@ -135,7 +135,7 @@ namespace Parliament.Interact.Core.Migrations
                         new IssueActionContent
                         {
                             Key = "LinkName",
-                            Content = "SUBMIT EVIDENCE"
+                            Content = "Parliament Website"
                         }
                     }
                 },
