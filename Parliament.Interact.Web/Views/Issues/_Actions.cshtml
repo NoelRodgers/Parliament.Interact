@@ -9,6 +9,9 @@
             <div class="parl-action-time">
                 @action.Eta
             </div>
+            <div class="parl-action-basic-content">
+                @Html.Raw(action.BasicContent)
+            </div>
             <div class="parl-action-content">
                 @Html.Partial(action.ActionView, action.ActionModel)
             </div>
