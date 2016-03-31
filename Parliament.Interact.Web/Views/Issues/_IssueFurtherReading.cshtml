@@ -2,14 +2,17 @@
 
 <div class="further-readings">
     <h2>Further reading</h2>
-    @foreach(var reading in Model.FurtherReadings)
-    {
-        <div>
-            <a href=@reading.LinkUrl target="_blank">@reading.LinkName</a>
-            @if(reading.DisplayExternalIcon == true)
-            {
-                <i class="fa fa-external-link"></i>
-            }
-        </div>
-    }
+    <ul>
+        @foreach (var reading in Model.FurtherReadings)
+        {
+        <li class="further-reading-link-list-item">
+            <span class="further-reading-link">
+                <a href=@reading.LinkUrl target="_blank">@reading.LinkName</a>@if (reading.DisplayExternalIcon == true)
+                {
+                    <i class="fa fa-external-link"></i>
+                }
+            </span> - @reading.Description
+        </li>
+        }
+    </ul>
 </div>

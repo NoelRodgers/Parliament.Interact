@@ -118,21 +118,24 @@ namespace Parliament.Interact.Core.Migrations
             {
                 new IssueFurtherReading
                 {
-                    LinkName = "link name 1",
-                    LinkUrl = "###",
+                    LinkName = "Read a report by the Education Commitee",
+                    LinkUrl = "http://www.parliament.uk/business/committees/committees-a-z/commons-select/education-committee/news/academies-and-free-schools-government-response-to-be-published/",
+                    Description = "about Academies and Free Schools (January 2015)",
                     DisplayExternalIcon = true
                 },
                 new IssueFurtherReading
                 {
-                    LinkName = "link name 2",
-                    LinkUrl = "###",
+                    LinkName = "BBC News article",
+                    LinkUrl = "http://www.bbc.co.uk/news/education-13274090",
+                    Description = "What does it mean to be an Academy School? (BBC News, March 2016)",
                     DisplayExternalIcon = true
                 },
                 new IssueFurtherReading
                 {
-                    LinkName = "link name 3",
-                    LinkUrl = "###",
-                    DisplayExternalIcon = false
+                    LinkName = "Nicky Morgan’s Press release",
+                    LinkUrl = "https://www.gov.uk/government/news/nicky-morgan-unveils-new-vision-for-the-education-system",
+                    Description = "Nicky Morgan unveils new vision for the education system (GOV.UK, March 2016)",
+                    DisplayExternalIcon = true
                 }
             };
 
