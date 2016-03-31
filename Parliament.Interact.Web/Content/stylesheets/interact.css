@@ -9,7 +9,7 @@
 
 .header-links li {
     display: inline;
-    padding: 5px;
+    padding: 0 0 0 15px;
     font-size: 16px;
     color: #589e9e;
     list-style-type: none;
@@ -17,13 +17,35 @@
 
     .header-links li:first-child {
         border-right: 2px solid #589e9e;
-        padding-right: 10px;
+        padding: 0 20px 0 20px;
     }
 
     .header-links li a {
         text-decoration: none;
         color: #333333;
     }
+
+    .panel-group .panel-heading + .panel-collapse .panel-body {
+        border-top: 0;
+    }
+
+    .panel-body {
+        padding: 50px;
+    }
+
+    h2 {
+        margin-top: 0;
+        font-size: 36px;
+        color: #589e9e;
+    }
+
+    .parl-expand-collapse {
+        width: 200px;
+    }
+
+
+
+    
 
 .logo {
     position: relative;
@@ -68,18 +90,22 @@
     margin-top: 10px;
 }
 
-.parl-button-group a {
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
+    .parl-button-group a {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
 
 .panel-group > .issues-panel {
     border-radius: 8px;
     margin-bottom: 40px;
+    max-width: 1170px;
 }
 
 .panel-heading {
     height: 120px;
+    max-width: 1170px;
+    border-radius: 8px;
+    padding-left: 20px;
 }
 
     .panel-heading.orangeHeaderBackground {
@@ -162,6 +188,26 @@ footer div span {
     display: none;
 }
 
+.parl-center {
+    margin: auto;
+}
+
+.panel-heading .panel-heading-button {
+    padding-right: 70px;
+}
+
+.panel-heading .panel-heading-button .btn {
+    background-image: none;
+    background-color: transparent;
+    color: #ffffff;
+    border-color: #ffffff;
+    border: 2px solid;
+}
+
+.panel-title {
+    padding-left: 10px;
+}
+
 /* Media queries for responsive styling */
 
 @media (max-width: 992px) { /* this is for a tablet */
@@ -176,7 +222,7 @@ footer div span {
     }
 
     .panel-group > .issues-panel {
-        margin-bottom: 25px;    
+        margin-bottom: 25px;
     }
 
     .panel-heading h1 {
@@ -184,7 +230,7 @@ footer div span {
     }
 
     .panel-heading .panel-heading-button {
-        padding-right: 15px;    
+        padding-right: 15px;
     }
 
     .panel-heading-button .btn {
@@ -225,7 +271,7 @@ footer div span {
     }
 
     .panel-group > .issues-panel {
-        margin-bottom: 15px;    
+        margin-bottom: 15px;
     }
 
     .panel-heading {
@@ -235,6 +281,7 @@ footer div span {
 
     .panel-header {
         padding-right: 0;
+        padding-left: 20px;
     }
 
     .panel-heading h1 {
@@ -251,7 +298,7 @@ footer div span {
     }
 
     .panel-heading .panel-heading-button {
-        padding-right: 0;    
+        padding-right: 0;
     }
 
     .footer-description {

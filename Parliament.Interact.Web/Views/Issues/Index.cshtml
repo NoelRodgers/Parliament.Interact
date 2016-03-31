@@ -12,17 +12,13 @@
                 var collapseId = "collapse" + issue.Id;
                 var headingId = "heading" + issue.Id;
 
-                <div class="issues-panel panel panel-default">
+                <div class="issues-panel panel panel-default parl-center">
                     <div class="panel-heading @issue.BackgroundColorClass" role="tab" id="headingOne">
                         <div class="panel-header col-xs-9">
-                            <h1 class="panel-title"><span class="panel-header-index">#@issue.LogicalOrderId</span> @issue.Title</h1>
+                            <h1 class="panel-title"># @issue.Title</h1>
                         </div>
-                        <div class="col-xs-2 shareIcons">
-                        </div>
-                        <div class="panel-heading-button col-md-2 col-xs-3">
-                            <a class="btn btn-default btn-block" role="button" data-toggle="collapse" data-parent="#accordion" href="#@collapseId" aria-expanded="false" aria-controls="@collapseId">
-                                OPEN
-                            </a>
+                        <div class="panel-heading-button col-md-3 col-xs-3">
+                            <a class="btn btn-default btn-block parl-expand-collapse" role="button" data-toggle="collapse" data-parent="#accordion" href="#@collapseId" aria-expanded="false" aria-controls="@collapseId">OPEN</a>
                         </div>
                         <div class="col-sm-1 hidden-xs hidden-sm last-panel-heading-column"></div>
                     </div>
