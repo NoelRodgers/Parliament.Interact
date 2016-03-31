@@ -2,11 +2,13 @@
 
 <div class="col-xs-12">
     <h2>What Is @Model.Title?</h2>
-    @Html.Raw(Model.Content)
-
-    @if (Model.HasImage)
-    {
-        <img src="@Url.Action("GetImageFile", "Issues", new { issueId = Model.Id })" />
-
-    }
+    <div class="col-md-6">
+        @Html.Raw(Model.Content)
+    </div>
+    <div class="col-md-6">
+        @if (Model.HasImage)
+        {
+            <img class="issue-content-img" src="@Url.Action("GetImageFile", "Issues", new { issueId = Model.Id })" />
+        }
+    </div>
 </div>
