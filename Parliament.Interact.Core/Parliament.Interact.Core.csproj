@@ -71,6 +71,7 @@
     <Compile Include="ActionsViewFactory\Enum\ActionViewName.cs" />
     <Compile Include="ActionsViewFactory\IActionsViewModelFactory.cs" />
     <Compile Include="ActionsViewFactory\IActionsViewModelFactoryItem.cs" />
+    <Compile Include="ActionsViewFactory\Items\Base\ActionsItemViewModelBuilderBase.cs" />
     <Compile Include="ActionsViewFactory\Items\ContactYourMPViewModelBuilder.cs" />
     <Compile Include="ActionsViewFactory\Items\Models\ContactYourMPModel.cs" />
     <Compile Include="ActionsViewFactory\Items\Models\ContactYourMPResultModel.cs" />
