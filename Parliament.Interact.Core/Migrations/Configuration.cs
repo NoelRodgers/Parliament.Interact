@@ -31,9 +31,60 @@ namespace Parliament.Interact.Core.Migrations
 
             var actionItems = new List<ActionItem>
             {
-                new ActionItem {ViewName = ActionViewName.ContactYourMP},
-                new ActionItem {ViewName = ActionViewName.Links},
-                new ActionItem {ViewName = ActionViewName.Petitions}
+                new ActionItem {ViewName = ActionViewName.ContactYourMP, ActionContents = new List<ActionContent>()
+                {
+                    new ActionContent()
+                    {
+                        Key = "Title",
+                        Content = "Contact your MP"
+                    },
+                    new ActionContent()
+                    {
+                        Key = "Eta",
+                        Content = "Approx 15mins"
+                    },
+                    new ActionContent()
+                    {
+                        Key = "BasicContent",
+                        Content = "<p>Write to your MP about academy schools. Your MP represents you. They can raise your concerns in Parliament and question Government.</p>"
+                    }
+                }  },
+                new ActionItem {ViewName = ActionViewName.Links, ActionContents = new List<ActionContent>()
+                {
+                    new ActionContent()
+                    {
+                        Key = "Title",
+                        Content = "Links"
+                    },
+                    new ActionContent()
+                    {
+                        Key = "Eta",
+                        Content = "10 minutes"
+                    },
+                    new ActionContent()
+                    {
+                        Key = "BasicContent",
+                        Content = "Basic Content for Links"
+                    }
+                }},
+                new ActionItem {ViewName = ActionViewName.Petitions, ActionContents = new List<ActionContent>()
+                {
+                    new ActionContent()
+                    {
+                        Key = "Title",
+                        Content = "Sign or start a petition"
+                    },
+                    new ActionContent()
+                    {
+                        Key = "Eta",
+                        Content = "Approx 5mins"
+                    },
+                    new ActionContent()
+                    {
+                        Key = "BasicContent",
+                        Content = "<p>Sign or Start a petition about academy schools. The Government must respond to petitions that get 10,000 signatures. A petition that receives 100,000 signatures may be debated in Parliament.</p>"
+                    }
+                }}
             };
 
             var timelines = new List<IssueTimeLine>
@@ -155,6 +206,16 @@ namespace Parliament.Interact.Core.Migrations
                         {
                             Key = "LinkName",
                             Content = "Parliament Website"
+                        },
+                        new IssueActionContent
+                        {
+                            Key = "Eta",
+                            Content = "10 minutes"
+                        },
+                        new IssueActionContent
+                        {
+                            Key = "BasicContent",
+                            Content = "Example of basic content"
                         }
                     }
                 },

@@ -1,32 +1,29 @@
 ﻿using System;
 using System.Diagnostics.CodeAnalysis;
-using Parliament.Common.Interfaces;
 using Parliament.Interact.Core.ActionsViewFactory.Enum;
 using Parliament.Interact.Core.ActionsViewFactory.Items.Models;
 using Parliament.MPContact;
-using Parliament.MPContact.Settings;
 using Parliament.Common.Extensions;
+using Parliament.Interact.Core.ActionsViewFactory.Items.Base;
 using Parliament.Interact.Core.Domain;
 
 namespace Parliament.Interact.Core.ActionsViewFactory.Items
 {
     [SuppressMessage("ReSharper", "ConvertPropertyToExpressionBody")] //Supressed as if we let Resharper do that it will break if we try to build on msbuild with our .NET Version!
-    public class ContactYourMPViewModelBuilder : IActionsViewModelFactoryItemWithInputModel
+    public class ContactYourMPViewModelBuilder : ActionsItemViewModelBuilderBase, IActionsViewModelFactoryItemWithInputModel
     {
         private readonly IMemberContactService _service;
-        private MemberSettings _settings;
 
-        public ContactYourMPViewModelBuilder(IMemberContactService service, IConfigurationBuilder configurationBuilder)
+        public ContactYourMPViewModelBuilder(IMemberContactService service)
         {
             _service = service;
-            _settings = configurationBuilder.GetConfiguration<MemberSettings>("Members");
         }
 
-        public ActionViewName ActionName { get { return ActionViewName.ContactYourMP; } }
-        public string Title { get { return "Contact your MP"; } }
+        public override ActionViewName ActionName { get { return ActionViewName.ContactYourMP; } }
         public string ActionView { get { return "_ContactYourMP"; } }
         public object BuildViewModel(Issue issue)
         {
+            Build(issue);
             return new ContactYourMPModel();
         }
 
