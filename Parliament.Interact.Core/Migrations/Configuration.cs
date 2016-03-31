@@ -1,8 +1,10 @@
+using System;
 using System.Collections.Generic;
 using Parliament.Interact.Core.ActionsViewFactory.Enum;
 using Parliament.Interact.Core.Domain;
 using System.Data.Entity.Migrations;
 using System.IO;
+using System.Reflection;
 using System.Web;
 using Parliament.Interact.Core.Domain.Context;
 
@@ -75,8 +77,11 @@ namespace Parliament.Interact.Core.Migrations
                 }
             };
 
-            var originalImage = System.Drawing.Image.FromFile("c:\\school.jpg");
-            var dbImageType = MimeMapping.GetMimeMapping("c:\\school.jpg");
+            var filename = new UriBuilder(Assembly.GetExecutingAssembly().CodeBase);
+            var path = Uri.UnescapeDataString(filename.Path);
+            var directory = Path.GetDirectoryName(path) + "\\Migrations\\school.jpg";
+            var originalImage = System.Drawing.Image.FromFile(directory);
+            var dbImageType = MimeMapping.GetMimeMapping(directory);
             byte[] dbImage;
     
             using (var ms = new MemoryStream())
