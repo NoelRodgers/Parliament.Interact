@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Parliament.Interact.Core.Domain
 {
-    public class IssueActionContent
+    public class IssueActionContent : IActionContent
     {
         [Key]
         public int Id { get; set; }

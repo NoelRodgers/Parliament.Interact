@@ -8,8 +8,6 @@ namespace Parliament.Interact.Core.ActionsViewFactory
     {
         ActionViewName ActionName { get; }
         string Title { get; }
-        string Eta { get; }
-        string BasicContent { get; }
         string ActionView { get; }
         object BuildViewModel(Issue issue);
     }
