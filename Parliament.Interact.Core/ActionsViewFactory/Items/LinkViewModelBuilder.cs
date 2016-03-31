@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Parliament.Interact.Core.ActionsViewFactory.Enum;
-using System.Diagnostics.CodeAnalysis;
 using Parliament.Interact.Core.Domain;
 using Parliament.Interact.Core.ActionsViewFactory.Items.Models;
 
@@ -31,19 +31,19 @@ namespace Parliament.Interact.Core.ActionsViewFactory
 
         public string Title
         {
-            get
-            {
-                return "";
-            }
+            get; private set;
         }
 
         public object BuildViewModel(Issue issue)
         {
             var issueAction = issue.IssueActions.Single(x => x.ActionItem.ViewName == ActionName);
-            var content = issueAction.IssueActionContents.Single(x => x.Key == "Link");
+            var linkContent = issueAction.IssueActionContents.Single(x => x.Key == "Link");
+            var linkNameContent = issueAction.IssueActionContents.Single(x => x.Key == "LinkName");
+            Title = issueAction.IssueActionContents.Single(x => x.Key == "Title").Content;
             return new LinkModel
             {
-                Link = content.Content
+                Link = linkContent.Content,
+                LinkName = linkNameContent.Content
             };
         }
     }

@@ -124,8 +124,18 @@ namespace Parliament.Interact.Core.Migrations
                     {
                         new IssueActionContent
                         {
+                            Key = "Title",
+                            Content = "Submission Deadline is Monday 25 April 2016"
+                        },
+                        new IssueActionContent
+                        {
                             Key = "Link",
-                            Content = "www.google.co.uk"
+                            Content = "http://www.parliament.uk"
+                        },
+                        new IssueActionContent
+                        {
+                            Key = "LinkName",
+                            Content = "SUBMIT EVIDENCE"
                         }
                     }
                 },
