@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Parliament.Common.Extensions;
 using Parliament.Interact.Core.ActionsViewFactory.Enum;
+using System.Linq;
 
 namespace Parliament.Interact.Core.ActionsViewFactory
 {
@@ -13,9 +14,10 @@ namespace Parliament.Interact.Core.ActionsViewFactory
             _actions = actions;
         }
 
-        public List<IActionsViewModelFactoryItem> GetActionsByName(List<ActionViewName> actionNames)
+        public List<T> GetActionsByName<T>(params ActionViewName[] actionNames)
+            where T : IActionsViewModelFactoryItem
         {
-            return _actions.WhereToList(x => actionNames.Contains(x.ActionName));
+            return _actions.WhereToList(x => actionNames.ToList().Contains(x.ActionName)).SelectToList(x => (T)x);
         }
     }
 }

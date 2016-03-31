@@ -15,6 +15,7 @@ namespace Parliament.Interact.Core.IoC
         {
             For<IActionsViewModelFactoryItem>().Add<ContactYourMPViewModelBuilder>();
             For<IActionsViewModelFactoryItem>().Add<PetitionsViewModelBuilder>();
+            For<IActionsViewModelFactoryItem>().Add<LinkViewModelBuilder>();
         }
     }
 }

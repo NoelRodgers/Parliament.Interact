@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parliament.Common", "Parlia
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parliament.Interact.Core", "Parliament.Interact.Core\Parliament.Interact.Core.csproj", "{B69225D2-6687-4FF7-8DA8-AEA5F40D813D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parliament.MPContact", "Parliament.MPContact\Parliament.MPContact.csproj", "{37572A90-6096-4B85-ACD2-9BFFDE79342C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,18 @@ Global
 		{B69225D2-6687-4FF7-8DA8-AEA5F40D813D}.QA|Any CPU.Build.0 = Release|Any CPU
 		{B69225D2-6687-4FF7-8DA8-AEA5F40D813D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B69225D2-6687-4FF7-8DA8-AEA5F40D813D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37572A90-6096-4B85-ACD2-9BFFDE79342C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37572A90-6096-4B85-ACD2-9BFFDE79342C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37572A90-6096-4B85-ACD2-9BFFDE79342C}.DevCi|Any CPU.ActiveCfg = Debug|Any CPU
+		{37572A90-6096-4B85-ACD2-9BFFDE79342C}.DevCi|Any CPU.Build.0 = Debug|Any CPU
+		{37572A90-6096-4B85-ACD2-9BFFDE79342C}.PPE|Any CPU.ActiveCfg = Release|Any CPU
+		{37572A90-6096-4B85-ACD2-9BFFDE79342C}.PPE|Any CPU.Build.0 = Release|Any CPU
+		{37572A90-6096-4B85-ACD2-9BFFDE79342C}.Prod|Any CPU.ActiveCfg = Release|Any CPU
+		{37572A90-6096-4B85-ACD2-9BFFDE79342C}.Prod|Any CPU.Build.0 = Release|Any CPU
+		{37572A90-6096-4B85-ACD2-9BFFDE79342C}.QA|Any CPU.ActiveCfg = Release|Any CPU
+		{37572A90-6096-4B85-ACD2-9BFFDE79342C}.QA|Any CPU.Build.0 = Release|Any CPU
+		{37572A90-6096-4B85-ACD2-9BFFDE79342C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37572A90-6096-4B85-ACD2-9BFFDE79342C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

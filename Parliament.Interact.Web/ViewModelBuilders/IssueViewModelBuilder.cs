@@ -99,7 +99,7 @@ namespace Parliament.Interact.Web.ViewModelBuilders
                 BackgroundColorClass = AssignBackGroundColorClass(issue.LogicalOrder),
                 FurtherReadings = issue.FurtherReadings.SelectToList(BuildFurtherReadingViewModel),
                 TimeLines = issue.TimeLines.SelectToList(BuildTimeLineViewModel),
-                ActionsItems = _actionsViewModelBuilder.Build(issue.IssueActions.SelectToList(x => x.ActionItem.ViewName).ToArray())
+                ActionsItems = _actionsViewModelBuilder.Build(issue, issue.IssueActions.SelectToList(x => x.ActionItem.ViewName).ToArray())
             };
         }
     }

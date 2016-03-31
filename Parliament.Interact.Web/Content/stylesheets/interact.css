@@ -80,6 +80,9 @@
     font-weight: bold;
 }
 
+.error-message {
+    color: red;
+}
 /* Accordion Section */
 
 .panel-group {

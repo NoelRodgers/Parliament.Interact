@@ -73,12 +73,17 @@
     <Compile Include="ActionsViewFactory\IActionsViewModelFactoryItem.cs" />
     <Compile Include="ActionsViewFactory\Items\ContactYourMPViewModelBuilder.cs" />
     <Compile Include="ActionsViewFactory\Items\Models\ContactYourMPModel.cs" />
+    <Compile Include="ActionsViewFactory\Items\Models\ContactYourMPResultModel.cs" />
+    <Compile Include="ActionsViewFactory\Items\Models\LinkModel.cs" />
     <Compile Include="ActionsViewFactory\Items\Models\PetitionItemModel.cs" />
     <Compile Include="ActionsViewFactory\Items\Models\PetitionsModel.cs" />
     <Compile Include="ActionsViewFactory\Items\PetitionsViewModelBuilder.cs" />
+    <Compile Include="ActionsViewFactory\Items\LinkViewModelBuilder.cs" />
+    <Compile Include="Domain\ActionContent.cs" />
     <Compile Include="Domain\ActionItem.cs" />
     <Compile Include="Domain\Context\InteractDbContext.cs" />
     <Compile Include="Domain\Issue.cs" />
+    <Compile Include="Domain\IssueActionContent.cs" />
     <Compile Include="Domain\IssueTimeLine.cs" />
     <Compile Include="Domain\TimeLineEnumerable.cs" />
     <Compile Include="Domain\IssueFurtherReading.cs" />
@@ -132,6 +137,14 @@
     <Compile Include="Migrations\201603291308258_Altering Issues domain object to correctly connect to the IssueActions linker table.Designer.cs">
       <DependentUpon>201603291308258_Altering Issues domain object to correctly connect to the IssueActions linker table.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201603301554252_Added ActionContent Model.cs" />
+    <Compile Include="Migrations\201603301554252_Added ActionContent Model.Designer.cs">
+      <DependentUpon>201603301554252_Added ActionContent Model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603301556431_Added IssueActionContent model.cs" />
+    <Compile Include="Migrations\201603301556431_Added IssueActionContent model.Designer.cs">
+      <DependentUpon>201603301556431_Added IssueActionContent model.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Petitions\Contract\PetitionContract.cs" />
     <Compile Include="Petitions\IPetition.cs" />
@@ -151,6 +164,10 @@
     <ProjectReference Include="..\Parliament.Common\Parliament.Common.csproj">
       <Project>{a43982c3-100b-43d1-a547-99f4d38dcfbe}</Project>
       <Name>Parliament.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Parliament.MPContact\Parliament.MPContact.csproj">
+      <Project>{37572a90-6096-4b85-acd2-9bffde79342c}</Project>
+      <Name>Parliament.MPContact</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -189,6 +206,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603291308258_Altering Issues domain object to correctly connect to the IssueActions linker table.resx">
       <DependentUpon>201603291308258_Altering Issues domain object to correctly connect to the IssueActions linker table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603301554252_Added ActionContent Model.resx">
+      <DependentUpon>201603301554252_Added ActionContent Model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603301556431_Added IssueActionContent model.resx">
+      <DependentUpon>201603301556431_Added IssueActionContent model.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

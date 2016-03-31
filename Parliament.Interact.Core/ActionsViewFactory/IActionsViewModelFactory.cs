@@ -5,6 +5,7 @@ namespace Parliament.Interact.Core.ActionsViewFactory
 {
     public interface IActionsViewModelFactory
     {
-        List<IActionsViewModelFactoryItem> GetActionsByName(List<ActionViewName> actionNames);
+        List<T> GetActionsByName<T>(params ActionViewName[] actionNames)
+              where T : IActionsViewModelFactoryItem;
     }
 }

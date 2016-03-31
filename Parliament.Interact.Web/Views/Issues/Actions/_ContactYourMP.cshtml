@@ -1,4 +1,17 @@
 ﻿@model Parliament.Interact.Core.ActionsViewFactory.Items.Models.ContactYourMPModel
-
 <div class="parl-contact-your-mp parl-action">
+    @using (Ajax.BeginForm("GetMPLink", "Issues",
+                        new AjaxOptions
+                        {
+                            HttpMethod = "POST",
+                            InsertionMode = InsertionMode.Replace,
+                            UpdateTargetId = "postcode-form"
+        }))
+    {
+        <div id="postcode-form">
+            @Html.TextBoxFor(x => x.Postcode)
+            <input type="submit" id="postcode-button" value="Go"/>
+            <span class="error-message">@Model.ErrorMessage</span>
+        </div>
+    }
 </div>
