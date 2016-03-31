@@ -5,6 +5,7 @@ using Parliament.Interact.Core.Domain;
 using System.Data.Entity.Migrations;
 using System.IO;
 using System.Reflection;
+using System.Text;
 using System.Web;
 using Parliament.Interact.Core.Domain.Context;
 
@@ -29,6 +30,13 @@ namespace Parliament.Interact.Core.Migrations
             context.FurtherReadings.RemoveRange(context.FurtherReadings);
             context.IssueTimeLines.RemoveRange(context.IssueTimeLines);
 
+            var issueContent = new StringBuilder();
+            issueContent.Append(
+                "<p>The Government announced in March 2016 that every primary and secondary state school become an academy. (George Osborne, <a href='http://www.publications.parliament.uk/pa/cm201516/cmhansrd/cm160316/debtext/160316-0001.htm#16031632000621'>Budget Statement, 16 March 2016 <i class='fa fa-external'></i></a>)</p>");
+            issueContent.Append("<p>Academies are state schools, independent of local authority control. They are funded directly by central government rather than by local authorities. By 2015 almost 60% of state-funded secondary schools were academies, up from 6% at the start of 2010.</p>");
+            issueContent.Append("<h5>Should state schools become independent of local authority control?</h5>");
+            issueContent.Append("<p>Government argues that freedom from local authority control brings opportunities for innovation, better leadership and higher attainment and that academies have had a positive impact on other schools in their local area.</p>");
+            issueContent.Append("<p>Others say that the freedoms afforded to academies, and their rapid expansion, have the potential to result in financial problems and lapses in standards. (House of Commons Library, <a href='http://www.parliament.uk/business/publications/research/key-issues-parliament-2015/education/academies-and-free-schools/'>Key Issues for the 2015 Parliament <i class='fa fa-external'></i></a>)</p>");
             var actionItems = new List<ActionItem>
             {
                 new ActionItem {ViewName = ActionViewName.ContactYourMP, ActionContents = new List<ActionContent>()
@@ -92,17 +100,17 @@ namespace Parliament.Interact.Core.Migrations
                 new IssueTimeLine
                 {
                     TimelineType = TimeLineType.Past,
-                    HTMLContent = "<p>Debated last week in the House of Commons.</p>"
+                    HTMLContent = "<p>On 16 March the Chancellor, George Osborne, presented his Budget to Parliament and announced that by the end of 2020, every school in England should be an academy or free school – or be in the process of becoming one.</p>"
                 },
                 new IssueTimeLine
                 {
                     TimelineType = TimeLineType.Present,
-                    HTMLContent = "<p>Debating this week in the House of Commons.</p>"
+                    HTMLContent = "<p>The House of Commons Education Committee is running an inquiry into the performance, accountability & governance of Multi-Academy Trusts. <a href='http://www.parliament.uk/business/committees/committees-a-z/commons-select/education-committee/inquiries/parliament-2015/multi-academy-trusts-15-16/'>Inquiry: Multi - Academy Trusts</a> <i class='fa fa-external'></i></p>"
                 },
                 new IssueTimeLine
                 {
                     TimelineType = TimeLineType.Future,
-                    HTMLContent = "<p>Debating next week in the House of Commons.</p>"
+                    HTMLContent = "<p>On 27 April, the Education Select Committee is due to question Nicky Morgan, Secretary of State for Education, on the Government's policy 'Educational Excellence Everywhere' which includes the proposal for every school to become a free school or academy.</p>"
                 }
             };
 
@@ -171,7 +179,7 @@ namespace Parliament.Interact.Core.Migrations
                 {
                     Title = "Academy Schools",
                     LogicalOrder = 1,
-                    Content = "<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>",
+                    Content = issueContent.ToString(),
                     TimeLines = timelines,
                     FurtherReadings = furtherReadings,
                     Image = dbImage,
@@ -195,27 +203,27 @@ namespace Parliament.Interact.Core.Migrations
                         new IssueActionContent
                         {
                             Key = "Title",
-                            Content = "Visit the parliament website"
+                            Content = "Contribute to the inquiry"
                         },
                         new IssueActionContent
                         {
                             Key = "Link",
-                            Content = "http://www.parliament.uk"
+                            Content = "http://www.parliament.uk/business/committees/committees-a-z/commons-select/education-committee/inquiries/parliament-2015/multi-academy-trusts-15-16/"
                         },
                         new IssueActionContent
                         {
                             Key = "LinkName",
-                            Content = "Parliament Website"
+                            Content = "Submit Evidence"
                         },
                         new IssueActionContent
                         {
                             Key = "Eta",
-                            Content = "10 minutes"
+                            Content = "Over 1hr"
                         },
                         new IssueActionContent
                         {
                             Key = "BasicContent",
-                            Content = "Example of basic content"
+                            Content = "<p>Send your views on groups of academy schools (Multiple-Academy Trusts) to the House of Commons Education Committee. The Committee can use information you provide to help it question Ministers or make recommendations to Government.</p>"
                         }
                     }
                 },
