@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
 using Parliament.Common.Extensions;
 using Parliament.Interact.Core.Domain;
 using Parliament.Interact.Core.Services;
@@ -76,7 +79,7 @@ namespace Parliament.Interact.Web.ViewModelBuilders
             if (logicalOrderId % 3 == 1)
             {
                 return "blueHeaderBackground";
-        }
+            }
 
             if (logicalOrderId % 3 == 2)
             {
@@ -99,6 +102,9 @@ namespace Parliament.Interact.Web.ViewModelBuilders
                 BackgroundColorClass = AssignBackGroundColorClass(issue.LogicalOrder),
                 FurtherReadings = issue.FurtherReadings.SelectToList(BuildFurtherReadingViewModel),
                 TimeLines = issue.TimeLines.SelectToList(BuildTimeLineViewModel),
+                DbImageBase64 = issue.Image,
+                ImageType = issue.ImageType,
+                HasImage = issue.Image != null,
                 ActionsItems = _actionsViewModelBuilder.Build(issue, issue.IssueActions.SelectToList(x => x.ActionItem.ViewName).ToArray())
             };
         }
