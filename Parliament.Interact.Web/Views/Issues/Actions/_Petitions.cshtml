@@ -11,7 +11,7 @@
                         #@petition.LogicalOrder
                     </div>
                     <div class="parl-petition-item-link col-md-7 col-sm-9 col-xs-12">
-                        <a href="@petition.Link">@petition.LinkName</a>
+                        <a href="@petition.Link" onClick="ga('send', 'event', 'call-to-actions', 'click', 'all events');">@petition.LinkName</a>
                     </div>
                     <div class="parl-petition-item-signed col-md-4 col-sm-2 hidden-xs">
                         @petition.SignatureCount
@@ -21,7 +21,7 @@
         </div>
     </div>
     <div class="parl-button-group">
-        <a class="btn btn-success" href="@Model.ViewAllUrl">VIEW RELEVANT PETITIONS</a>
-        <a class="btn btn-success" href="@Model.CreateUrl">START A NEW PETITION</a>
+        <a id="view-petitions" class="btn btn-success" href="@Model.ViewAllUrl" onClick="ga('send', 'event', 'call-to-actions', 'click', 'all events');">VIEW RELEVANT PETITIONS</a>
+        <a id="start-petition" class="btn btn-success" href="@Model.CreateUrl" onClick="ga('send', 'event', 'call-to-actions', 'click', 'all events');">START A NEW PETITION</a>
     </div>
 </div>
