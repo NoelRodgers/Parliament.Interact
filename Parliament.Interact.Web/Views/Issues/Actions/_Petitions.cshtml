@@ -7,10 +7,7 @@
             @foreach (var petition in Model.Petitions)
             {
                 <div class="parl-petition-item col-xs-12 row">
-                    <div class="parl-petition-item-number col-md-1 col-sm-1 hidden-xs">
-                        #@petition.LogicalOrder
-                    </div>
-                    <div class="parl-petition-item-link col-md-7 col-sm-9 col-xs-12">
+                    <div class="parl-petition-item-link col-md-8 col-sm-10 col-xs-12">
                         <a href="@petition.Link" onClick="ga('send', 'event', 'call-to-actions', 'click', 'all events');">@petition.LinkName</a>
                     </div>
                     <div class="parl-petition-item-signed col-md-4 col-sm-2 hidden-xs">

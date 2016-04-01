@@ -14,10 +14,10 @@ namespace Parliament.Interact.Core.ActionsViewFactory
             _actions = actions;
         }
 
-        public List<T> GetActionsByName<T>(params ActionViewName[] actionNames)
+        public T GetActionsByName<T>(ActionViewName actionViewName)
             where T : IActionsViewModelFactoryItem
         {
-            return _actions.WhereToList(x => actionNames.ToList().Contains(x.ActionName)).SelectToList(x => (T)x);
+            return (T)_actions.SingleOrDefault(x => x.ActionName == actionViewName);
         }
     }
 }
