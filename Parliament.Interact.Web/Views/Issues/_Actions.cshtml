@@ -1,13 +1,12 @@
 ﻿@model Parliament.Interact.Web.Models.IssueViewModel
 
 <div class="parl-action-items col-xs-12">
-    <h2>What can I do about it?</h2>
     @foreach (var action in Model.ActionsItems)
     {
         <div class="parl-action-item">
             <h3>@action.Title</h3>
             <div class="parl-action-time">
-                @action.Eta
+                <img src="~/Content/img/stopwatch-28x28.svg" class="stopwatch"/>@action.Eta
             </div>
             <div class="parl-action-basic-content">
                 @Html.Raw(action.BasicContent)

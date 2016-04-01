@@ -1,7 +1,7 @@
 ﻿@model Parliament.Interact.Web.Models.IssueViewModel
 
 <div class="panel-body">
-    <div class="row col-xs-12">
+    <div class="desktop-issue-introduction-container row col-xs-12">
         @Html.Partial("~/Views/Issues/_IntroductionContent.cshtml", Model)
         <div class="col-md-6 col-xs-12">
             @Html.Partial("~/Views/Issues/_IssueImageView.cshtml", Model)
@@ -11,6 +11,9 @@
     <hr class="break"/>
     <div class="row col-xs-12">
         @Html.Partial("~/Views/Issues/_IssueTimeLine.cshtml", Model)
+    </div>
+    <h2 class="parl-action-items-title">What can I do about it?</h2>
+    <div class="row col-xs-12">
         @Html.Partial("~/Views/Issues/_Actions.cshtml", Model)
     </div>
 </div>

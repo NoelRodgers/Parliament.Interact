@@ -5,23 +5,6 @@
     color: #333333;
 }
 
-.break {
-    width: 1100px;
-    margin-left: -16px;
-    height: 4px;
-    background-color: rgba(88, 158, 158, 0.2);
-}
-
-.panel-body a:not(.btn):not(.jssocials-share-link) {
-    color: #589e9e;
-    text-decoration: underline;
-}
-
-.panel-body h5 {
-    font-weight: bold;
-    padding: 8px 0;
-}
-
 /* Header section */
 
 .header-links li {
@@ -180,8 +163,90 @@ h2 {
 
 .jssocials-share-link {
      border-radius: 50%;
-} 
+}
 
+/* issue body section */
+
+.panel-body a:not(.btn):not(.jssocials-share-link) {
+    color: #589e9e;
+    text-decoration: underline;
+}
+
+.panel-body h5 {
+    font-weight: bold;
+    padding: 8px 0;
+}
+
+.break {
+    width: 103%;
+    margin-left: -16px;
+    height: 4px;
+    background-color: rgba(88, 158, 158, 0.2);
+}
+
+/* Further reading links section*/
+
+.further-readings h2 {
+    padding-top: 33px;
+}
+
+.further-reading-link {
+    color: #589e9e;
+}
+
+.further-reading-link a {
+    color: #589e9e;
+    text-decoration: underline;
+}
+
+.further-reading-link-list-item {
+    margin-left: -22px;
+}
+
+/* Timeline section */
+
+.desktop-issue-introduction-container {
+    padding-top: 10px;
+    padding-bottom: 25px;
+}
+
+.time-line-container {
+    padding-top: 60px;
+}
+
+.time-line-item {
+    padding-left: 0;
+    padding-right: 30px;
+    padding-bottom: 85px;
+}
+
+/* Actions section */
+
+.parl-action-items-title {
+    width: 103%;
+    margin-left: -16px;
+    background-color: #589e9e;
+    padding: 10px 35px;
+    color: #ffffff;
+}
+
+.parl-action-item h3 {
+    color: #589e9e;
+}
+
+.parl-action-time {
+    padding: 20px 0;
+    font-family: Verdana Regular, sans-serif;
+    font-size: 16px;
+    color: #aaa;
+}
+
+.stopwatch {
+    height: 20px;
+    width: 20px;
+    padding-right: 3px;
+}
+ 
 /* footer section*/
 
 footer div p {
@@ -206,32 +271,6 @@ footer div span {
     padding-top: 55px;
     margin: 0 auto;
     text-align: center;
-}
-
-/* Further reading links section*/
-
-.further-readings h2 {
-    padding-top: 33px;
-}
-
-.further-reading-link {
-    color: #589e9e;
-}
-
-.further-reading-link a {
-    color: #589e9e;
-    text-decoration: underline;
-}
-
-.further-reading-link-list-item {
-    margin-left: -22px;
-}
-
-/* Timeline section */
-
-.time-line-item {
-    padding-left: 0;
-    padding-right: 30px;
 }
 
 /* Modal */
@@ -368,5 +407,10 @@ footer div span {
     .logo-beta-box {
         margin-left: 73%;
         top: 10px;
+    }
+
+    .stopwatch {
+        height: 28px;
+        width: 28px;
     }
 }
