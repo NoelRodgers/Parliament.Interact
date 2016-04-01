@@ -1,16 +1,16 @@
 ﻿@model Parliament.Interact.Core.ActionsViewFactory.Items.Models.ContactYourMPModel
 <div class="parl-contact-your-mp parl-action-small">
     @using (Ajax.BeginForm("GetMPLink", "Issues",
-                                new AjaxOptions
-                                {
-                                    HttpMethod = "POST",
-                                    InsertionMode = InsertionMode.Replace,
-                                    UpdateTargetId = "postcode-form"
-                                }))
+                                        new AjaxOptions
+                                        {
+                                            HttpMethod = "POST",
+                                            InsertionMode = InsertionMode.Replace,
+                                            UpdateTargetId = "postcode-form"
+                                        }))
     {
         <div id="postcode-form">
-            @Html.TextBoxFor(x => x.Postcode)
-            <input type="submit" id="postcode-button" value="FIND MY MP" placeholder="My Postcode" onClick="ga('send', 'event', 'call-to-actions', 'click', 'all events');" />
+            @Html.TextBoxFor(x => x.Postcode, new { @class = "find-my-mp-input", @placeholder = "My Postcode" })
+            <input type="submit" class="btn parl-button parl-secondary-button find-my-mp-button" id="postcode-button" value="FIND MY MP" onClick="ga('send', 'event', 'call-to-actions', 'click', 'all events');" />
             <span class="error-message">@Model.ErrorMessage</span>
         </div>
     }
