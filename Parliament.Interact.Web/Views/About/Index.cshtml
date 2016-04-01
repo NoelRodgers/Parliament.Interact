@@ -5,5 +5,10 @@
 <div class="parl-about-container">
     <h2>About</h2>
     <p>This is a prototype service to help you understand, engage with and influence what is happening in the UK Parliament. You can use it to explore an issue you care about, find out how to get your voice heard and inform MPs and Members of the House of Lords in the work they do to.</p>
-    <p>This is a test service and we would value your feedback. If you think that anything is missing from or have ideas about how to improve it, please let us know. You can email with any comments to <a href="mailto:info@interact-parliament.uk">info@interact-parliament.uk</a></p>
+    <p>
+        This is a test service and we would value your feedback. If you think that anything is missing from or have ideas about how to improve it, please let us know. You can email with any comments to <a href="mailto:info@interact-parliament.uk">info@interact-parliament.uk</a>
+    </p>
+    <div class="parl-center about-button">
+        @Html.ActionLink("Back to Interact", "Index", new { controller = "Issues" }, new { @class = "btn parl-button parl-secondary-button petitions-button" })
+    </div>
 </div>

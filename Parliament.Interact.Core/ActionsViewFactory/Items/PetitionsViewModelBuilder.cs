@@ -43,7 +43,7 @@ namespace Parliament.Interact.Core.ActionsViewFactory.Items
         {
             return new PetitionItemModel
             {
-                Link = petition.Link,
+                Link = petition.Link.Replace(".json", string.Empty),
                 LinkName = petition.ProposedAction,
                 SignatureCount = petition.SignatureCount,
                 LogicalOrder = index + 1

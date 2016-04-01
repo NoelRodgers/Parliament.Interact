@@ -23,6 +23,9 @@ h1, h2, h3, h4, h5 {
     font-family: 'Lato', sans-serif;
 }
 
+.about-button {
+    max-width: 294px;
+}
 /* Header section */
 
 .header-links li {
@@ -38,10 +41,10 @@ h1, h2, h3, h4, h5 {
         color: #333333;
     }
 
-     .header-links li a:hover {
-        text-decoration: underline;
-        color: #333333;
-    }
+        .header-links li a:hover {
+            text-decoration: underline;
+            color: #333333;
+        }
 
 .panel-group .panel-heading + .panel-collapse .panel-body {
     border-top: 0;
