@@ -54,7 +54,8 @@ h2 {
 .logo-image {
     display: block;
     position: relative;
-    max-width: 62%;
+    max-width: 770px;
+    width: 62%;
     margin: 0 auto;
     padding-top: 100px;
 }
@@ -62,7 +63,7 @@ h2 {
 .logo-beta-box {
     position: absolute;
     margin-left: 81%;
-    top: 135px;
+    top: 110px;
     width: 65px;
     border: 2px solid #589e9e;
     border-radius: 5px;
@@ -74,10 +75,11 @@ h2 {
 }
 
 .strapline {
+    color: #000;
     font-family: 'Lato', sans-serif;
     font-size: 30px;
     margin: 50px 0 70px 0;
-    font-weight: bold;
+    letter-spacing: 0.02em;
 }
 
 .error-message {
@@ -216,7 +218,7 @@ h2 {
 }
 
 .time-line-container {
-    padding-top: 60px;
+    padding-top: 35px;
 }
 
 .time-line-item {
