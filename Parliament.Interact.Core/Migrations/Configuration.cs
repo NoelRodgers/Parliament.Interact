@@ -152,32 +152,8 @@ namespace Parliament.Interact.Core.Migrations
                 dbImage = ms.ToArray();
             }
 
-        var issues = new List<Issue>
+            var issues = new List<Issue>
             {
-                new Issue
-                {
-                    Title = "EU Referendum",
-                    LogicalOrder = 2,
-                    Content = "Description of Test Issue 1",
-                },
-                new Issue
-                {
-                    Title = "Refugees & Asylum",
-                    LogicalOrder = 3,
-                    Content = "Description of Test Issue 2"
-                },
-                new Issue
-                {
-                    Title = "Investigatory Powers",
-                    LogicalOrder = 4,
-                    Content = "Description of Test Issue 3"
-                },
-                new Issue
-                {
-                    Title = "Housing & Planning",
-                    LogicalOrder = 5,
-                    Content = "Description of Test Issue 5"
-                },
                 new Issue
                 {
                     Title = "Academy Schools",
@@ -194,7 +170,7 @@ namespace Parliament.Interact.Core.Migrations
             {
                 new IssueAction
                 {
-                    Issue = issues[4],
+                    Issue = issues[0],
                     ActionItem = actionItems[1],
                     IsPrimary = true,
                     LogicalOrder = 1,
@@ -229,14 +205,14 @@ namespace Parliament.Interact.Core.Migrations
                 },
                 new IssueAction
                 {
-                    Issue = issues[4],
+                    Issue = issues[0],
                     ActionItem = actionItems[2],
                     IsPrimary = true,
                     LogicalOrder = 2
                 },
                 new IssueAction
                 {
-                    Issue = issues[4],
+                    Issue = issues[0],
                     ActionItem = actionItems[0],
                     IsPrimary = false,
                     LogicalOrder = 3

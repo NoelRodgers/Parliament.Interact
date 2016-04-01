@@ -9,8 +9,8 @@
         }))
     {
         <div id="postcode-form">
-            @Html.TextBoxFor(x => x.Postcode)
-            <input type="submit" id="postcode-button" value="FIND MY MP" placeholder="My Postcode" onClick="ga('send', 'event', 'call-to-actions', 'click', 'all events');"/>
+            @Html.TextBoxFor(x => x.Postcode, new { @class = "find-my-mp-input", @placeholder = "My Postcode"})
+            <input type="submit" class="btn parl-button parl-secondary-button find-my-mp-button" id="postcode-button" value="FIND MY MP" onClick="ga('send', 'event', 'call-to-actions', 'click', 'all events');"/>
             <span class="error-message">@Model.ErrorMessage</span>
         </div>
     }

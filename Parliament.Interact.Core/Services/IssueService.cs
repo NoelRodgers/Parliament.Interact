@@ -1,12 +1,20 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using Parliament.Common.Caching;
+using Parliament.Common.Extensions;
+using Parliament.Common.Interfaces;
 using Parliament.Interact.Core.Domain;
 using Parliament.Interact.Core.Domain.Context;
 
 namespace Parliament.Interact.Core.Services
 {
-    public class IssueService : IIssueService
+    public class IssueService : CachedService, IIssueService
     {
+        public IssueService(IConfigurationBuilder configurationBuilder)
+            : base(configurationBuilder, "InteractDb")
+        {
+        }
 
         private IQueryable<Issue> GetIssues(InteractDbContext context)
         {
@@ -22,18 +30,25 @@ namespace Parliament.Interact.Core.Services
 
         public List<Issue> GetTopFiveIssues()
         {
-            using (var context = new InteractDbContext())
-            {
-                return GetIssues(context).Take(5).ToList();
-            }
+            return GetCached("Top5Issues", () => { 
+                using (var context = new InteractDbContext())
+                {
+                    return GetIssues(context).Take(5).ToList();
+                }
+            });
         }
 
         public Issue GetIssueById(int id)
         {
-            using (var context = new InteractDbContext())
+            return GetCached("Issue{0}".FormatString(id), () =>
             {
-                return GetIssues(context).Single(issue => issue.Id == id);
-            }
+                using (var context = new InteractDbContext())
+                {
+                    return GetIssues(context).Single(issue => issue.Id == id);
+                }
+            });
         }
+
+
     }
 }

@@ -5,6 +5,10 @@
     color: #333333;
 }
 
+h1, h2, h3, h4, h5 {
+    font-family: 'Lato', sans-serif;
+}
+
 /* Header section */
 
 .header-links li {
@@ -15,15 +19,15 @@
     list-style-type: none;
 }
 
-.header-links li:first-child {
-    border-right: 2px solid #589e9e;
-    padding: 0 20px 0 20px;
-}
+    .header-links li:first-child {
+        /* border-right: 2px solid #589e9e; */
+        padding: 0 20px 0 20px;
+    }
 
-.header-links li a {
-    text-decoration: none;
-    color: #333333;
-}
+    .header-links li a {
+        text-decoration: none;
+        color: #333333;
+    }
 
 .panel-group .panel-heading + .panel-collapse .panel-body {
     border-top: 0;
@@ -42,7 +46,7 @@ h2 {
 .parl-expand-collapse {
     width: 200px;
 }
-   
+
 .logo {
     position: relative;
 }
@@ -50,7 +54,8 @@ h2 {
 .logo-image {
     display: block;
     position: relative;
-    max-width: 62%;
+    max-width: 770px;
+    width: 62%;
     margin: 0 auto;
     padding-top: 100px;
 }
@@ -58,7 +63,7 @@ h2 {
 .logo-beta-box {
     position: absolute;
     margin-left: 81%;
-    top: 135px;
+    top: 110px;
     width: 65px;
     border: 2px solid #589e9e;
     border-radius: 5px;
@@ -70,10 +75,11 @@ h2 {
 }
 
 .strapline {
+    color: #000;
     font-family: 'Lato', sans-serif;
     font-size: 30px;
     margin: 50px 0 70px 0;
-    font-weight: bold;
+    letter-spacing: 0.02em;
 }
 
 .error-message {
@@ -89,10 +95,10 @@ h2 {
     margin-top: 10px;
 }
 
-.parl-button-group a {
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
+    .parl-button-group a {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
 
 .panel-group > .issues-panel {
     border-radius: 8px;
@@ -107,22 +113,23 @@ h2 {
     padding-left: 20px;
 }
 
-.panel-heading.orangeHeaderBackground {
-    background-color: #b14d07;
-}
+    .panel-heading.orangeHeaderBackground {
+        background-color: #b14d07;
+    }
 
-.panel-heading.blueHeaderBackground {
-    background-color: #589e9e;
-}
+    .panel-heading.blueHeaderBackground {
+        background-color: #589e9e;
+    }
 
-.panel-heading.purpleHeaderBackground {
-    background-color: #6e6095;
-}
+    .panel-heading.purpleHeaderBackground {
+        background-color: #6e6095;
+    }
 
-.panel-heading h1 {
-    font-size: 60px;
-    color: #ffffff;
-}
+    .panel-heading h1 {
+        font-size: 60px;
+        letter-spacing: -0.01em;
+        color: #ffffff;
+    }
 
 .panel-header-index {
     margin-right: 40px;
@@ -162,12 +169,12 @@ h2 {
 }
 
 .jssocials-share-link {
-     border-radius: 50%;
+    border-radius: 50%;
 }
 
 /* issue body section */
 
-.panel-body a:not(.btn):not(.jssocials-share-link) {
+.panel-body a:not(.btn):not(.parl-button):not(.jssocials-share-link) {
     color: #589e9e;
     text-decoration: underline;
 }
@@ -198,10 +205,10 @@ h2 {
     color: #589e9e;
 }
 
-.further-reading-link a {
-    color: #589e9e;
-    text-decoration: underline;
-}
+    .further-reading-link a {
+        color: #589e9e;
+        text-decoration: underline;
+    }
 
 .further-reading-link-list-item {
     margin-left: -22px;
@@ -215,7 +222,7 @@ h2 {
 }
 
 .time-line-container {
-    padding-top: 60px;
+    padding-top: 35px;
 }
 
 .time-line-item {
@@ -239,7 +246,7 @@ h2 {
 }
 
 .parl-action-time {
-    padding: 20px 0;
+    padding: 2px 0 12px;
     font-family: Verdana Regular, sans-serif;
     font-size: 16px;
     color: #aaa;
@@ -248,9 +255,72 @@ h2 {
 .stopwatch {
     height: 20px;
     width: 20px;
-    padding-right: 3px;
+    margin-top: -5px;
+    margin-right: 10px;
 }
- 
+
+.parl-button {
+    padding: 0;
+    font-family: Lato-bold, sans-serif;
+    letter-spacing: 0.02em;
+    text-align: center;
+    border: 2px solid #589e9e;
+    border-radius: 4px;
+    color: #ffffff;
+    text-transform: uppercase;
+    background: #589e9e; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#589e9e, #458787); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#589e9e, #458787); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#589e9e, #458787); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#589e9e, #458787); /* Standard syntax */
+    box-shadow: 0 4px 3.6px 0.4px rgba(153, 153, 153, 0.3);
+}
+
+.parl-primary-button {
+    width: 400px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 30px;
+}
+
+.parl-secondary-button {
+    height: 60px;
+    font-size: 20px;
+    line-height: 60px;
+}
+
+.parl-button:hover {
+    color: #ffffff;
+}
+
+.apply-online-button {
+    width: 230px;
+}
+
+.petitions-button {
+    width: 340px;
+}
+
+.find-my-mp-button {
+    width: 170px;
+    margin-left: 20px;
+    margin-top: -8px;
+}
+
+.find-my-mp-input {
+    width: 270px;
+    height: 60px;
+    border-radius: 4px;
+}
+
+    .find-my-mp-input[type="text"] {
+        text-transform: uppercase;
+        font-family: "Verdana";
+        font-size: 20px;
+        color: #333333;
+        padding-left: 10px;
+    }
+
 /* footer section*/
 
 footer div p {
@@ -285,17 +355,23 @@ footer div span {
 .parl-center {
     margin: auto;
 }
-
+.header-links-container {
+    max-width: 1170px;   
+}
 .panel-heading .panel-heading-button {
     padding-right: 70px;
 }
 
-.panel-heading .panel-heading-button .btn {
-    background-image: none;
-    background-color: transparent;
-    color: #ffffff;
-    border-color: #ffffff;
-    border: 2px solid;
+    .panel-heading .panel-heading-button .btn {
+        background-image: none;
+        background-color: transparent;
+        color: #ffffff;
+        border-color: #ffffff;
+        border: 2px solid;
+    }
+
+.header-links {
+    max-width: 1170px;
 }
 
 .panel-title {
