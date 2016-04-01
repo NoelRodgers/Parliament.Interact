@@ -17,25 +17,37 @@ namespace Parliament.Interact.Web.ViewModelBuilders
             _actionsModelFactory = actionsModelFactory;
         }
 
-        public List<ActionItemViewModel> Build(Issue issue, params ActionViewName[] actionNames)
+        public List<ActionItemViewModel> Build(Issue issue)
         {
-            var actions = _actionsModelFactory.GetActionsByName<IActionsViewModelFactoryItem>(actionNames);
-            return actions.SelectToList(x => BuildActionItemViewModel(x, issue));
+            var orderedActions =
+                issue.IssueActions.OrderBy(x => x.LogicalOrder)
+                    .SelectToList(x => _actionsModelFactory.GetActionsByName<IActionsViewModelFactoryItem>(x.ActionItem.ViewName));
+
+            return orderedActions.SelectToList(x => BuildActionItemViewModel(x, issue));
         }
 
         public ActionItemViewModel BuildActionItemViewModel(IActionsViewModelFactoryItem item, Issue issue)
         {
             // ReSharper disable once UseObjectOrCollectionInitializer
             // Suppressed as Title is sometimes built from BuildViewModel
+            var primaryIssueAction = issue.IssueActions.FirstOrDefault(x => x.IsPrimary);
+            var actionsBasePath = "Actions/{0}";
+
+            if (primaryIssueAction == null)
+            {
+                actionsBasePath = "Actions/Small/{0}";
+            }
+
             var model = new ActionItemViewModel
             {
-                ActionView = "Actions/{0}".FormatString(item.ActionView),
+                ActionView = actionsBasePath.FormatString(item.ActionView),
                 ActionModel = item.BuildViewModel(issue)
             };
 
             model.Title = item.Title;
             model.Eta = item.Eta;
             model.BasicContent = item.BasicContent;
+
             return model;
         }
     }

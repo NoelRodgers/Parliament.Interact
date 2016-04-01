@@ -12,6 +12,8 @@ namespace Parliament.Interact.Core.Domain
 
         public ActionItem ActionItem { get; set; }
 
-        public List<IssueActionContent> IssueActionContents { get; set; } 
+        public List<IssueActionContent> IssueActionContents { get; set; }
+        public bool IsPrimary { get; set; }
+        public int LogicalOrder { get; set; }
     }
 }

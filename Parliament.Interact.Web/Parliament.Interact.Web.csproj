@@ -278,6 +278,9 @@
     <Content Include="Views\Issues\_Actions.cshtml" />
     <Content Include="Views\Issues\_IssueImageView.cshtml" />
     <Content Include="Views\Issues\Actions\_Links.cshtml" />
+    <Content Include="Views\Issues\Actions\Small\_ContactYourMP.cshtml" />
+    <Content Include="Views\Issues\Actions\Small\_Links.cshtml" />
+    <Content Include="Views\Issues\Actions\Small\_Petitions.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
