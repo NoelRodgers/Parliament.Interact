@@ -1,5 +1,5 @@
 ﻿
 @model Parliament.Interact.Core.ActionsViewFactory.Items.Models.LinkModel
 <div>
-    <a class="btn btn-success" href="@Model.Link" target="_blank">@Model.LinkName</a>
+    <a class="btn btn-success" href="@Model.Link" target="_blank" onClick="ga('send', 'event', 'call-to-actions', 'click', 'all events');" >@Model.LinkName</a>
 </div>
