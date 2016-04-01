@@ -194,11 +194,6 @@ namespace Parliament.Interact.Core.Migrations
             {
                 new IssueAction
                 {
-                    Issue = issues[0],
-                    ActionItem = actionItems[0]
-                },
-                new IssueAction
-                {
                     Issue = issues[4],
                     ActionItem = actionItems[1],
                     IssueActionContents = new List<IssueActionContent>
@@ -229,21 +224,6 @@ namespace Parliament.Interact.Core.Migrations
                             Content = "<p>Send your views on groups of academy schools (Multiple-Academy Trusts) to the House of Commons Education Committee. The Committee can use information you provide to help it question Ministers or make recommendations to Government.</p>"
                         }
                     }
-                },
-                new IssueAction
-                {
-                    Issue = issues[1],
-                    ActionItem = actionItems[0]
-                },
-                new IssueAction
-                {
-                    Issue = issues[2],
-                    ActionItem = actionItems[0]
-                },
-                new IssueAction
-                {
-                    Issue = issues[3],
-                    ActionItem = actionItems[0]
                 },
                 new IssueAction
                 {

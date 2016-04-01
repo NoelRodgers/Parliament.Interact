@@ -1,23 +1,11 @@
 ﻿$(document).ready(function () {
     //setTimeout(callModal, 3000);
 
-    $(".shareIcons").jsSocials({
+    $("#shareIcons").jsSocials({
         showLabel: false,
         showCount: false,
-        shares: ["twitter", "facebook"]
+        shares: ["twitter", "facebook", "email", "googleplus", "linkedin", "pinterest", "whatsapp"]
     });
-
-    //$('#postcode-button').click(function () {
-    //    var postcodeValue = $('#postcode').val();
-    //    $.ajax({
-    //        type: "POST",
-    //        url: "Issues/GetMPLink",
-    //        dataType: "text",
-    //        data: { value: postcodeValue }
-    //    }).error(function () {
-    //        console.log("it's gone horribly wrong");
-    //    });
-    //});
 });
 
 function callModal() {
