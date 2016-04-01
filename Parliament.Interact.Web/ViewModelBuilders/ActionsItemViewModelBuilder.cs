@@ -27,15 +27,24 @@ namespace Parliament.Interact.Web.ViewModelBuilders
         {
             // ReSharper disable once UseObjectOrCollectionInitializer
             // Suppressed as Title is sometimes built from BuildViewModel
+            var primaryIssueAction = issue.IssueActions.FirstOrDefault(x => x.IsPrimary);
+            var actionsBasePath = "Actions/{0}";
+
+            if (primaryIssueAction == null)
+            {
+                actionsBasePath = "Actions/Small/{0}";
+            }
+
             var model = new ActionItemViewModel
             {
-                ActionView = "Actions/{0}".FormatString(item.ActionView),
+                ActionView = actionsBasePath.FormatString(item.ActionView),
                 ActionModel = item.BuildViewModel(issue)
             };
 
             model.Title = item.Title;
             model.Eta = item.Eta;
             model.BasicContent = item.BasicContent;
+
             return model;
         }
     }
