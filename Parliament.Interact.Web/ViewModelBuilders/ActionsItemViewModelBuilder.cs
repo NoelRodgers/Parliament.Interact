@@ -27,7 +27,7 @@ namespace Parliament.Interact.Web.ViewModelBuilders
         {
             // ReSharper disable once UseObjectOrCollectionInitializer
             // Suppressed as Title is sometimes built from BuildViewModel
-            var primaryIssueAction = issue.IssueActions.Single(x => x.IsPrimary);
+            var primaryIssueAction = issue.IssueActions.FirstOrDefault(x => x.IsPrimary);
             var actionsBasePath = "Actions/{0}";
 
             if (primaryIssueAction == null)
