@@ -7,6 +7,6 @@ namespace Parliament.Interact.Web.ViewModelBuilders
 {
     public interface IActionsItemViewModelBuilder
     {
-        List<ActionItemViewModel> Build(Issue issue, params ActionViewName[] actionNames);
+        List<ActionItemViewModel> Build(Issue issue);
     }
 }

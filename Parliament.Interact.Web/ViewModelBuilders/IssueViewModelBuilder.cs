@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using Parliament.Common.Extensions;
 using Parliament.Interact.Core.Domain;
 using Parliament.Interact.Core.Services;
@@ -106,7 +107,7 @@ namespace Parliament.Interact.Web.ViewModelBuilders
                 DbImageBase64 = issue.Image,
                 ImageType = issue.ImageType,
                 HasImage = issue.Image != null,
-                ActionsItems = _actionsViewModelBuilder.Build(issue, issue.IssueActions.SelectToList(x => x.ActionItem.ViewName).ToArray())
+                ActionsItems = _actionsViewModelBuilder.Build(issue)
             };
         }
     }

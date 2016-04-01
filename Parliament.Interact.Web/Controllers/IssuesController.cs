@@ -44,7 +44,7 @@ namespace Parliament.Interact.Web.Controllers
                 model.ErrorMessage = "Please enter a valid postcode.";
                 return PartialView("~/Views/Issues/Actions/_ContactYourMP.cshtml", model);
             }
-            var result = (ContactYourMPResultModel)action.First().BuildViewModel(model.Postcode);
+            var result = (ContactYourMPResultModel)action.BuildViewModel(model.Postcode);
             if (string.IsNullOrEmpty(result.RedirectLink))
             {
                 model.Postcode = "";
