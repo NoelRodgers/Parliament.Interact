@@ -5,6 +5,23 @@
     color: #333333;
 }
 
+.break {
+    width: 1100px;
+    margin-left: -16px;
+    height: 4px;
+    background-color: rgba(88, 158, 158, 0.2);
+}
+
+.panel-body a:not(.btn):not(.jssocials-share-link) {
+    color: #589e9e;
+    text-decoration: underline;
+}
+
+.panel-body h5 {
+    font-weight: bold;
+    padding: 8px 0;
+}
+
 /* Header section */
 
 .header-links li {
@@ -208,6 +225,13 @@ footer div span {
 
 .further-reading-link-list-item {
     margin-left: -22px;
+}
+
+/* Timeline section */
+
+.time-line-item {
+    padding-left: 0;
+    padding-right: 30px;
 }
 
 /* Modal */

@@ -39,7 +39,7 @@ namespace Parliament.Interact.Core.Migrations
             issueContent.Append("<p>Others say that the freedoms afforded to academies, and their rapid expansion, have the potential to result in financial problems and lapses in standards. (House of Commons Library, <a href='http://www.parliament.uk/business/publications/research/key-issues-parliament-2015/education/academies-and-free-schools/'>Key Issues for the 2015 Parliament <i class='fa fa-external'></i></a>)</p>");
             var actionItems = new List<ActionItem>
             {
-                new ActionItem {ViewName = ActionViewName.ContactYourMP, ActionContents = new List<ActionContent>()
+                new ActionItem {ViewName = ActionViewName.ContactYourMP, IsPrimary = false, ActionContents = new List<ActionContent>()
                 {
                     new ActionContent()
                     {
@@ -57,7 +57,7 @@ namespace Parliament.Interact.Core.Migrations
                         Content = "<p>Write to your MP about academy schools. Your MP represents you. They can raise your concerns in Parliament and question Government.</p>"
                     }
                 }  },
-                new ActionItem {ViewName = ActionViewName.Links, ActionContents = new List<ActionContent>()
+                new ActionItem {ViewName = ActionViewName.Links, IsPrimary = true, ActionContents = new List<ActionContent>()
                 {
                     new ActionContent()
                     {
@@ -75,7 +75,7 @@ namespace Parliament.Interact.Core.Migrations
                         Content = "Basic Content for Links"
                     }
                 }},
-                new ActionItem {ViewName = ActionViewName.Petitions, ActionContents = new List<ActionContent>()
+                new ActionItem {ViewName = ActionViewName.Petitions, IsPrimary = true, ActionContents = new List<ActionContent>()
                 {
                     new ActionContent()
                     {
