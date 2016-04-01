@@ -184,6 +184,10 @@ h2 {
     background-color: rgba(88, 158, 158, 0.2);
 }
 
+.parl-small-action-item-last {
+    padding-left: 60px;
+    border-left: 4px solid rgba(88, 158, 158, 0.2);
+}
 /* Further reading links section*/
 
 .further-readings h2 {
