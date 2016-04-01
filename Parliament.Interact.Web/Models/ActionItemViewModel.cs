@@ -8,5 +8,6 @@
 
         public string ActionView { get; set; }
         public object ActionModel { get; set; }
+        public bool IsPrimary { get; set; }
     }
 }
