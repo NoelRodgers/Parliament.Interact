@@ -87,7 +87,7 @@
     <Compile Include="Domain\IActionContent.cs" />
     <Compile Include="Domain\Context\InteractDbContext.cs" />
     <Compile Include="Domain\Issue.cs" />
-    <Compile Include="Domain\IssueActionContent.cs" />
+    <Compile Include="ActionsViewFactory\IssueActionContent.cs" />
     <Compile Include="Domain\IssueTimeLine.cs" />
     <Compile Include="Domain\TimeLineEnumerable.cs" />
     <Compile Include="Domain\IssueFurtherReading.cs" />

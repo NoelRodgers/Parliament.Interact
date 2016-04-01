@@ -12,7 +12,7 @@
     background-color: rgba(88, 158, 158, 0.2);
 }
 
-.panel-body a:not(.btn) {
+.panel-body a:not(.btn):not(.jssocials-share-link) {
     color: #589e9e;
     text-decoration: underline;
 }
