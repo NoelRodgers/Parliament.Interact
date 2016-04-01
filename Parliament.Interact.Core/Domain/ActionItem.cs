@@ -14,5 +14,7 @@ namespace Parliament.Interact.Core.Domain
         public List<IssueAction> IssueActions { get; set; }
 
         public List<ActionContent> ActionContents { get; set; } 
+
+        public bool IsPrimary { get; set; }
     }
 }

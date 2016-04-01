@@ -161,6 +161,10 @@
     <Compile Include="Migrations\201603311615370_added description field to IssueFurtherReading.Designer.cs">
       <DependentUpon>201603311615370_added description field to IssueFurtherReading.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201604011012384_added isprimary boolean to actionItem.cs" />
+    <Compile Include="Migrations\201604011012384_added isprimary boolean to actionItem.Designer.cs">
+      <DependentUpon>201604011012384_added isprimary boolean to actionItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Petitions\Contract\PetitionContract.cs" />
     <Compile Include="Petitions\IPetition.cs" />
@@ -237,6 +241,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603311615370_added description field to IssueFurtherReading.resx">
       <DependentUpon>201603311615370_added description field to IssueFurtherReading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604011012384_added isprimary boolean to actionItem.resx">
+      <DependentUpon>201604011012384_added isprimary boolean to actionItem.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
