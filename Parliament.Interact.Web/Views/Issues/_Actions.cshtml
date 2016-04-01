@@ -21,13 +21,17 @@
                 @Html.Partial(action.ActionView, action.ActionModel)
             </div>
         </div>
+        if (action.IsPrimary)
+        {
+            <hr class="break"/>
+        }
     }
 
     <!--Hard coded for now - should both be an action-->
     <div class="parl-action-item col-sm-6 parl-small-action-item-last">
         <h3>Volunteer as a school governor</h3>
         <div class="parl-action-time">
-            <img src="~/Content/img/stopwatch-28x28.svg" class="stopwatch" />Over 1hr
+            <img src="~/Content/img/stopwatch-28x28.svg" class="stopwatch"/>Over 1hr
         </div>
         <div class="parl-action-basic-content">
             <p>Could you help set a school's direction and ensure that its budget is properly managed?</p>
@@ -39,6 +43,8 @@
             </div>
         </div>
     </div>
+
+    <hr class="break"/>
 
     <div class="parl-action-item parl-action-social-media col-xs-12">
         <h3>Help raise awareness</h3>
