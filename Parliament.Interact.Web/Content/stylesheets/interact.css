@@ -203,10 +203,10 @@ h2 {
     color: #589e9e;
 }
 
-    .further-reading-link a {
-        color: #589e9e;
-        text-decoration: underline;
-    }
+.further-reading-link a {
+    color: #589e9e;
+    text-decoration: underline;
+}
 
 .further-reading-link-list-item {
     margin-left: -22px;
@@ -239,6 +239,14 @@ h2 {
     color: #ffffff;
 }
 
+.parl-small-action-item {
+    padding-right: 60px;
+}
+
+.parl-small-action-item .parl-action-content {
+    margin-top: 31px;
+}
+
 .parl-action-item {
     margin-top: 30px;
     margin-bottom: 80px;
@@ -249,6 +257,10 @@ h2 {
     padding-bottom: 50px;
     border-left: 4px solid rgba(88, 158, 158, 0.2);
     margin-bottom: 30px;
+}
+
+.parl-small-action-item-last .parl-action-content {
+    margin-top: 20px;
 }
 
 .parl-action-item h3 {
@@ -319,18 +331,18 @@ h2 {
 }
 
 .find-my-mp-input {
-    width: 270px;
+    width: 250px;
     height: 60px;
     border-radius: 4px;
 }
 
-    .find-my-mp-input[type="text"] {
-        text-transform: uppercase;
-        font-family: "Verdana";
-        font-size: 20px;
-        color: #333333;
-        padding-left: 10px;
-    }
+.find-my-mp-input[type="text"] {
+    text-transform: uppercase;
+    font-family: "Verdana";
+    font-size: 20px;
+    color: #333333;
+    padding-left: 10px;
+}
 
 /* footer section*/
 

@@ -1,8 +1,8 @@
 ﻿@model Parliament.Interact.Web.Models.IssueViewModel
 @{
-    var columnClass = "";
+    var columnClass = "col-xs-12";
 }
-<div class="parl-action-items col-xs-12">
+<div class="parl-action-items">
     @foreach (var action in Model.ActionsItems)
     {
         if (!action.IsPrimary)
