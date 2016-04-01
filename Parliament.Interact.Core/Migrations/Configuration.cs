@@ -231,7 +231,7 @@ namespace Parliament.Interact.Core.Migrations
                 {
                     Issue = issues[4],
                     ActionItem = actionItems[2],
-                    IsPrimary = false,
+                    IsPrimary = true,
                     LogicalOrder = 2
                 },
                 new IssueAction
