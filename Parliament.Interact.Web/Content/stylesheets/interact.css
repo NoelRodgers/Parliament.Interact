@@ -19,15 +19,15 @@ h1, h2, h3, h4, h5 {
     list-style-type: none;
 }
 
-.header-links li:first-child {
-    border-right: 2px solid #589e9e;
-    padding: 0 20px 0 20px;
-}
+    .header-links li:first-child {
+        /* border-right: 2px solid #589e9e; */
+        padding: 0 20px 0 20px;
+    }
 
-.header-links li a {
-    text-decoration: none;
-    color: #333333;
-}
+    .header-links li a {
+        text-decoration: none;
+        color: #333333;
+    }
 
 .panel-group .panel-heading + .panel-collapse .panel-body {
     border-top: 0;
@@ -46,7 +46,7 @@ h2 {
 .parl-expand-collapse {
     width: 200px;
 }
-   
+
 .logo {
     position: relative;
 }
@@ -93,10 +93,10 @@ h2 {
     margin-top: 10px;
 }
 
-.parl-button-group a {
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
+    .parl-button-group a {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
 
 .panel-group > .issues-panel {
     border-radius: 8px;
@@ -111,23 +111,23 @@ h2 {
     padding-left: 20px;
 }
 
-.panel-heading.orangeHeaderBackground {
-    background-color: #b14d07;
-}
+    .panel-heading.orangeHeaderBackground {
+        background-color: #b14d07;
+    }
 
-.panel-heading.blueHeaderBackground {
-    background-color: #589e9e;
-}
+    .panel-heading.blueHeaderBackground {
+        background-color: #589e9e;
+    }
 
-.panel-heading.purpleHeaderBackground {
-    background-color: #6e6095;
-}
+    .panel-heading.purpleHeaderBackground {
+        background-color: #6e6095;
+    }
 
-.panel-heading h1 {
-    font-size: 60px;
-    letter-spacing: -0.01em;
-    color: #ffffff;
-}
+    .panel-heading h1 {
+        font-size: 60px;
+        letter-spacing: -0.01em;
+        color: #ffffff;
+    }
 
 .panel-header-index {
     margin-right: 40px;
@@ -167,7 +167,7 @@ h2 {
 }
 
 .jssocials-share-link {
-     border-radius: 50%;
+    border-radius: 50%;
 }
 
 /* issue body section */
@@ -199,10 +199,10 @@ h2 {
     color: #589e9e;
 }
 
-.further-reading-link a {
-    color: #589e9e;
-    text-decoration: underline;
-}
+    .further-reading-link a {
+        color: #589e9e;
+        text-decoration: underline;
+    }
 
 .further-reading-link-list-item {
     margin-left: -22px;
@@ -286,7 +286,7 @@ h2 {
 .parl-button:hover {
     color: #ffffff;
 }
- 
+
 .apply-online-button {
     width: 230px;
 }
@@ -307,13 +307,13 @@ h2 {
     border-radius: 4px;
 }
 
-.find-my-mp-input[type="text"] {
-    text-transform: uppercase;
-    font-family: "Verdana";
-    font-size: 20px;
-    color: #333333;
-    padding-left: 10px;
-}
+    .find-my-mp-input[type="text"] {
+        text-transform: uppercase;
+        font-family: "Verdana";
+        font-size: 20px;
+        color: #333333;
+        padding-left: 10px;
+    }
 
 /* footer section*/
 
@@ -349,17 +349,23 @@ footer div span {
 .parl-center {
     margin: auto;
 }
-
+.header-links-container {
+    max-width: 1170px;   
+}
 .panel-heading .panel-heading-button {
     padding-right: 70px;
 }
 
-.panel-heading .panel-heading-button .btn {
-    background-image: none;
-    background-color: transparent;
-    color: #ffffff;
-    border-color: #ffffff;
-    border: 2px solid;
+    .panel-heading .panel-heading-button .btn {
+        background-image: none;
+        background-color: transparent;
+        color: #ffffff;
+        border-color: #ffffff;
+        border: 2px solid;
+    }
+
+.header-links {
+    max-width: 1170px;
 }
 
 .panel-title {
