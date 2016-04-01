@@ -178,7 +178,7 @@ h2 {
 }
 
 .break {
-    width: 1100px;
+    width: 103%;
     margin-left: -16px;
     height: 4px;
     background-color: rgba(88, 158, 158, 0.2);
@@ -223,11 +223,15 @@ h2 {
 /* Actions section */
 
 .parl-action-items-title {
-    width: 1100px;
+    width: 103%;
     margin-left: -16px;
     background-color: #589e9e;
     padding: 10px 35px;
     color: #ffffff;
+}
+
+.parl-action-item h3 {
+    color: #589e9e;
 }
  
 /* footer section*/
