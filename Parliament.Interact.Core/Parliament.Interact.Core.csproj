@@ -169,6 +169,10 @@
     <Compile Include="Migrations\201604011309562_Moved isPrimary to IssueAction rather than ActionItem.Designer.cs">
       <DependentUpon>201604011309562_Moved isPrimary to IssueAction rather than ActionItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201604011425569_Added logical order property to issueAction.cs" />
+    <Compile Include="Migrations\201604011425569_Added logical order property to issueAction.Designer.cs">
+      <DependentUpon>201604011425569_Added logical order property to issueAction.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Petitions\Contract\PetitionContract.cs" />
     <Compile Include="Petitions\IPetition.cs" />
@@ -251,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201604011309562_Moved isPrimary to IssueAction rather than ActionItem.resx">
       <DependentUpon>201604011309562_Moved isPrimary to IssueAction rather than ActionItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604011425569_Added logical order property to issueAction.resx">
+      <DependentUpon>201604011425569_Added logical order property to issueAction.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

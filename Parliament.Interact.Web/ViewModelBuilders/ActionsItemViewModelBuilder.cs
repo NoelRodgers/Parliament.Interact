@@ -17,10 +17,13 @@ namespace Parliament.Interact.Web.ViewModelBuilders
             _actionsModelFactory = actionsModelFactory;
         }
 
-        public List<ActionItemViewModel> Build(Issue issue, params ActionViewName[] actionNames)
+        public List<ActionItemViewModel> Build(Issue issue)
         {
-            var actions = _actionsModelFactory.GetActionsByName<IActionsViewModelFactoryItem>(actionNames);
-            return actions.SelectToList(x => BuildActionItemViewModel(x, issue));
+            var orderedActions =
+                issue.IssueActions.OrderBy(x => x.LogicalOrder)
+                    .SelectToList(x => _actionsModelFactory.GetActionsByName<IActionsViewModelFactoryItem>(x.ActionItem.ViewName));
+
+            return orderedActions.SelectToList(x => BuildActionItemViewModel(x, issue));
         }
 
         public ActionItemViewModel BuildActionItemViewModel(IActionsViewModelFactoryItem item, Issue issue)

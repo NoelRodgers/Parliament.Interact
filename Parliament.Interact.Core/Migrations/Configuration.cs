@@ -197,6 +197,7 @@ namespace Parliament.Interact.Core.Migrations
                     Issue = issues[4],
                     ActionItem = actionItems[1],
                     IsPrimary = true,
+                    LogicalOrder = 1,
                     IssueActionContents = new List<IssueActionContent>
                     {
                         new IssueActionContent
@@ -230,13 +231,15 @@ namespace Parliament.Interact.Core.Migrations
                 {
                     Issue = issues[4],
                     ActionItem = actionItems[2],
-                    IsPrimary = false
+                    IsPrimary = false,
+                    LogicalOrder = 2
                 },
                 new IssueAction
                 {
                     Issue = issues[4],
                     ActionItem = actionItems[0],
-                    IsPrimary = false
+                    IsPrimary = false,
+                    LogicalOrder = 3
                 }
             };
 
