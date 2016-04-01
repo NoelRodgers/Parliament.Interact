@@ -5,6 +5,16 @@
     color: #333333;
 }
 
+.panel-body a:not(.btn) {
+    color: #589e9e;
+    text-decoration: underline;
+}
+
+.panel-body h5 {
+    font-weight: bold;
+    padding: 8px 0;
+}
+
 /* Header section */
 
 .header-links li {
@@ -207,6 +217,13 @@ footer div span {
 
 .further-reading-link-list-item {
     margin-left: -22px;
+}
+
+/* Timeline section */
+
+.time-line-item {
+    padding-left: 0;
+    padding-right: 30px;
 }
 
 /* Modal */
