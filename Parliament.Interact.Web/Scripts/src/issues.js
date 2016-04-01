@@ -4,7 +4,7 @@
     $("#shareIcons").jsSocials({
         showLabel: false,
         showCount: false,
-        shares: ["twitter", "facebook", "email", "googleplus", "linkedin", "pinterest", "whatsapp"]
+        shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "whatsapp"]
     });
 });
 
