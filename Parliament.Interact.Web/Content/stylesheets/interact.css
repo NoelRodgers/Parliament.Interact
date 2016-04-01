@@ -5,6 +5,10 @@
     color: #333333;
 }
 
+h1, h2, h3, h4, h5 {
+    font-family: 'Lato', sans-serif;
+}
+
 /* Header section */
 
 .header-links li {
@@ -121,6 +125,7 @@ h2 {
 
 .panel-heading h1 {
     font-size: 60px;
+    letter-spacing: -0.01em;
     color: #ffffff;
 }
 
@@ -253,7 +258,6 @@ h2 {
     font-family: Lato-bold, sans-serif;
     letter-spacing: 0.02em;
     text-align: center;
-    line-height: 60px;
     border: 2px solid #589e9e;
     border-radius: 4px;
     color: #ffffff;
@@ -267,13 +271,16 @@ h2 {
 }
 
 .parl-primary-button {
+    width: 400px;
     height: 80px;
+    line-height: 80px;
     font-size: 30px;
 }
 
 .parl-secondary-button {
     height: 60px;
     font-size: 20px;
+    line-height: 60px;
 }
 
 .parl-button:hover {
@@ -282,6 +289,10 @@ h2 {
  
 .apply-online-button {
     width: 230px;
+}
+
+.petitions-button {
+    width: 340px;
 }
 
 .find-my-mp-button {
