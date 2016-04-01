@@ -182,6 +182,7 @@
     <Compile Include="App_Start\FontAwesomeBundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\StructuremapMvc.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\IssuesController.cs" />
     <Compile Include="DependencyResolution\ControllerConvention.cs" />
     <Compile Include="DependencyResolution\DefaultRegistry.cs" />
@@ -191,6 +192,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AboutModel.cs" />
     <Compile Include="Models\ActionItemViewModel.cs" />
     <Compile Include="Models\FurtherReadingViewModel.cs" />
     <Compile Include="Models\IssueViewModel.cs" />
@@ -281,6 +283,8 @@
     <Content Include="Views\Issues\Actions\Small\_ContactYourMP.cshtml" />
     <Content Include="Views\Issues\Actions\Small\_Links.cshtml" />
     <Content Include="Views\Issues\Actions\Small\_Petitions.cshtml" />
+    <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\Shared\_ThinLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

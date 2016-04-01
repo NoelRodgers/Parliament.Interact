@@ -1,8 +1,19 @@
-﻿<header>
+﻿@model Parliament.Interact.Web.Models.AboutModel
+
+<header>
     <div class="parl-center header-links-container">
-        <ul class="header-links pull-right">
-            <li><a href="#">About</a></li>
-        </ul>
+        @if (Model.DisplayAbout)
+        {
+            <ul class="header-links pull-right">
+                <li>@Html.ActionLink("About", "Index", new {controller = "About"})</li>
+            </ul>
+        }
+        else
+        {
+            <ul class="header-links pull-right">
+                <li>@Html.ActionLink("Back to Interact", "Index", new { controller = "Issues" })</li>
+            </ul>
+        }
     </div>
 
     <div class="logo">

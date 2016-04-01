@@ -1,0 +1,28 @@
+﻿@using Parliament.Interact.Web.Models
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+    @Styles.Render("~/Content/fontawesome")
+    @Styles.Render("~/Content/jsSocial")
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+<div class="parl-thin">
+    @Html.Partial("_Header", new AboutModel { DisplayAbout = false })
+    @RenderBody()
+    @Html.Partial("_Footer")
+</div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/unobtrusiveAjax")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jsSocial")
+    @Scripts.Render("~/bundles/src")
+</body>
+</html>

@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using Parliament.Interact.Web.Models
+<!DOCTYPE html>
 <html>
 <head>
     <!-- Google Analytics Content Experiment code -->
@@ -68,7 +69,6 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
         ga('create', 'UA-31560783-7', 'auto');
         ga('send', 'pageview');
-        ga('send', 'event', 'call-to-actions', 'onClick', 'allEvents');
     </script>
 
     <!-- End Google Analytics Code -->
@@ -89,7 +89,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-WH27LH');</script>
     <!-- End Google Tag Manager -->
 
-@Html.Partial("_Header")
+@Html.Partial("_Header", new AboutModel { DisplayAbout = true })
 @Html.Partial("_Modal")
 @RenderBody()
 @Html.Partial("_Footer")
