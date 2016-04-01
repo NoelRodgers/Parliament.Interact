@@ -21,22 +21,17 @@ namespace Parliament.Interact.Web.ViewModelBuilders
         {
             var orderedActions =
                 issue.IssueActions.OrderBy(x => x.LogicalOrder)
-                    .SelectToList(x => _actionsModelFactory.GetActionsByName<IActionsViewModelFactoryItem>(x.ActionItem.ViewName));
+                    .SelectToList(x => new { ViewModelBuilder =_actionsModelFactory.GetActionsByName<IActionsViewModelFactoryItem>(x.ActionItem.ViewName), IssueAction = x });
 
-            return orderedActions.SelectToList(x => BuildActionItemViewModel(x, issue));
+            return orderedActions.SelectToList(x => BuildActionItemViewModel(x.ViewModelBuilder, x.IssueAction, issue));
         }
 
-        public ActionItemViewModel BuildActionItemViewModel(IActionsViewModelFactoryItem item, Issue issue)
+        public ActionItemViewModel BuildActionItemViewModel(IActionsViewModelFactoryItem item, IssueAction issueAction, Issue issue)
         {
             // ReSharper disable once UseObjectOrCollectionInitializer
             // Suppressed as Title is sometimes built from BuildViewModel
-            var primaryIssueAction = issue.IssueActions.FirstOrDefault(x => x.IsPrimary);
-            var actionsBasePath = "Actions/{0}";
 
-            if (primaryIssueAction == null)
-            {
-                actionsBasePath = "Actions/Small/{0}";
-            }
+            var actionsBasePath = issueAction.IsPrimary ? "Actions/{0}" : "Actions/Small/{0}";
 
             var model = new ActionItemViewModel
             {
@@ -47,6 +42,7 @@ namespace Parliament.Interact.Web.ViewModelBuilders
             model.Title = item.Title;
             model.Eta = item.Eta;
             model.BasicContent = item.BasicContent;
+            model.IsPrimary = issueAction.IsPrimary;
 
             return model;
         }
