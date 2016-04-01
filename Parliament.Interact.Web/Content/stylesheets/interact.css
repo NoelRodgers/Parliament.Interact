@@ -233,6 +233,19 @@ h2 {
 .parl-action-item h3 {
     color: #589e9e;
 }
+
+.parl-action-time {
+    padding: 20px 0;
+    font-family: Verdana Regular, sans-serif;
+    font-size: 16px;
+    color: #aaa;
+}
+
+.stopwatch {
+    height: 20px;
+    width: 20px;
+    padding-right: 3px;
+}
  
 /* footer section*/
 
@@ -394,5 +407,10 @@ footer div span {
     .logo-beta-box {
         margin-left: 73%;
         top: 10px;
+    }
+
+    .stopwatch {
+        height: 28px;
+        width: 28px;
     }
 }
