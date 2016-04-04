@@ -59,7 +59,7 @@ h5 {
 }
 
 .panel-body {
-    padding: 50px 25px 0 55px;
+    padding: 50px 30px;
 }
 
 h2 {
@@ -212,10 +212,10 @@ h2 {
 }
 
 .break {
+    padding-left: 0;
+    padding-right: 0;
     margin-top: 0;
     margin-bottom: 0;
-    width: 101%;
-    margin-left: -21px;
     height: 4px;
     background-color: rgba(88, 158, 158, 0.2);
     clear: both;
@@ -260,39 +260,45 @@ h2 {
 /* Actions section */
 
 .parl-action-items-title {
-    width: 101%;
-    margin-left: -21px;
     background-color: #589e9e;
     padding: 10px 35px;
     color: #ffffff;
 }
 
-.parl-small-action-item {
-    padding-right: 60px;
-}
 
-.parl-small-action-item .parl-action-content {
-    margin-top: 31px;
-}
+    .parl-small-action-item .parl-action-content {
+        margin-top: 31px;
+    }
 
 .parl-action-item {
+    float: left;
+    clear: both;
     margin-top: 30px;
     margin-bottom: 80px;
 }
 
+    .parl-action-item h3 {
+        margin-top: 0;
+    }
+
 .parl-small-action-item-last {
-    padding-left: 60px;
+    padding-left: 30px;
     padding-bottom: 50px;
     border-left: 4px solid rgba(88, 158, 158, 0.2);
     margin-bottom: 30px;
 }
 
-.parl-small-action-item-last .parl-action-content {
-    margin-top: 20px;
+    .parl-small-action-item-last .parl-action-content {
+        margin-top: 20px;
+    }
+
+h2.parl-action-items-title {
+    margin-bottom: 0;
+    float: left;
+    clear: both;
 }
 
 .parl-action-item h3 {
-    margin-top: 30px;
     color: #589e9e;
 }
 
@@ -314,7 +320,7 @@ h2 {
     display: inline-block;
 }
 
-.number-of-signatures{
+.number-of-signatures {
     display: inline-block;
 }
 
@@ -323,11 +329,10 @@ h2 {
 }
 
 .parl-petition-item {
-    height: 42px;
     background-color: rgba(204, 204, 204, 0.1);
     margin-bottom: 10px;
     margin-left: 0;
-    padding: 12px 30px 0 30px;
+    padding: 12px 30px 12px 30px;
 }
 
 .parl-petition-item-signatures-mobile {
@@ -353,8 +358,6 @@ h2 {
 }
 
 .parl-primary-button {
-    width: 400px;
-    height: 80px;
     line-height: 80px;
     font-size: 30px;
 }
@@ -363,7 +366,10 @@ h2 {
     height: 60px;
     font-size: 20px;
     line-height: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
+
 
 .parl-button:hover {
     color: #ffffff;
@@ -377,14 +383,9 @@ h2 {
     width: 340px;
 }
 
-.find-my-mp-button {
-    width: 170px;
-    margin-left: 20px;
-    margin-top: -8px;
-}
+
 
 .find-my-mp-input {
-    width: 250px;
     height: 60px;
     border-radius: 4px;
 }
@@ -433,7 +434,7 @@ footer div span {
 }
 
 .header-links-container {
-    max-width: 1170px;   
+    max-width: 1170px;
 }
 
 .panel-heading .panel-heading-button {
@@ -500,7 +501,7 @@ footer div span {
     }
 
     .parl-expand-collapse {
-        width: 140px;
+        max-width: 140px;
     }
 
     .panel-heading-button .btn {
@@ -518,13 +519,9 @@ footer div span {
     }
 
     .panel-body {
-        padding: 30px 0 0 25px;
+        padding: 30px 25px 0 25px;
     }
 
-    .break {
-        width: 650px;
-        margin-left: -6px;
-    }
 
     .logo-beta-box {
         width: 100px;
@@ -548,9 +545,28 @@ footer div span {
         padding-top: 25px;
     }
 
-    .parl-primary-button {
-        width: 550px;
+    .parl-small-action-item {
+        padding-right: 0;
+    }
+
+    .parl-small-action-item-last {
+        padding-left: 0;
+    }
+
+    .find-my-mp-input {
         height: 100px;
+    }
+
+        .find-my-mp-input[type="text"] {
+            font-size: 28px;
+            margin-top: 1px;
+        }
+
+    .find-my-mp-button {
+        margin-top: -7px;
+    }
+
+    .parl-primary-button {
         font-size: 36px;
         line-height: 96px;
     }
@@ -569,10 +585,6 @@ footer div span {
         margin-bottom: 35px;
     }
 
-    .parl-petition-item {
-        height: 180px;
-    }
-
     .parl-petitions-item-header .pull-right {
         display: none;
     }
@@ -587,18 +599,22 @@ footer div span {
         visibility: visible;
     }
 
-   .stopwatch {
+    .stopwatch {
         height: 28px;
         width: 26px;
     }
 
-   .parl-action-time {
-       font-size: 28px;
-   }
+    .parl-action-time {
+        font-size: 28px;
+    }
 
-   .parl-small-action-item-last {
-       border-left: 0;
-   }
+    .parl-small-action-item-last {
+        border-left: 0;
+    }
+
+    input, select, textarea {
+        max-width: inherit; 
+    }
 }
 
 @media (max-width: 480px) { /* this is for a mobile */
@@ -633,7 +649,7 @@ footer div span {
     }
 
     .panel-body {
-        padding: 10px 0 0 5px;
+        padding: 10px 5px 0 5px;
     }
 
     .panel-heading {
@@ -711,8 +727,6 @@ footer div span {
     }
 
     .parl-primary-button {
-        width: 275px;
-        height: 50px;
         font-size: 18px;
         line-height: 45px;
     }
@@ -737,12 +751,18 @@ footer div span {
     }
 
     .parl-petition-item {
-        height: 100px;
         padding: 10px;
     }
 
     .parl-button-group .btn {
+        float: left;
+        clear: both;
         margin-bottom: 18px;
+    }
+   
+    .parl-secondary-button {
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .time-line-container {
@@ -754,12 +774,30 @@ footer div span {
         margin-top: 15px;
     }
 
+    .find-my-mp-input[type="text"] {
+        font-size: 20px;
+        height: 60px;
+    }
+
     .parl-small-action-item-last {
         padding-left: 0;
         padding-bottom: 0;
     }
 
+    .parl-small-action-item-last h3 {
+        padding-top: 30px;
+        border-top: 5px solid rgba(88, 158, 158, 0.2);
+        margin-left: -15px;
+        margin-right: -15px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
     .time-line-item {
         padding-bottom: 5px;
+    }
+
+    input, select, textarea {
+        max-width: inherit; 
     }
 }

@@ -21,9 +21,9 @@ namespace Parliament.Interact.Core.ActionsViewFactory.Items
 
         public override ActionViewName ActionName { get { return ActionViewName.ContactYourMP; } }
         public string ActionView { get { return "_ContactYourMP"; } }
-        public object BuildViewModel(Issue issue)
+        public object BuildViewModel(Issue issue, IssueAction issueAction)
         {
-            Build(issue);
+            Build(issueAction);
             return new ContactYourMPModel();
         }
 

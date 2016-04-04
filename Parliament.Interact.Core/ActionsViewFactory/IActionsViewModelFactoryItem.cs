@@ -11,7 +11,7 @@ namespace Parliament.Interact.Core.ActionsViewFactory
         string Eta { get; }
         string BasicContent { get; }
         string ActionView { get; }
-        object BuildViewModel(Issue issue);
+        object BuildViewModel(Issue issue, IssueAction issueAction);
     }
 
     public interface IActionsViewModelFactoryItemWithInputModel : IActionsViewModelFactoryItem

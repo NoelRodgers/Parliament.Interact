@@ -1,19 +1,27 @@
 ﻿@model Parliament.Interact.Web.Models.IssueViewModel
+
 @{
-    var columnClass = "col-xs-12";
-    var outsideColumnClass = "col-xs-12 col-sm-12";
+    var secondaryActionCount = 0;
 }
 
 <div class="parl-action-items">
     @foreach (var action in Model.ActionsItems)
     {
+        var columnClass = "";
+        var outsideColumnClass = "col-xs-12 col-md-12";
         if (!action.IsPrimary)
         {
+            secondaryActionCount++;
             columnClass = "parl-small-action-item";
-            outsideColumnClass = "col-xs-12 col-sm-6";
+            if (secondaryActionCount % 2 == 0)
+            {
+                columnClass += " parl-small-action-item-last";
+            }
+            outsideColumnClass = "col-xs-12 col-md-6";
         }
+
         <div class="@outsideColumnClass">
-            <div class="parl-action-item @columnClass">
+            <div class="parl-action-item @columnClass col-xs-12">
                 <h3>@action.Title</h3>
                 <div class="parl-action-time">
                     <img src="~/Content/img/stopwatch-28x28.svg" class="stopwatch" />@action.Eta
@@ -26,28 +34,11 @@
                 </div>
             </div>
         </div>
-        if (action.IsPrimary)
+        if ((action.IsPrimary || (!action.IsPrimary && secondaryActionCount % 2 == 0))
+            && (Model.ActionsItems.IndexOf(action) + 1) != Model.ActionsItems.Count)  //TODO - move to view model builder
+
         {
-            <hr class="break" />
+            <hr class="break col-xs-12" />
         }
     }
-
-    <!--Hard coded for now - should both be an action-->
-    <div class="col-xs-12 col-sm-6">
-        <div class="parl-action-item parl-small-action-item-last">
-            <h3>Volunteer as a school governor</h3>
-            <div class="parl-action-time">
-                <img src="~/Content/img/stopwatch-28x28.svg" class="stopwatch" />Over 1hr
-            </div>
-            <div class="parl-action-basic-content">
-                <p>Could you help set a school's direction and ensure that its budget is properly managed?</p>
-                <a href="https://www.gov.uk/government/get-involved/take-part/volunteer-as-a-school-governor">Read more on GOV.UK</a>
-            </div>
-            <div class="parl-action-content">
-                <div class="parl-volunteer-governor parl-action-small">
-                    <a id="volunteer-governor" href="https://www.gov.uk/become-school-college-governor" class="btn parl-button parl-secondary-button apply-online-button" onClick="ga('send', 'event', 'call-to-actions', 'click', 'all events');">Apply Online</a>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>

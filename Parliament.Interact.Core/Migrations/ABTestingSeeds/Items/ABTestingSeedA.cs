@@ -44,7 +44,7 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds
                         Content = "<p>Write to your MP about academy schools. Your MP represents you. They can raise your concerns in Parliament and question Government.</p>"
                     }
                 }  },
-                new ActionItem {ViewName = ActionViewName.Links, ActionContents = new List<ActionContent>()
+                new ActionItem {ViewName = ActionViewName.Links, ActionContents = new List<ActionContent>
                 {
                     new ActionContent
                     {
@@ -230,7 +230,42 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds
                     Issue = issues[0],
                     ActionItem = actionItems[3],
                     IsPrimary = true,
-                    LogicalOrder = 4
+                    LogicalOrder = 5
+                },
+                new IssueAction
+                {
+                    Issue = issues[0],
+                    ActionItem = actionItems[1],
+                    IsPrimary = false,
+                    LogicalOrder = 4,
+                    IssueActionContents = new List<IssueActionContent>
+                    {
+                        new IssueActionContent
+                        {
+                            Key = "Title",
+                            Content = "Volunteer as a school governor"
+                        },
+                        new IssueActionContent
+                        {
+                            Key = "Link",
+                            Content = "https://www.gov.uk/become-school-college-governor"
+                        },
+                        new IssueActionContent
+                        {
+                            Key = "LinkName",
+                            Content = "Apply Online"
+                        },
+                        new IssueActionContent
+                        {
+                            Key = "Eta",
+                            Content = "Over 1hr"
+                        },
+                        new IssueActionContent
+                        {
+                            Key = "BasicContent",
+                            Content = "<p>Could you help set a school's direction and ensure that its budget is properly managed?</p><p><a href=\"https://www.gov.uk/government/get-involved/take-part/volunteer-as-a-school-governor\">Read more on GOV.UK</a></p>"
+                        }
+                    }
                 },
             };
 

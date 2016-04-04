@@ -36,7 +36,7 @@ namespace Parliament.Interact.Web.ViewModelBuilders
             var model = new ActionItemViewModel
             {
                 ActionView = actionsBasePath.FormatString(item.ActionView),
-                ActionModel = item.BuildViewModel(issue)
+                ActionModel = item.BuildViewModel(issue, issueAction)
             };
 
             model.Title = item.Title;

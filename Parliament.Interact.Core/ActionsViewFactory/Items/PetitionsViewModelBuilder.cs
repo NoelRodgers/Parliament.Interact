@@ -26,9 +26,9 @@ namespace Parliament.Interact.Core.ActionsViewFactory.Items
 
         public string ActionView { get { return "_Petitions"; } }
 
-        public object BuildViewModel(Issue issue)
+        public object BuildViewModel(Issue issue, IssueAction issueAction)
         {
-            Build(issue);
+            Build(issueAction);
             var petitions = _service.GetTopPetitionsForPhrase("Academy Schools");
             return new PetitionsModel
             {

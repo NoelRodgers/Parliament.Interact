@@ -13,9 +13,9 @@ namespace Parliament.Interact.Core.ActionsViewFactory.Items
 
         public string ActionView { get { return "_Social"; } }
 
-        public object BuildViewModel(Issue issue)
+        public object BuildViewModel(Issue issue, IssueAction issueAction)
         {
-            Build(issue);
+            Build(issueAction);
             return null;
         }
 

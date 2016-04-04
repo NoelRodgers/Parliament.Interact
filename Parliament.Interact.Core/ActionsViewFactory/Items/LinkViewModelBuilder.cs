@@ -30,11 +30,11 @@ namespace Parliament.Interact.Core.ActionsViewFactory
             }
         }
 
-        public object BuildViewModel(Issue issue)
+        public object BuildViewModel(Issue issue, IssueAction issueAction)
         {
-            Build(issue);
-            var linkContent = GetActionContent(issue, "Link").Content;
-            var linkNameContent = GetActionContent(issue, "LinkName").Content;
+            Build(issueAction);
+            var linkContent = GetActionContent(issueAction, "Link").Content;
+            var linkNameContent = GetActionContent(issueAction, "LinkName").Content;
             return new LinkModel
             {
                 Link = linkContent,
