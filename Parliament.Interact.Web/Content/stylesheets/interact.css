@@ -214,6 +214,7 @@ h2 {
     margin-left: -21px;
     height: 4px;
     background-color: rgba(88, 158, 158, 0.2);
+    clear: both;
 }
 
 /* Further reading links section*/
