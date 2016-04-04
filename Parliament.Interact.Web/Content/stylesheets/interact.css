@@ -92,7 +92,7 @@ h2 {
     top: 75px;
     width: 65px;
     border: 2px solid #589e9e;
-    border-radius: 5px;
+    border-radius: 2px;
     color: #589e9e;
     text-align: center;
     font-family: "Verdana";
@@ -636,6 +636,10 @@ footer div span {
         padding: 10px 0 0 5px;
     }
 
+    .panel-heading {
+        border-radius: 4px;
+    }
+
     .parl-action-items-title {
         width: 345px;
         height: 50px;
@@ -703,7 +707,7 @@ footer div span {
         height: 24px;
         font-size: 11px;
         top: 10px;
-        padding-top: 2px;
+        padding-top: 0;
     }
 
     .parl-primary-button {
@@ -738,5 +742,13 @@ footer div span {
 
     .parl-button-group .btn {
         margin-bottom: 18px;
+    }
+
+    .time-line-container {
+        padding-bottom: 40px;
+    }
+
+    .time-line-item {
+        padding-bottom: 5px;
     }
 }
