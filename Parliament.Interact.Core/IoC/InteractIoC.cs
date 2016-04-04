@@ -18,6 +18,7 @@ namespace Parliament.Interact.Core.IoC
             For<IABTestingItem>().Add<ABTestingSeedA>();
             For<IABTestingItem>().Add<ABTestingSeedB>();
             For<IABTestingItem>().Add<ABTestingSeedC>();
+            For<IABTestingItem>().Add<ABTestingSeedD>();
         }
     }
 }

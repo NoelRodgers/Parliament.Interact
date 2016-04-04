@@ -176,9 +176,10 @@
       <DependentUpon>201604011425569_Added logical order property to issueAction.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\ABTestingSeeds\ABTestingFactory.cs" />
+    <Compile Include="Migrations\ABTestingSeeds\Items\ABTestingSeedC.cs" />
     <Compile Include="Migrations\ABTestingSeeds\Items\ABTestingSeedB.cs" />
     <Compile Include="Migrations\ABTestingSeeds\Items\ABTestingSeedA.cs" />
-    <Compile Include="Migrations\ABTestingSeeds\Items\ABTestingSeedC.cs" />
+    <Compile Include="Migrations\ABTestingSeeds\Items\ABTestingSeedD.cs" />
     <Compile Include="Migrations\ABTestingSeeds\IABTestingFactory.cs" />
     <Compile Include="Migrations\ABTestingSeeds\IABTestingItem.cs" />
     <Compile Include="Migrations\ABTestingSeeds\Settings\ABTestingSettings.cs" />

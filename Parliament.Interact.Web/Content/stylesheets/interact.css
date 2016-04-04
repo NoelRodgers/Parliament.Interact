@@ -244,7 +244,9 @@ h2 {
 
 .desktop-issue-introduction-container {
     padding-top: 10px;
-    padding-bottom: 25px;
+    padding-bottom: 30px;
+    float: left;
+    clear: both;
 }
 
 .time-line-container {

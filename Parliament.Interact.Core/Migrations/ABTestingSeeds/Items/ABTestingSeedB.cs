@@ -2,15 +2,18 @@
 using System.Collections.Generic;
 using System.Data.Entity.Migrations;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Threading.Tasks;
 using System.Web;
 using Parliament.Interact.Core.ActionsViewFactory.Enum;
 using Parliament.Interact.Core.Domain;
 using Parliament.Interact.Core.Domain.Context;
 
-namespace Parliament.Interact.Core.Migrations.ABTestingSeeds.Items
+namespace Parliament.Interact.Core.Migrations.ABTestingSeeds
 {
+    //This is the seed where all the actions are ordered in time
     public class ABTestingSeedB : IABTestingItem
     {
         public string ConfigurationName { get { return "B"; } }
@@ -42,7 +45,7 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds.Items
                         Content = "<p>Write to your MP about academy schools. Your MP represents you. They can raise your concerns in Parliament and question Government.</p>"
                     }
                 }  },
-                new ActionItem {ViewName = ActionViewName.Links, ActionContents = new List<ActionContent>()
+                new ActionItem {ViewName = ActionViewName.Links, ActionContents = new List<ActionContent>
                 {
                     new ActionContent
                     {
@@ -60,7 +63,7 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds.Items
                         Content = "Basic Content for Links"
                     }
                 }},
-                new ActionItem {ViewName = ActionViewName.Petitions, ActionContents = new List<ActionContent>()
+                new ActionItem {ViewName = ActionViewName.Petitions, ActionContents = new List<ActionContent>
                 {
                     new ActionContent
                     {
@@ -77,9 +80,73 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds.Items
                         Key = "BasicContent",
                         Content = "<p>Sign or Start a petition about academy schools. The Government must respond to petitions that get 10,000 signatures. A petition that receives 100,000 signatures may be debated in Parliament.</p>"
                     }
-                }}
+                }},
+                new ActionItem
+                {
+                    ViewName = ActionViewName.Social, ActionContents = new List<ActionContent>
+                    {
+                        new ActionContent
+                        {
+                            Key = "Title",
+                            Content = "Help raise awareness",
+                        },
+                        new ActionContent
+                        {
+                            Key = "Eta",
+                            Content = "Approx 2mins",
+                        },
+                        new ActionContent
+                        {
+                            Key = "BasicContent",
+                            Content = "<p>Share this page about Academy Schools with your social network, friends, family and colleagues to get more people involved in this issue.</p>",
+                        },
+                    }
+                }
             };
 
+            var timelines = new List<IssueTimeLine>
+            {
+                new IssueTimeLine
+                {
+                    TimelineType = TimeLineType.Past,
+                    HTMLContent = "<p>On 16 March the Chancellor, George Osborne, presented his Budget to Parliament and announced that by the end of 2020, every school in England should be an academy or free school – or be in the process of becoming one.</p>"
+                },
+                new IssueTimeLine
+                {
+                    TimelineType = TimeLineType.Present,
+                    HTMLContent = "<p>The House of Commons Education Committee is running an inquiry into the performance, accountability & governance of Multi-Academy Trusts. <a href='http://www.parliament.uk/business/committees/committees-a-z/commons-select/education-committee/inquiries/parliament-2015/multi-academy-trusts-15-16/'>Inquiry: Multi - Academy Trusts</a> <i class='fa fa-external'></i></p>"
+                },
+                new IssueTimeLine
+                {
+                    TimelineType = TimeLineType.Future,
+                    HTMLContent = "<p>On 27 April, the Education Select Committee is due to question Nicky Morgan, Secretary of State for Education, on the Government's policy 'Educational Excellence Everywhere' which includes the proposal for every school to become a free school or academy.</p>"
+                }
+            };
+
+            var furtherReadings = new List<IssueFurtherReading>
+            {
+                new IssueFurtherReading
+                {
+                    LinkName = "Read a report by the Education Commitee",
+                    LinkUrl = "http://www.parliament.uk/business/committees/committees-a-z/commons-select/education-committee/news/academies-and-free-schools-government-response-to-be-published/",
+                    Description = "about Academies and Free Schools (January 2015)",
+                    DisplayExternalIcon = true
+                },
+                new IssueFurtherReading
+                {
+                    LinkName = "BBC News article",
+                    LinkUrl = "http://www.bbc.co.uk/news/education-13274090",
+                    Description = "What does it mean to be an Academy School? (BBC News, March 2016)",
+                    DisplayExternalIcon = true
+                },
+                new IssueFurtherReading
+                {
+                    LinkName = "Nicky Morgan’s Press release",
+                    LinkUrl = "https://www.gov.uk/government/news/nicky-morgan-unveils-new-vision-for-the-education-system",
+                    Description = "Nicky Morgan unveils new vision for the education system (GOV.UK, March 2016)",
+                    DisplayExternalIcon = true
+                }
+            };
 
             var filename = new UriBuilder(Assembly.GetExecutingAssembly().CodeBase);
             var path = Uri.UnescapeDataString(filename.Path);
@@ -101,6 +168,8 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds.Items
                     Title = "Academy Schools",
                     LogicalOrder = 1,
                     Content = issueContent.ToString(),
+                    TimeLines = timelines,
+                    FurtherReadings = furtherReadings,
                     Image = dbImage,
                     ImageType = dbImageType
                 }
@@ -113,7 +182,7 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds.Items
                     Issue = issues[0],
                     ActionItem = actionItems[1],
                     IsPrimary = true,
-                    LogicalOrder = 1,
+                    LogicalOrder = 5,
                     IssueActionContents = new List<IssueActionContent>
                     {
                         new IssueActionContent
@@ -156,7 +225,49 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds.Items
                     ActionItem = actionItems[0],
                     IsPrimary = false,
                     LogicalOrder = 3
-                }
+                },
+                new IssueAction
+                {
+                    Issue = issues[0],
+                    ActionItem = actionItems[3],
+                    IsPrimary = true,
+                    LogicalOrder = 1
+                },
+                new IssueAction
+                {
+                    Issue = issues[0],
+                    ActionItem = actionItems[1],
+                    IsPrimary = false,
+                    LogicalOrder = 4,
+                    IssueActionContents = new List<IssueActionContent>
+                    {
+                        new IssueActionContent
+                        {
+                            Key = "Title",
+                            Content = "Volunteer as a school governor"
+                        },
+                        new IssueActionContent
+                        {
+                            Key = "Link",
+                            Content = "https://www.gov.uk/become-school-college-governor"
+                        },
+                        new IssueActionContent
+                        {
+                            Key = "LinkName",
+                            Content = "Apply Online"
+                        },
+                        new IssueActionContent
+                        {
+                            Key = "Eta",
+                            Content = "Over 1hr"
+                        },
+                        new IssueActionContent
+                        {
+                            Key = "BasicContent",
+                            Content = "<p>Could you help set a school's direction and ensure that its budget is properly managed?</p><p><a href=\"https://www.gov.uk/government/get-involved/take-part/volunteer-as-a-school-governor\">Read more on GOV.UK</a></p>"
+                        }
+                    }
+                },
             };
 
             context.Issues.AddOrUpdate(issues.ToArray());
