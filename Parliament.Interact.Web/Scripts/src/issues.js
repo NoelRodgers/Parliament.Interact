@@ -6,7 +6,14 @@
         showCount: false,
         shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "whatsapp"]
     });
+
+    setTimeout(openFirstAccordionItem, 400);
 });
+
+function openFirstAccordionItem() {
+    $(".parl-expand-collapse:nth-child(1)").trigger("click");
+    console.log("I'm happening");
+}
 
 function callModal() {
     $(".modal").modal();
