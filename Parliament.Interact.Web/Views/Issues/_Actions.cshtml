@@ -1,62 +1,67 @@
 ﻿@model Parliament.Interact.Web.Models.IssueViewModel
 @{
     var columnClass = "col-xs-12";
+    var outsideColumnClass = "col-xs-12 col-sm-12";
 }
+
 <div class="parl-action-items">
     @foreach (var action in Model.ActionsItems)
     {
         if (!action.IsPrimary)
         {
-            columnClass = "col-xs-12 col-sm-6 parl-small-action-item";
+            columnClass = "parl-small-action-item";
+            outsideColumnClass = "col-xs-12 col-sm-6";
         }
-        <div class="parl-action-item @columnClass">
-            <h3>@action.Title</h3>
-            <div class="parl-action-time">
-                <img src="~/Content/img/stopwatch-28x28.svg" class="stopwatch"/>@action.Eta
-            </div>
-            <div class="parl-action-basic-content">
-                @Html.Raw(action.BasicContent)
-            </div>
-            <div class="parl-action-content">
-                @Html.Partial(action.ActionView, action.ActionModel)
+        <div class="@outsideColumnClass">
+            <div class="parl-action-item @columnClass">
+                <h3>@action.Title</h3>
+                <div class="parl-action-time">
+                    <img src="~/Content/img/stopwatch-28x28.svg" class="stopwatch" />@action.Eta
+                </div>
+                <div class="parl-action-basic-content">
+                    @Html.Raw(action.BasicContent)
+                </div>
+                <div class="parl-action-content">
+                    @Html.Partial(action.ActionView, action.ActionModel)
+                </div>
             </div>
         </div>
         if (action.IsPrimary)
         {
-            <hr class="break"/>
+            <hr class="break" />
         }
     }
 
     <!--Hard coded for now - should both be an action-->
-    <div class="parl-action-item col-sm-6 parl-small-action-item-last">
-        <h3>Volunteer as a school governor</h3>
-        <div class="parl-action-time">
-            <img src="~/Content/img/stopwatch-28x28.svg" class="stopwatch"/>Over 1hr
-        </div>
-        <div class="parl-action-basic-content">
-            <p>Could you help set a school's direction and ensure that its budget is properly managed?</p>
-            <a href="https://www.gov.uk/government/get-involved/take-part/volunteer-as-a-school-governor">Read more on GOV.UK</a>
-        </div>
-        <div class="parl-action-content">
-            <div class="parl-volunteer-governor parl-action-small">
-                <a id="volunteer-governor" href="https://www.gov.uk/become-school-college-governor" class="btn parl-button parl-secondary-button apply-online-button" onClick="ga('send', 'event', 'call-to-actions', 'click', 'all events');">Apply Online</a>
+    <div class="row col-xs-12 col-sm-6">
+        <div class="parl-action-item parl-small-action-item-last">
+            <h3>Volunteer as a school governor</h3>
+            <div class="parl-action-time">
+                <img src="~/Content/img/stopwatch-28x28.svg" class="stopwatch" />Over 1hr
+            </div>
+            <div class="parl-action-basic-content">
+                <p>Could you help set a school's direction and ensure that its budget is properly managed?</p>
+                <a href="https://www.gov.uk/government/get-involved/take-part/volunteer-as-a-school-governor">Read more on GOV.UK</a>
+            </div>
+            <div class="parl-action-content">
+                <div class="parl-volunteer-governor parl-action-small">
+                    <a id="volunteer-governor" href="https://www.gov.uk/become-school-college-governor" class="btn parl-button parl-secondary-button apply-online-button" onClick="ga('send', 'event', 'call-to-actions', 'click', 'all events');">Apply Online</a>
+                </div>
             </div>
         </div>
     </div>
-
-    <hr class="break"/>
-
-    <div class="parl-action-item parl-action-social-media col-xs-12">
-        <h3>Help raise awareness</h3>
-        <div class="parl-action-time">
-            <img src="~/Content/img/stopwatch-28x28.svg" class="stopwatch" />Approx 2mins
-        </div>
-        <div class="parl-action-basic-content">
-            <p>Share this page about Academy Schools with your social network, friends, family and colleagues to get more people involved in this issue.</p>
-        </div>
-        <div id="shareIcons" class="parl-action-content share-icons">
-
+<hr class="break" />
+    <div class="row col-xs-12">
+        <div class="parl-action-item parl-action-social-media col-xs-12">
+            <h3>Help raise awareness</h3>
+            <div class="parl-action-time">
+                <img src="~/Content/img/stopwatch-28x28.svg" class="stopwatch" />Approx 2mins
+            </div>
+            <div class="parl-action-basic-content">
+                <p>Share this page about Academy Schools with your social network, friends, family and colleagues to get more people involved in this issue.</p>
+            </div>
+            <div id="shareIcons" class="parl-action-content share-icons">
+            </div>
         </div>
     </div>
-
 </div>
