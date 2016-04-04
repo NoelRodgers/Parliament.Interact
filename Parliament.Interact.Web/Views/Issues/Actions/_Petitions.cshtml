@@ -4,7 +4,7 @@
     <div class="parl-top-petitions">
         <div class="parl-petition-items-header">
         <h5>Top @Model.MaxCount relevant petitions on petition.parliament.uk</h5>
-            <h5 class="pull-right">No. of Signatures</h5>
+            <h5 class="pull-right number-of-signatures">No. of Signatures</h5>
         </div>
         <div class="parl-petition-items">
             @foreach (var petition in Model.Petitions)
@@ -12,8 +12,9 @@
                 <div class="parl-petition-item col-xs-12 row">
                     <div class="parl-petition-item-link">
                         <a href="@petition.Link" onClick="ga('send', 'event', 'call-to-actions', 'click', 'all events');" target="_blank">@petition.LinkName</a>
-                        <span class="parl-petition-item-signed pull-right">
+                        <span class="parl-petition-item-signatures-desktop pull-right">
                         @petition.SignatureCount</span>
+                        <div class="parl-petition-item-signatures-mobile">@petition.SignatureCount signatures</div>
                     </div>
                 </div>
             }

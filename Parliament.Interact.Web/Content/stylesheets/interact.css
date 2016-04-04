@@ -9,6 +9,10 @@ h1, h2, h3, h4, h5 {
     font-family: 'Lato', sans-serif;
 }
 
+h2 {
+    margin-bottom: 30px;
+}
+
 h5 {
     font-size: 18px;
 }
@@ -322,6 +326,11 @@ h2 {
     padding: 12px 30px 0 30px;
 }
 
+.parl-petition-item-signatures-mobile {
+    display: none;
+    visibility: hidden;
+}
+
 .parl-button {
     padding: 0;
     font-family: Lato-bold, sans-serif;
@@ -447,6 +456,20 @@ footer div span {
 
 @media (max-width: 992px) { /* this is for a tablet */
 
+    body {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    h5 {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
     .header-links {
         display: none;
     }
@@ -481,10 +504,6 @@ footer div span {
         color: #333333;
     }
 
-    body {
-        font-size: 26px;
-    }
-
     footer div p {
         line-height: 30px;
     }
@@ -492,6 +511,15 @@ footer div span {
     .logo-image {
         max-width: 640px;
         width: 85%;
+    }
+
+    .panel-body {
+        padding: 30px 0 0 25px;
+    }
+
+    .break {
+        width: 650px;
+        margin-left: -6px;
     }
 
     .logo-beta-box {
@@ -506,11 +534,71 @@ footer div span {
     .issue-content-img {
         display: none;
     }
+
+    .parl-action-items-title {
+        width: 690px;
+        height: 100px;
+        margin-left: -25px;
+        font-size: 44px;
+        padding-left: 40px;
+        padding-top: 25px;
+    }
+
+    .parl-primary-button {
+        width: 550px;
+        height: 100px;
+        font-size: 36px;
+        line-height: 96px;
+    }
+
+    .parl-secondary-button {
+        height: 100px;
+        font-size: 36px;
+        line-height: 96px;
+    }
+
+    .petitions-button {
+        width: 550px;
+    }
+
+    .parl-button-group .btn {
+        margin-bottom: 35px;
+    }
+
+    .number-of-signatures, .parl-petition-item-signatures-desktop {
+        display: none;
+        visibility: hidden;
+    }
+
+    .parl-petition-item-signatures-mobile {
+        display: block;
+        visibility: visible;
+    }
+
+   .stopwatch {
+        height: 28px;
+        width: 26px;
+    }
+
+   .parl-action-time {
+       font-size: 28px;
+   }
 }
 
 @media (max-width: 480px) { /* this is for a mobile */
     body {
-        font-size: 13px;
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    h2 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    h5 {
+        font-size: 14px;
+        line-height: 19px;
     }
 
     .header-links {
@@ -526,6 +614,19 @@ footer div span {
     .panel-group > .issues-panel {
         max-width: 345px;
         margin-bottom: 15px;
+    }
+
+    .panel-body {
+        padding: 10px 0 0 5px;
+    }
+
+    .parl-action-items-title {
+        width: 345px;
+        height: 50px;
+        margin-left: -5px;
+        font-size: 22px;
+        padding-left: 40px;
+        padding-top: 12px;
     }
 
     .panel-heading {
@@ -589,8 +690,19 @@ footer div span {
         padding-top: 2px;
     }
 
+    .parl-primary-button {
+        width: 275px;
+        height: 50px;
+        font-size: 18px;
+        line-height: 45px;
+    }
+
     .stopwatch {
-        height: 28px;
-        width: 28px;
+        height: 14px;
+        width: 13px;
+    }
+
+    .parl-action-time {
+        font-size: 14px;
     }
 }
