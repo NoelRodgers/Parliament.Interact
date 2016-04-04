@@ -24,43 +24,7 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds.Items
             issueContent.Append("<p>Others say that the freedoms afforded to academies, and their rapid expansion, have the potential to result in financial problems and lapses in standards. (House of Commons Library, <a href='http://www.parliament.uk/business/publications/research/key-issues-parliament-2015/education/academies-and-free-schools/'>Key Issues for the 2015 Parliament <i class='fa fa-external'></i></a>)</p>");
             var actionItems = new List<ActionItem>
             {
-                new ActionItem {ViewName = ActionViewName.ContactYourMP, ActionContents = new List<ActionContent>()
-                {
-                    new ActionContent
-                    {
-                        Key = "Title",
-                        Content = "Contact your MP"
-                    },
-                    new ActionContent
-                    {
-                        Key = "Eta",
-                        Content = "Approx 15mins"
-                    },
-                    new ActionContent
-                    {
-                        Key = "BasicContent",
-                        Content = "<p>Write to your MP about academy schools. Your MP represents you. They can raise your concerns in Parliament and question Government.</p>"
-                    }
-                }  },
-                new ActionItem {ViewName = ActionViewName.Links, ActionContents = new List<ActionContent>()
-                {
-                    new ActionContent
-                    {
-                        Key = "Title",
-                        Content = "Links"
-                    },
-                    new ActionContent
-                    {
-                        Key = "Eta",
-                        Content = "10 minutes"
-                    },
-                    new ActionContent
-                    {
-                        Key = "BasicContent",
-                        Content = "Basic Content for Links"
-                    }
-                }},
-                new ActionItem {ViewName = ActionViewName.Petitions, ActionContents = new List<ActionContent>()
+                new ActionItem {ViewName = ActionViewName.Petitions, ActionContents = new List<ActionContent>
                 {
                     new ActionContent
                     {
@@ -156,51 +120,9 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds.Items
                 new IssueAction
                 {
                     Issue = issues[0],
-                    ActionItem = actionItems[1],
-                    IsPrimary = true,
-                    LogicalOrder = 1,
-                    IssueActionContents = new List<IssueActionContent>
-                    {
-                        new IssueActionContent
-                        {
-                            Key = "Title",
-                            Content = "Contribute to the inquiry"
-                        },
-                        new IssueActionContent
-                        {
-                            Key = "Link",
-                            Content = "http://www.parliament.uk/business/committees/committees-a-z/commons-select/education-committee/inquiries/parliament-2015/multi-academy-trusts-15-16/"
-                        },
-                        new IssueActionContent
-                        {
-                            Key = "LinkName",
-                            Content = "Submit Evidence"
-                        },
-                        new IssueActionContent
-                        {
-                            Key = "Eta",
-                            Content = "Over 1hr"
-                        },
-                        new IssueActionContent
-                        {
-                            Key = "BasicContent",
-                            Content = "<p>Send your views on groups of academy schools (Multiple-Academy Trusts) to the House of Commons Education Committee. The Committee can use information you provide to help it question Ministers or make recommendations to Government.</p>"
-                        }
-                    }
-                },
-                new IssueAction
-                {
-                    Issue = issues[0],
-                    ActionItem = actionItems[2],
-                    IsPrimary = true,
-                    LogicalOrder = 2
-                },
-                new IssueAction
-                {
-                    Issue = issues[0],
                     ActionItem = actionItems[0],
-                    IsPrimary = false,
-                    LogicalOrder = 3
+                    IsPrimary = true,
+                    LogicalOrder = 1
                 }
             };
 

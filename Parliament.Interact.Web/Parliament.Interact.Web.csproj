@@ -285,6 +285,7 @@
     <Content Include="Views\Issues\Actions\Small\_Petitions.cshtml" />
     <Content Include="Views\About\Index.cshtml" />
     <Content Include="Views\Shared\_ThinLayout.cshtml" />
+    <Content Include="Views\Issues\Actions\_Social.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

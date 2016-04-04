@@ -13,6 +13,7 @@ namespace Parliament.Interact.Core.IoC
             For<IActionsViewModelFactoryItem>().Add<ContactYourMPViewModelBuilder>();
             For<IActionsViewModelFactoryItem>().Add<PetitionsViewModelBuilder>();
             For<IActionsViewModelFactoryItem>().Add<LinkViewModelBuilder>();
+            For<IActionsViewModelFactoryItem>().Add<SocialViewModelBuilder>();
 
             For<IABTestingItem>().Add<ABTestingSeedA>();
             For<IABTestingItem>().Add<ABTestingSeedB>();

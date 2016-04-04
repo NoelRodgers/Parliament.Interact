@@ -62,7 +62,7 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds
                         Content = "Basic Content for Links"
                     }
                 }},
-                new ActionItem {ViewName = ActionViewName.Petitions, ActionContents = new List<ActionContent>()
+                new ActionItem {ViewName = ActionViewName.Petitions, ActionContents = new List<ActionContent>
                 {
                     new ActionContent
                     {
@@ -79,7 +79,28 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds
                         Key = "BasicContent",
                         Content = "<p>Sign or Start a petition about academy schools. The Government must respond to petitions that get 10,000 signatures. A petition that receives 100,000 signatures may be debated in Parliament.</p>"
                     }
-                }}
+                }},
+                new ActionItem
+                {
+                    ViewName = ActionViewName.Social, ActionContents = new List<ActionContent>
+                    {
+                        new ActionContent
+                        {
+                            Key = "Title",
+                            Content = "Help raise awareness",
+                        },
+                        new ActionContent
+                        {
+                            Key = "Eta",
+                            Content = "Approx 2mins",
+                        },
+                        new ActionContent
+                        {
+                            Key = "BasicContent",
+                            Content = "<p>Share this page about Academy Schools with your social network, friends, family and colleagues to get more people involved in this issue.</p>",
+                        },
+                    }
+                }
             };
 
             var timelines = new List<IssueTimeLine>
@@ -203,7 +224,14 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds
                     ActionItem = actionItems[0],
                     IsPrimary = false,
                     LogicalOrder = 3
-                }
+                },
+                new IssueAction
+                {
+                    Issue = issues[0],
+                    ActionItem = actionItems[3],
+                    IsPrimary = true,
+                    LogicalOrder = 4
+                },
             };
 
             context.Issues.AddOrUpdate(issues.ToArray());
