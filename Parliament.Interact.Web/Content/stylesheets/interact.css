@@ -55,7 +55,7 @@ h5 {
 }
 
 .panel-body {
-    padding: 50px;
+    padding: 50px 25px 0 55px;
 }
 
 h2 {
@@ -210,8 +210,8 @@ h2 {
 .break {
     margin-top: 0;
     margin-bottom: 0;
-    width: 103%;
-    margin-left: -16px;
+    width: 101%;
+    margin-left: -21px;
     height: 4px;
     background-color: rgba(88, 158, 158, 0.2);
 }
@@ -255,8 +255,8 @@ h2 {
 /* Actions section */
 
 .parl-action-items-title {
-    width: 103%;
-    margin-left: -16px;
+    width: 101%;
+    margin-left: -21px;
     background-color: #589e9e;
     padding: 10px 35px;
     color: #ffffff;
@@ -458,7 +458,6 @@ footer div span {
 
     .panel-group > .issues-panel {
         max-width: 690px;
-        height: 120px;
         margin-bottom: 25px;
     }
 
@@ -502,6 +501,10 @@ footer div span {
         padding-top: 5px;
         top: 50px;
     }
+
+    .issue-content-img {
+        display: none;
+    }
 }
 
 @media (max-width: 480px) { /* this is for a mobile */
@@ -521,16 +524,13 @@ footer div span {
 
     .panel-group > .issues-panel {
         max-width: 345px;
-        height: 60px;
         margin-bottom: 15px;
     }
 
     .panel-heading {
         max-width: 345px;
-        padding-top: 0;
-        padding-left: 0;
-        height: 80px;
-        margin-top: -8px;
+        height: 60px;
+        padding: 0 15px 0 0;
     }
 
     .panel-header {
