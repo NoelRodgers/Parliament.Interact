@@ -1,18 +1,21 @@
 ﻿@model Parliament.Interact.Web.Models.IssueViewModel
-
-<div class="further-readings">
-    <h2>Further reading</h2>
-    <ul>
-        @foreach (var reading in Model.FurtherReadings)
-        {
-        <li class="further-reading-link-list-item">
-            <span class="further-reading-link">
-                <a href=@reading.LinkUrl target="_blank">@reading.LinkName</a>@if (reading.DisplayExternalIcon == true)
-                {
-                    <i class="fa fa-external-link"></i>
-                }
-            </span> - @reading.Description
-        </li>
-        }
-    </ul>
-</div>
+@if (Model.FurtherReadings.Any())
+{
+    <div class="further-readings">
+        <h2>Further reading</h2>
+        <ul>
+            @foreach (var reading in Model.FurtherReadings)
+            {
+                <li class="further-reading-link-list-item">
+                    <span class="further-reading-link">
+                        <a href=@reading.LinkUrl target="_blank">@reading.LinkName</a>
+                        @if (reading.DisplayExternalIcon == true)
+                        {
+                            <i class="fa fa-external-link"></i>
+                        }
+                    </span> - @reading.Description
+                </li>
+            }
+        </ul>
+    </div>
+}

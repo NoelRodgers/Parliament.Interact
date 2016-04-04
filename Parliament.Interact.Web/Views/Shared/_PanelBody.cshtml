@@ -8,7 +8,10 @@
             @Html.Partial("~/Views/Issues/_IssueFurtherReading.cshtml", Model)
         </div>
     </div>
-    <hr class="break"/>
+    @if (Model.TimeLines.Any())
+    {
+        <hr class="break" />
+    }
     <div class="row col-xs-12">
         @Html.Partial("~/Views/Issues/_IssueTimeLine.cshtml", Model)
     </div>

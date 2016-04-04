@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Parliament.Interact.Core.ActionsViewFactory;
+﻿using Parliament.Interact.Core.ActionsViewFactory;
 using Parliament.Interact.Core.ActionsViewFactory.Items;
+using Parliament.Interact.Core.Migrations.ABTestingSeeds;
+using Parliament.Interact.Core.Migrations.ABTestingSeeds.Items;
 using StructureMap.Configuration.DSL;
 
 namespace Parliament.Interact.Core.IoC
@@ -16,6 +13,10 @@ namespace Parliament.Interact.Core.IoC
             For<IActionsViewModelFactoryItem>().Add<ContactYourMPViewModelBuilder>();
             For<IActionsViewModelFactoryItem>().Add<PetitionsViewModelBuilder>();
             For<IActionsViewModelFactoryItem>().Add<LinkViewModelBuilder>();
+
+            For<IABTestingItem>().Add<ABTestingSeedA>();
+            For<IABTestingItem>().Add<ABTestingSeedB>();
+            For<IABTestingItem>().Add<ABTestingSeedC>();
         }
     }
 }
