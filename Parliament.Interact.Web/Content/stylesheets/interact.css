@@ -737,7 +737,8 @@ footer div span {
     }
 
     .parl-petition-item {
-        height: 120px;
+        height: 100px;
+        padding: 10px;
     }
 
     .parl-button-group .btn {
@@ -746,6 +747,16 @@ footer div span {
 
     .time-line-container {
         padding-bottom: 40px;
+    }
+
+    .find-my-mp-button {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+
+    .parl-small-action-item-last {
+        padding-left: 0;
+        padding-bottom: 0;
     }
 
     .time-line-item {
