@@ -310,7 +310,11 @@ h2 {
     margin-right: 10px;
 }
 
-.parl-petition-items-header h5{
+.petitions-header {
+    display: inline-block;
+}
+
+.number-of-signatures{
     display: inline-block;
 }
 
@@ -565,6 +569,14 @@ footer div span {
         margin-bottom: 35px;
     }
 
+    .parl-petition-item {
+        height: 180px;
+    }
+
+    .parl-petitions-item-header .pull-right {
+        display: none;
+    }
+
     .number-of-signatures, .parl-petition-item-signatures-desktop {
         display: none;
         visibility: hidden;
@@ -582,6 +594,10 @@ footer div span {
 
    .parl-action-time {
        font-size: 28px;
+   }
+
+   .parl-small-action-item-last {
+       border-left: 0;
    }
 }
 
@@ -697,6 +713,16 @@ footer div span {
         line-height: 45px;
     }
 
+    .parl-secondary-button {
+        height: 50px;
+        font-size: 18px;
+        line-height: 45px;
+    }
+
+    .petitions-button {
+        width: 275px;
+    }
+
     .stopwatch {
         height: 14px;
         width: 13px;
@@ -704,5 +730,13 @@ footer div span {
 
     .parl-action-time {
         font-size: 14px;
+    }
+
+    .parl-petition-item {
+        height: 120px;
+    }
+
+    .parl-button-group .btn {
+        margin-bottom: 18px;
     }
 }
