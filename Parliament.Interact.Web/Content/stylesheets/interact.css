@@ -65,6 +65,7 @@ h2 {
 }
 
 .parl-expand-collapse {
+    text-align: center;
     width: 200px;
 }
 
@@ -90,6 +91,7 @@ h2 {
     border-radius: 5px;
     color: #589e9e;
     text-align: center;
+    font-family: "Verdana";
     font-size: 14px;
     padding: 2px 0;
     letter-spacing: -1px;
@@ -451,18 +453,27 @@ footer div span {
     .strapline {
         font-size: 34px;
         color: #000000;
+        margin: 70px 0 70px 0;
     }
 
     .panel-group > .issues-panel {
+        max-width: 690px;
+        height: 120px;
         margin-bottom: 25px;
     }
 
     .panel-heading h1 {
-        font-size: 40px;
+        max-width: 690px;
+        font-size: 44px;
     }
 
     .panel-heading .panel-heading-button {
+        width: 140px;
         padding-right: 15px;
+    }
+
+    .parl-expand-collapse {
+        width: 140px;
     }
 
     .panel-heading-button .btn {
@@ -479,12 +490,17 @@ footer div span {
     }
 
     .logo-image {
-        max-width: 65%;
+        max-width: 640px;
+        width: 85%;
     }
 
     .logo-beta-box {
-        margin-left: 83%;
-        top: 95px;
+        width: 100px;
+        height: 48px;
+        font-size: 22px;
+        margin-left: 79%;
+        padding-top: 5px;
+        top: 50px;
     }
 }
 
@@ -500,15 +516,21 @@ footer div span {
     .strapline {
         font-size: 17px;
         color: #000000;
+        margin: 35px 0 35px 0;
     }
 
     .panel-group > .issues-panel {
+        max-width: 345px;
+        height: 60px;
         margin-bottom: 15px;
     }
 
     .panel-heading {
+        max-width: 345px;
+        padding-top: 0;
         padding-left: 0;
         height: 80px;
+        margin-top: -8px;
     }
 
     .panel-header {
@@ -517,7 +539,15 @@ footer div span {
     }
 
     .panel-heading h1 {
-        font-size: 18px;
+        font-size: 22px;
+    }
+
+    .panel-title {
+        padding-left: 0;
+    }
+
+    .parl-expand-collapse {
+        width: 70px;
     }
 
     .panel-header-index {
@@ -530,6 +560,8 @@ footer div span {
     }
 
     .panel-heading .panel-heading-button {
+        width: 70px;
+        height: 30px;
         padding-right: 0;
     }
 
@@ -543,12 +575,17 @@ footer div span {
 
     .logo-image {
         padding-top: 50px;
-        max-width: 75%;
+        max-width: 320px;
+        width: 85%;
     }
 
     .logo-beta-box {
-        margin-left: 73%;
+        margin-left: 76%;
+        width: 50px;
+        height: 24px;
+        font-size: 11px;
         top: 10px;
+        padding-top: 2px;
     }
 
     .stopwatch {
