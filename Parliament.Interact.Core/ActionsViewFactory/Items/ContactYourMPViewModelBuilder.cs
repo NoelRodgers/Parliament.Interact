@@ -21,6 +21,8 @@ namespace Parliament.Interact.Core.ActionsViewFactory.Items
 
         public override ActionViewName ActionName { get { return ActionViewName.ContactYourMP; } }
         public string ActionView { get { return "_ContactYourMP"; } }
+        public bool DistributeOverTwoColumns { get { return false; } }
+
         public object BuildViewModel(Issue issue, IssueAction issueAction)
         {
             Build(issueAction);

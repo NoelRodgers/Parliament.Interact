@@ -26,6 +26,8 @@ namespace Parliament.Interact.Core.ActionsViewFactory.Items
 
         public string ActionView { get { return "_Petitions"; } }
 
+        public bool DistributeOverTwoColumns { get { return false; } }
+
         public object BuildViewModel(Issue issue, IssueAction issueAction)
         {
             Build(issueAction);

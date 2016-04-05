@@ -21,18 +21,38 @@
         }
 
         <div class="@outsideColumnClass">
-            <div class="parl-action-item @columnClass col-xs-12">
-                <h3>@action.Title</h3>
-                <div class="parl-action-time">
-                    <img src="~/Content/img/stopwatch-28x28.svg" class="stopwatch" />@action.Eta
+            @if (action.DistributeOverTwoColumns)
+            {
+                <div class="parl-action-item parl-action-item-sub-start col-xs-12 col-md-6">
+                    <h3>@action.Title</h3>
+                    <div class="parl-action-time">
+                        <img src="~/Content/img/stopwatch-28x28.svg" class="stopwatch"/>@action.Eta
+                    </div>
+                    <div class="parl-action-basic-content">
+                        @Html.Raw(action.BasicContent)
+                    </div>
                 </div>
-                <div class="parl-action-basic-content">
-                    @Html.Raw(action.BasicContent)
+                <div class="parl-action-item-sub col-xs-12 col-md-6">
+                    <div class="parl-action-content">
+                        @Html.Partial(action.ActionView, action.ActionModel)
+                    </div>
                 </div>
-                <div class="parl-action-content">
-                    @Html.Partial(action.ActionView, action.ActionModel)
+            }
+            else
+            {
+                <div class="parl-action-item @columnClass col-xs-12">
+                    <h3>@action.Title</h3>
+                    <div class="parl-action-time">
+                        <img src="~/Content/img/stopwatch-28x28.svg" class="stopwatch" />@action.Eta
+                    </div>
+                    <div class="parl-action-basic-content">
+                        @Html.Raw(action.BasicContent)
+                    </div>
+                    <div class="parl-action-content">
+                        @Html.Partial(action.ActionView, action.ActionModel)
+                    </div>
                 </div>
-            </div>
+            }
         </div>
         if ((action.IsPrimary || (!action.IsPrimary && secondaryActionCount % 2 == 0))
             && (Model.ActionsItems.IndexOf(action) + 1) != Model.ActionsItems.Count)  //TODO - move to view model builder

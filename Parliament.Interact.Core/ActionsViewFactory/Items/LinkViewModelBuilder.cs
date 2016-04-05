@@ -30,6 +30,8 @@ namespace Parliament.Interact.Core.ActionsViewFactory
             }
         }
 
+        public bool DistributeOverTwoColumns { get { return true; } }
+
         public object BuildViewModel(Issue issue, IssueAction issueAction)
         {
             Build(issueAction);
