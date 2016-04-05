@@ -7,6 +7,7 @@ using Parliament.Common.Extensions;
 using Parliament.Interact.Core.Domain;
 using Parliament.Interact.Core.Services;
 using Parliament.Interact.Web.Models;
+using Parliament.Interact.Web.ViewModelBuilders.Base;
 
 namespace Parliament.Interact.Web.ViewModelBuilders
 {
@@ -14,17 +15,21 @@ namespace Parliament.Interact.Web.ViewModelBuilders
     {
         private readonly IIssueService _issueService;
         private readonly IActionsItemViewModelBuilder _actionsViewModelBuilder;
+        private readonly IBaseViewModelBuilder _baseViewModelBuilder;
 
-        public IssueViewModelBuilder(IIssueService issueService, IActionsItemViewModelBuilder actionsViewModelBuilder)
+        public IssueViewModelBuilder(IIssueService issueService, IActionsItemViewModelBuilder actionsViewModelBuilder, IBaseViewModelBuilder baseViewModelBuilder)
         {
             _issueService = issueService;
             _actionsViewModelBuilder = actionsViewModelBuilder;
+            _baseViewModelBuilder = baseViewModelBuilder;
         }
 
-        public IList<IssueViewModel> Build()
+        public IssuesViewModel Build()
         {
             var issues = _issueService.GetTopFiveIssues();
-            return issues.SelectToList(BuildIssueViewModel);
+            var model = _baseViewModelBuilder.Build<IssuesViewModel>();
+            model.Issues = issues.SelectToList(BuildIssueViewModel);
+            return model;
         }
 
         public IssueViewModel Build(int id)
