@@ -44,6 +44,15 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'PPE|AnyCPU'">
     <OutputPath>bin\PPE\</OutputPath>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ABTestingA|AnyCPU'">
+    <OutputPath>bin\ABTestingA\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ABTestingB|AnyCPU'">
+    <OutputPath>bin\ABTestingB\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ABTestingC|AnyCPU'">
+    <OutputPath>bin\ABTestingC\</OutputPath>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="StructureMap, Version=3.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\structuremap.3.1.1.134\lib\net40\StructureMap.dll</HintPath>
