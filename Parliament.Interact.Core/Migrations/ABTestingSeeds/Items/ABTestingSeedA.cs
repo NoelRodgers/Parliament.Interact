@@ -13,7 +13,7 @@ using Parliament.Interact.Core.Domain.Context;
 
 namespace Parliament.Interact.Core.Migrations.ABTestingSeeds
 {
-    //This is the base seed
+    //This is the seed where all the actions are ordered in time
     public class ABTestingSeedA : IABTestingItem
     {
         public string ConfigurationName { get { return "A"; } }
@@ -182,7 +182,7 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds
                     Issue = issues[0],
                     ActionItem = actionItems[1],
                     IsPrimary = true,
-                    LogicalOrder = 1,
+                    LogicalOrder = 5,
                     IssueActionContents = new List<IssueActionContent>
                     {
                         new IssueActionContent
@@ -231,7 +231,7 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds
                     Issue = issues[0],
                     ActionItem = actionItems[3],
                     IsPrimary = true,
-                    LogicalOrder = 5
+                    LogicalOrder = 1
                 },
                 new IssueAction
                 {

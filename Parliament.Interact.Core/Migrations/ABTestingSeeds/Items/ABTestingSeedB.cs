@@ -13,7 +13,7 @@ using Parliament.Interact.Core.Domain.Context;
 
 namespace Parliament.Interact.Core.Migrations.ABTestingSeeds
 {
-    //This is the seed where all the actions are ordered in time
+    //This is the seed where the top content is minimised
     public class ABTestingSeedB : IABTestingItem
     {
         public string ConfigurationName { get { return "B"; } }
@@ -104,49 +104,7 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds
                 }
             };
 
-            var timelines = new List<IssueTimeLine>
-            {
-                new IssueTimeLine
-                {
-                    TimelineType = TimeLineType.Past,
-                    HTMLContent = "<p>On 16 March the Chancellor, George Osborne, presented his Budget to Parliament and announced that by the end of 2020, every school in England should be an academy or free school – or be in the process of becoming one.</p>"
-                },
-                new IssueTimeLine
-                {
-                    TimelineType = TimeLineType.Present,
-                    HTMLContent = "<p>The House of Commons Education Committee is running an inquiry into the performance, accountability & governance of Multi-Academy Trusts. <a href='http://www.parliament.uk/business/committees/committees-a-z/commons-select/education-committee/inquiries/parliament-2015/multi-academy-trusts-15-16/'>Inquiry: Multi - Academy Trusts</a> <i class='fa fa-external'></i></p>"
-                },
-                new IssueTimeLine
-                {
-                    TimelineType = TimeLineType.Future,
-                    HTMLContent = "<p>On 27 April, the Education Select Committee is due to question Nicky Morgan, Secretary of State for Education, on the Government's policy 'Educational Excellence Everywhere' which includes the proposal for every school to become a free school or academy.</p>"
-                }
-            };
-
-            var furtherReadings = new List<IssueFurtherReading>
-            {
-                new IssueFurtherReading
-                {
-                    LinkName = "Read a report by the Education Commitee",
-                    LinkUrl = "http://www.parliament.uk/business/committees/committees-a-z/commons-select/education-committee/news/academies-and-free-schools-government-response-to-be-published/",
-                    Description = "about Academies and Free Schools (January 2015)",
-                    DisplayExternalIcon = true
-                },
-                new IssueFurtherReading
-                {
-                    LinkName = "BBC News article",
-                    LinkUrl = "http://www.bbc.co.uk/news/education-13274090",
-                    Description = "What does it mean to be an Academy School? (BBC News, March 2016)",
-                    DisplayExternalIcon = true
-                },
-                new IssueFurtherReading
-                {
-                    LinkName = "Nicky Morgan’s Press release",
-                    LinkUrl = "https://www.gov.uk/government/news/nicky-morgan-unveils-new-vision-for-the-education-system",
-                    Description = "Nicky Morgan unveils new vision for the education system (GOV.UK, March 2016)",
-                    DisplayExternalIcon = true
-                }
-            };
+           
 
             var filename = new UriBuilder(Assembly.GetExecutingAssembly().CodeBase);
             var path = Uri.UnescapeDataString(filename.Path);
@@ -168,8 +126,6 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds
                     Title = "Academy Schools",
                     LogicalOrder = 1,
                     Content = issueContent.ToString(),
-                    TimeLines = timelines,
-                    FurtherReadings = furtherReadings,
                     Image = dbImage,
                     ImageType = dbImageType
                 }
@@ -182,7 +138,7 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds
                     Issue = issues[0],
                     ActionItem = actionItems[1],
                     IsPrimary = true,
-                    LogicalOrder = 5,
+                    LogicalOrder = 1,
                     IssueActionContents = new List<IssueActionContent>
                     {
                         new IssueActionContent
@@ -231,7 +187,7 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds
                     Issue = issues[0],
                     ActionItem = actionItems[3],
                     IsPrimary = true,
-                    LogicalOrder = 1
+                    LogicalOrder = 5
                 },
                 new IssueAction
                 {

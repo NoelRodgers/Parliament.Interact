@@ -236,6 +236,7 @@
     <Content Include="Content\fonts\fontawesome-webfont.ttf" />
     <Content Include="Content\fonts\fontawesome-webfont.eot" />
     <Content Include="Content\fonts\fontawesome-webfont.woff2" />
+    <None Include="Properties\PublishProfiles\AbTest-A.pubxml" />
     <None Include="Properties\PublishProfiles\DevCI.pubxml" />
     <None Include="Properties\PublishProfiles\Prod.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />

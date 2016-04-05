@@ -15,10 +15,10 @@ namespace Parliament.Interact.Core.IoC
             For<IActionsViewModelFactoryItem>().Add<LinkViewModelBuilder>();
             For<IActionsViewModelFactoryItem>().Add<SocialViewModelBuilder>();
 
+            For<IABTestingItem>().Add<ABTestingSeedDefault>();
             For<IABTestingItem>().Add<ABTestingSeedA>();
             For<IABTestingItem>().Add<ABTestingSeedB>();
             For<IABTestingItem>().Add<ABTestingSeedC>();
-            For<IABTestingItem>().Add<ABTestingSeedD>();
         }
     }
 }
