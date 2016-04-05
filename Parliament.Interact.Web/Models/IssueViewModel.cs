@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
 using Parliament.Interact.Core.Domain;
+using Parliament.Interact.Web.Models.Base;
 
 namespace Parliament.Interact.Web.Models
 {
-    public class IssueViewModel
+    public class IssueViewModel : BaseViewModel
     {
         public string Title { get; set; }
         public string Content { get; set; }
