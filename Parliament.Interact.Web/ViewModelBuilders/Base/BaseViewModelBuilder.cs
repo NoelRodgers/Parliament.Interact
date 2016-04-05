@@ -17,7 +17,8 @@ namespace Parliament.Interact.Web.ViewModelBuilders.Base
             var model = new T
             {
                 GoogleAnalyticsCode = _settings.GoogleAnalyticsCode,
-                TagManager = _settings.TagManager
+                TagManager = _settings.TagManager,
+                DisplayGoogleExperiments = _settings.DisplayGoogleExperiments
             };
 
             return model;

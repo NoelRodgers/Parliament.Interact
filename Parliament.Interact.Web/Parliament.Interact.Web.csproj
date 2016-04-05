@@ -296,6 +296,7 @@
     <Content Include="Views\Issues\Actions\_Social.cshtml" />
     <Content Include="Views\Shared\_GoogleAnalytics.cshtml" />
     <Content Include="Views\Shared\_TagManager.cshtml" />
+    <Content Include="Views\Shared\_GoogleExperiments.cshtml" />
     <None Include="Web.ABTestingA.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

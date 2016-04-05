@@ -9,5 +9,7 @@ namespace Parliament.Interact.Web.Models.Base
     {
         public string GoogleAnalyticsCode { get; set; }
         public string TagManager { get; set; }
+
+        public bool DisplayGoogleExperiments { get; set; }
     }
 }
