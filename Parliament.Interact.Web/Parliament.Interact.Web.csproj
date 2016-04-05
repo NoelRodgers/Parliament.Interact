@@ -194,11 +194,16 @@
     </Compile>
     <Compile Include="Models\AboutModel.cs" />
     <Compile Include="Models\ActionItemViewModel.cs" />
+    <Compile Include="Models\Base\BaseViewModel.cs" />
     <Compile Include="Models\FurtherReadingViewModel.cs" />
+    <Compile Include="Models\IssuesViewModel.cs" />
     <Compile Include="Models\IssueViewModel.cs" />
     <Compile Include="Models\TimeLineViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModelBuilders\ActionsItemViewModelBuilder.cs" />
+    <Compile Include="ViewModelBuilders\Base\BaseViewModelBuilder.cs" />
+    <Compile Include="ViewModelBuilders\Base\BaseViewModelSettings.cs" />
+    <Compile Include="ViewModelBuilders\Base\IBaseViewModelBuilder.cs" />
     <Compile Include="ViewModelBuilders\IActionsViewModelBuilder.cs" />
     <Compile Include="ViewModelBuilders\IIssueViewModelBuilder.cs" />
     <Compile Include="ViewModelBuilders\IssueViewModelBuilder.cs" />
@@ -289,6 +294,8 @@
     <Content Include="Views\About\Index.cshtml" />
     <Content Include="Views\Shared\_ThinLayout.cshtml" />
     <Content Include="Views\Issues\Actions\_Social.cshtml" />
+    <Content Include="Views\Shared\_GoogleAnalytics.cshtml" />
+    <Content Include="Views\Shared\_TagManager.cshtml" />
     <None Include="Web.ABTestingA.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -307,7 +314,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="ViewModelBuilders\Base\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

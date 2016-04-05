@@ -6,7 +6,7 @@ namespace Parliament.Interact.Web.ViewModelBuilders
 {
     public interface IIssueViewModelBuilder
     {
-        IList<IssueViewModel> Build();
+        IssuesViewModel Build();
         IssueViewModel Build(int id);
     }
 }

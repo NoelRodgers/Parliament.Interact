@@ -1,4 +1,4 @@
-﻿@model IList<Parliament.Interact.Web.Models.IssueViewModel>
+﻿@model Parliament.Interact.Web.Models.IssuesViewModel
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -7,7 +7,7 @@
 <div class="container-fluid">
     <div class="col-xs-12">
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
-            @foreach (var issue in Model)
+            @foreach (var issue in Model.Issues)
             {
                 var collapseId = "collapse" + issue.Id;
                 var headingId = "heading" + issue.Id;
