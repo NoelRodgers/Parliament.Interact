@@ -13,7 +13,7 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds.Items
 {
     public class InvestigatoryPowersSeed : IABTestingItem
     {
-        public string ConfigurationName { get { return "Default"; } }
+        public string ConfigurationName { get { return "InvestigatoryPowers"; } }
         public void Seed(InteractDbContext context)
         {
             var issueContentForInvestigatoryPowers = new StringBuilder();
@@ -170,7 +170,7 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds.Items
                 new Issue
                 {
                     Title = "Investigatory Powers",
-                    LogicalOrder = 3,
+                    LogicalOrder = 2,
                     Content = issueContentForInvestigatoryPowers.ToString(),
                     TimeLines = timelinesForInvestigatoryPowers,
                     FurtherReadings = furtherReadingsForInvestigatoryPowers,
@@ -197,7 +197,7 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds.Items
                         new IssueActionContent
                         {
                             Key = "Link",
-                            Content = "http://www.parliament.uk/business/committees/committees-a-z/commons-select/education-committee/inquiries/parliament-2015/multi-academy-trusts-15-16/"
+                            Content = "http://www.parliament.uk/business/news/2016/march/have-your-say-on-the-investigatory-powers-bill/"
                         },
                         new IssueActionContent
                         {
@@ -212,7 +212,42 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds.Items
                         new IssueActionContent
                         {
                             Key = "BasicContent",
-                            Content = "<p>Send your views on groups of academy schools (Multiple-Academy Trusts) to the House of Commons Education Committee. The Committee can use information you provide to help it question Ministers or make recommendations to Government.</p>"
+                            Content = "<p>Give your view on the Investigatory Powers Bill to the House of Commons Public Bill Committee. The Committee can use information you provide to help it question Ministers or make recommendations to Government.</p><p><strong>Submission deadline: Thursday 5 May 2016</strong></p>"
+                        }
+                    }
+                },
+                 new IssueAction
+                {
+                    Issue = issues[0],
+                    ActionItem = actionItems[1],
+                    IsPrimary = true,
+                    LogicalOrder = 2,
+                    IssueActionContents = new List<IssueActionContent>
+                    {
+                        new IssueActionContent
+                        {
+                            Key = "Title",
+                            Content = "Watch debates"
+                        },
+                        new IssueActionContent
+                        {
+                            Key = "Link",
+                            Content = "http://parliamentlive.tv/Search?Keywords=Investigatory+powers+bill&Member=&MemberId=&House=&Business=&Start=22%2F02%2F2016&End=22%2F03%2F2016"
+                        },
+                        new IssueActionContent
+                        {
+                            Key = "LinkName",
+                            Content = "Watch a debate"
+                        },
+                        new IssueActionContent
+                        {
+                            Key = "Eta",
+                            Content = "Over 30mins"
+                        },
+                        new IssueActionContent
+                        {
+                            Key = "BasicContent",
+                            Content = "<p>Watch the most recent debates on this issue from Parliament online with Parliamentlive.tv, a free service from Parliament streaming live and archive coverage of all UK Parliament proceedings taking place in public, including debates and committee meetings.</p>"
                         }
                     }
                 },
@@ -221,7 +256,20 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds.Items
                     Issue = issues[0],
                     ActionItem = actionItems[2],
                     IsPrimary = true,
-                    LogicalOrder = 2
+                    LogicalOrder = 2,
+                    IssueActionContents = new List<IssueActionContent>
+                    {
+                        new IssueActionContent
+                        {
+                            Key = "BasicContent",
+                            Content = "<p>Sign or start a petition about this issue. The Government must respond to petitions that get 10,000 signatures. A petition that receives 100,000 signatures may be debated in Parliament.</p>"
+                        },
+                        new IssueActionContent
+                        {
+                            Key = "Keywords",
+                            Content = "Investigatory Powers"
+                        }
+                    }
                 },
                 new IssueAction
                 {
@@ -248,27 +296,27 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds.Items
                         new IssueActionContent
                         {
                             Key = "Title",
-                            Content = "Volunteer as a school governor"
+                            Content = "Book a community group workshop"
                         },
                         new IssueActionContent
                         {
                             Key = "Link",
-                            Content = "https://www.gov.uk/become-school-college-governor"
+                            Content = "http://www.parliament.uk/get-involved/attend-an-event/events-for-organisations/"
                         },
                         new IssueActionContent
                         {
                             Key = "LinkName",
-                            Content = "Apply Online"
+                            Content = "Book a workshop"
                         },
                         new IssueActionContent
                         {
                             Key = "Eta",
-                            Content = "Over 1hr"
+                            Content = "Approx 10mins"
                         },
                         new IssueActionContent
                         {
                             Key = "BasicContent",
-                            Content = "<p>Could you help set a school's direction and ensure that its budget is properly managed?</p><p><a href=\"https://www.gov.uk/government/get-involved/take-part/volunteer-as-a-school-governor\">Read more on GOV.UK</a></p>"
+                            Content = "<p>If you are part of a group who may be affected by this issue and would like to understand more about the stages of the Bill and how and when you can get invovled, book a workshop from Parliament.</p>"
                         }
                     }
                 },

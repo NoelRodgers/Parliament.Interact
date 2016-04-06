@@ -22,7 +22,7 @@
                         </div>
                         <div class="col-sm-1 hidden-xs hidden-sm last-panel-heading-column"></div>
                     </div>
-                    <div id="@collapseId" class="panel-collapse collapse" role="tabpanel" aria-labelledby="@headingId">
+                    <div id="@collapseId" class="panel-collapse collapse @issue.BackgroundColorClass" role="tabpanel" aria-labelledby="@headingId">
                         @Html.Partial("_PanelBody", issue)
                         <div class="parl-bottom-action @issue.BackgroundColorClass"></div>
                     </div>

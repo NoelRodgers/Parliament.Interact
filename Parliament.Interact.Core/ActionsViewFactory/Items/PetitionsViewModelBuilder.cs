@@ -31,13 +31,14 @@ namespace Parliament.Interact.Core.ActionsViewFactory.Items
         public object BuildViewModel(Issue issue, IssueAction issueAction)
         {
             Build(issueAction);
-            var petitions = _service.GetTopPetitionsForPhrase("Academy Schools");
+            var keywords = GetActionContent(issueAction, "Keywords").Content;
+            var petitions = _service.GetTopPetitionsForPhrase(keywords);
             return new PetitionsModel
             {
                 Petitions = petitions.SelectToListIndex(BuildPetitionViewModel),
                 MaxCount = _settings.MaxCount,
                 CreateUrl = _settings.BaseUrl + _settings.CreateUrlPart,
-                ViewAllUrl = _service.GetViewAllSearchLink("Academy Schools")
+                ViewAllUrl = _service.GetViewAllSearchLink(keywords)
             };
         }
 
