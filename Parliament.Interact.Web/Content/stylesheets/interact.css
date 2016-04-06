@@ -43,6 +43,29 @@ h5 {
 .about-button {
     max-width: 294px;
 }
+
+.parl-open .panel-heading {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.parl-bottom-action {
+    width: 100%;
+    height: 20px;
+}
+
+    .parl-bottom-action.blueHeaderBackground {
+        background: #589e9e;
+    }
+
+    .parl-bottom-action.orangeHeaderBackground {
+        background-color: #b14d07;
+    }
+
+    .parl-bottom-action.purpleHeaderBackground {
+        background-color: #6e6095;
+    }
+
 /* Header section */
 
 .header-links li {
@@ -277,9 +300,9 @@ h2 {
 }
 
 
-    .parl-small-action-item .parl-action-content {
-        margin-top: 31px;
-    }
+.parl-small-action-item .parl-action-content {
+    margin-top: 31px;
+}
 
 .parl-action-item {
     float: left;
@@ -646,7 +669,7 @@ footer div span {
     }
 
     input, select, textarea {
-        max-width: inherit; 
+        max-width: inherit;
     }
 }
 
@@ -815,7 +838,7 @@ footer div span {
         clear: both;
         margin-bottom: 18px;
     }
-   
+
     .parl-secondary-button {
         padding-left: 0;
         padding-right: 0;
@@ -845,20 +868,20 @@ footer div span {
         padding-bottom: 0;
     }
 
-    .parl-small-action-item-last h3 {
-        padding-top: 30px;
-        border-top: 5px solid rgba(88, 158, 158, 0.2);
-        margin-left: -15px;
-        margin-right: -15px;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
+        .parl-small-action-item-last h3 {
+            padding-top: 30px;
+            border-top: 5px solid rgba(88, 158, 158, 0.2);
+            margin-left: -15px;
+            margin-right: -15px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
 
     .time-line-item {
         padding-bottom: 5px;
     }
 
     input, select, textarea {
-        max-width: inherit; 
+        max-width: inherit;
     }
 }
