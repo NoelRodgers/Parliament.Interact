@@ -10,5 +10,7 @@
         public object ActionModel { get; set; }
 
         public bool IsPrimary { get; set; }
+
+        public bool DistributeOverTwoColumns { get; set; }
     }
 }

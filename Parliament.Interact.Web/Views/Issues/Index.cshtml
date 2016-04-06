@@ -14,7 +14,7 @@
 
                 <div class="issues-panel panel panel-default parl-center">
                     <div class="panel-heading @issue.BackgroundColorClass" role="tab" id="headingOne">
-                        <div class="panel-header col-xs-9">
+                        <div class="panel-header col-xs-8">
                             <h1 class="panel-title"># @issue.Title</h1>
                         </div>
                         <div class="panel-heading-button col-md-3 col-xs-3">
@@ -24,6 +24,7 @@
                     </div>
                     <div id="@collapseId" class="panel-collapse collapse" role="tabpanel" aria-labelledby="@headingId">
                         @Html.Partial("_PanelBody", issue)
+                        <div class="parl-bottom-action @issue.BackgroundColorClass"></div>
                     </div>
                 </div>
             }

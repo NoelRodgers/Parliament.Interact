@@ -43,6 +43,7 @@ namespace Parliament.Interact.Web.ViewModelBuilders
             model.Eta = item.Eta;
             model.BasicContent = item.BasicContent;
             model.IsPrimary = issueAction.IsPrimary;
+            model.DistributeOverTwoColumns = issueAction.IsPrimary && item.DistributeOverTwoColumns;
 
             return model;
         }

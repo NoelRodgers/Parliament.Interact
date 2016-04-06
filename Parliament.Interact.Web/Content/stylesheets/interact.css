@@ -13,8 +13,17 @@ h2 {
     margin-bottom: 30px;
 }
 
+h3 {
+    font-size: 30px;
+    line-height: 40px;
+}
+
 h5 {
     font-size: 18px;
+}
+
+.panel-default {
+    border: 0;
 }
 
 /* About section */
@@ -34,6 +43,38 @@ h5 {
 .about-button {
     max-width: 294px;
 }
+
+.parl-open .panel-heading {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.parl-bottom-action {
+    width: 100%;
+    height: 20px;
+}
+
+    .parl-bottom-action.blueHeaderBackground {
+        background: #589e9e;
+    }
+
+    .parl-bottom-action.orangeHeaderBackground {
+        background-color: #b14d07;
+    }
+
+    .parl-bottom-action.purpleHeaderBackground {
+        background-color: #6e6095;
+    }
+
+.parl-action-item-sub {
+    float: left;
+    margin-top: 100px;    
+}
+
+.parl-action-item-sub #submit-evidence {
+    margin-top: 5px;
+}
+
 /* Header section */
 
 .header-links li {
@@ -119,7 +160,7 @@ h2 {
 }
 
 .parl-button-group {
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
     .parl-button-group a {
@@ -244,13 +285,13 @@ h2 {
 
 .desktop-issue-introduction-container {
     padding-top: 10px;
-    padding-bottom: 30px;
+    padding-bottom: 65px;
     float: left;
     clear: both;
 }
 
 .time-line-container {
-    padding-top: 35px;
+    padding-top: 55px;
 }
 
 .time-line-item {
@@ -263,14 +304,14 @@ h2 {
 
 .parl-action-items-title {
     background-color: #589e9e;
-    padding: 10px 35px;
+    padding: 20px 35px;
     color: #ffffff;
 }
 
 
-    .parl-small-action-item .parl-action-content {
-        margin-top: 31px;
-    }
+.parl-small-action-item .parl-action-content {
+    margin-top: 31px;
+}
 
 .parl-action-item {
     float: left;
@@ -359,6 +400,14 @@ h2.parl-action-items-title {
     box-shadow: 0 4px 3.6px 0.4px rgba(153, 153, 153, 0.3);
 }
 
+.parl-button:active {
+    background: #589e9e; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#458787, #589e9e); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#458787, #589e9e); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#458787, #589e9e); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#458787, #589e9e); /* Standard syntax */
+}
+
 .parl-primary-button {
     line-height: 80px;
     font-size: 30px;
@@ -385,7 +434,9 @@ h2.parl-action-items-title {
     width: 340px;
 }
 
-
+.find-my-mp-button {
+    margin-left: 20px;
+}
 
 .find-my-mp-input {
     height: 60px;
@@ -447,8 +498,7 @@ footer div span {
         background-image: none;
         background-color: transparent;
         color: #ffffff;
-        border-color: #ffffff;
-        border: 2px solid;
+        border: 2px solid #ffffff;
     }
 
 .header-links {
@@ -472,9 +522,23 @@ footer div span {
         font-size: 36px;
     }
 
+    h3 {
+        font-size: 36px;
+        line-height: 46px;
+    }
+
     h5 {
         font-size: 28px;
         line-height: 38px;
+    }
+
+    .parl-action-item-sub {
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+
+    .parl-action-item-sub-start {
+        margin-bottom: 30px;
     }
 
     .header-links {
@@ -524,14 +588,17 @@ footer div span {
         padding: 30px 25px 0 25px;
     }
 
-
     .logo-beta-box {
-        width: 100px;
-        height: 48px;
+        width: 90px;
+        height: 40px;
         font-size: 22px;
         margin-left: 79%;
-        padding-top: 5px;
+        padding-top: 0;
         top: 50px;
+    }
+
+    .desktop-issue-introduction-container {
+        padding-bottom: 85px;
     }
 
     .issue-content-img {
@@ -556,7 +623,7 @@ footer div span {
     }
 
     .find-my-mp-input {
-        height: 100px;
+        height: 90px;
     }
 
         .find-my-mp-input[type="text"] {
@@ -565,7 +632,8 @@ footer div span {
         }
 
     .find-my-mp-button {
-        margin-top: -7px;
+        margin-left: 0;
+        margin-top: 20px;
     }
 
     .parl-primary-button {
@@ -615,7 +683,7 @@ footer div span {
     }
 
     input, select, textarea {
-        max-width: inherit; 
+        max-width: inherit;
     }
 }
 
@@ -630,9 +698,18 @@ footer div span {
         margin-bottom: 15px;
     }
 
+    h3 {
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+
     h5 {
         font-size: 14px;
         line-height: 19px;
+    }
+
+    .panel-body h5 {
+        padding: 8px 0;
     }
 
     .header-links {
@@ -687,7 +764,15 @@ footer div span {
     }
 
     .parl-expand-collapse {
-        width: 70px;
+        width: 66px;
+        height: 26px;
+        margin-top: 3px;
+        margin-left: 8px;
+        padding-top: 1px;
+    }
+
+    .panel-heading .panel-heading-button .btn {
+        border: 1px solid #ffffff;
     }
 
     .panel-header-index {
@@ -723,9 +808,15 @@ footer div span {
         margin-left: 76%;
         width: 50px;
         height: 24px;
+        border: 1px solid #589e9e;
+        border-radius: 2px;
         font-size: 11px;
         top: 10px;
-        padding-top: 0;
+        padding-top: 1px;
+    }
+
+    .desktop-issue-introduction-container {
+        padding-bottom: 40px;
     }
 
     .parl-primary-button {
@@ -761,13 +852,14 @@ footer div span {
         clear: both;
         margin-bottom: 18px;
     }
-   
+
     .parl-secondary-button {
         padding-left: 0;
         padding-right: 0;
     }
 
     .time-line-container {
+        padding-top: 30px;
         padding-bottom: 40px;
     }
 
@@ -778,7 +870,11 @@ footer div span {
 
     .find-my-mp-input[type="text"] {
         font-size: 20px;
-        height: 60px;
+        padding-top: 5px;
+    }
+
+    .find-my-mp-input {
+        height: 45px;
     }
 
     .parl-small-action-item-last {
@@ -786,20 +882,20 @@ footer div span {
         padding-bottom: 0;
     }
 
-    .parl-small-action-item-last h3 {
-        padding-top: 30px;
-        border-top: 5px solid rgba(88, 158, 158, 0.2);
-        margin-left: -15px;
-        margin-right: -15px;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
+        .parl-small-action-item-last h3 {
+            padding-top: 30px;
+            border-top: 5px solid rgba(88, 158, 158, 0.2);
+            margin-left: -15px;
+            margin-right: -15px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
 
     .time-line-item {
         padding-bottom: 5px;
     }
 
     input, select, textarea {
-        max-width: inherit; 
+        max-width: inherit;
     }
 }

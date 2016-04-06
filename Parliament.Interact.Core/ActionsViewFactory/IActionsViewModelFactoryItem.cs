@@ -11,6 +11,7 @@ namespace Parliament.Interact.Core.ActionsViewFactory
         string Eta { get; }
         string BasicContent { get; }
         string ActionView { get; }
+        bool DistributeOverTwoColumns { get; }
         object BuildViewModel(Issue issue, IssueAction issueAction);
     }
 
