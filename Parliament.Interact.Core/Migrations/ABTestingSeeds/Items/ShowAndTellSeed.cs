@@ -28,8 +28,8 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds
 
             var issueContentForRefugees = new StringBuilder();
             issueContentForRefugees.Append("<p>As the Government administers and develops the process for handling refugees in the UK, Members of the House of Commons and Peers in the House of Lords work to look at how well existing process are working and what the impact of proposed changes will be.</p>");
-            issueContentForRefugees.Append("<p>The United Nations High Commission for Refugees (UNHCR) warned in 2015 that the world is in the midst of a forced migration crisis. It see the Syrian conflict as the biggest cause. Huge numbers of people are dying trying to cross the Mediterranean to Southern Europe from Libya. European Countries are struggling to deal with the numbers reaching their boarders, and securing agreement within the EU on a coordinated response is proving difficult.</p>");
-            issueContentForRefugees.Append("<p>The total number of people applying for asylum in EU counties increased from a monthly average of 22, 000 in 2010 to 110, 000 in 2015. Asylum applications in EU countries reached their highest level in October 2015 at 172, 000, falling to 109, 000 in December 2015. The number of asylum applications to the UK peaked in 2002 at 84, 132.After that the number fell sharply to reach a twenty year low point of 17, 916 in 2010, before rising slowly to reach 32, 414 in 2015.</p>");
+            issueContentForRefugees.Append("<p>The United Nations High Commission for Refugees (UNHCR) warned in 2015 that the world is in the midst of a forced migration crisis. It sees the Syrian conflict as the biggest cause. Huge numbers of people are dying trying to cross the Mediterranean to Southern Europe from Libya. European Countries are struggling to deal with the numbers reaching their borders, and securing agreement within the EU on a coordinated response is proving difficult.</p>");
+            issueContentForRefugees.Append("<p>The total number of people applying for asylum in EU countries increased from a monthly average of 22,000 in 2010 to 110,000 in 2015. Asylum applications in EU countries reached their highest level in October 2015 at 172,000, falling to 109,000 in December 2015. The number of asylum applications to the UK peaked in 2002 at 84,132. After that the number fell sharply to reach a twenty year low point of 17,916 in 2010, before rising slowly to reach 32,414 in 2015.</p>");
             issueContentForRefugees.Append("<p>The Government is planning to resettle up to 20,000 Syrian refugees in the UK by the end of this Parliament in 2020.</p>");
 
             var issueContentAcademySchools = new StringBuilder();
@@ -87,7 +87,7 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds
                         {
                             Key = "BasicContent",
                             Content =
-                                "<p>Write to your MP about academy schools. Your MP represents you. They can raise your concerns in Parliament and question Government.</p>"
+                                "<p>Write to your MP about this issue. Your MP represents you. They can raise your concerns in Parliament and question Government.</p>"
                         }
                     }
                 },
@@ -155,7 +155,7 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds
                         {
                             Key = "BasicContent",
                             Content =
-                                "<p>Share this page about Academy Schools with your social network, friends, family and colleagues to get more people involved in this issue.</p>",
+                                "<p>Share this page about this issue with your social network, friends, family and colleagues to get more people involved in this issue.</p>",
                         },
                     }
                 }
@@ -168,17 +168,17 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds
                 new IssueTimeLine
                 {
                     TimelineType = TimeLineType.Past,
-                    HTMLContent = "<p>On 7 September 2015, the Prime Minister announced the UK is now planning to resettle up to 20,000 refugees from the Syrian region over the next five years. The Government also announced, on 28 January 2016, that it would work with the UN High Commissioner for Refugees(UNHCR) to lead a new initiative to resettle unaccompanied children from conflict regions.</p><p>On Wednesday 10 February 2016, three debates relating to migration were held by MPs.The topics include the provision of asylum support, migration into the EU, and the UK Government’s policy on refugees.</p>"
+                    HTMLContent = "<p>On 7 September 2015, the Prime Minister announced the UK is now planning to resettle up to 20,000 refugees from the Syrian region over the next five years. The Government also announced, on 28 January 2016, that it would work with the UN High Commissioner for Refugees (UNHCR) to lead a new initiative to resettle unaccompanied children from conflict regions.</p><p>On Wednesday 10 February 2016, three debates relating to migration were held by MPs.The topics include the provision of asylum support, migration into the EU, and the UK Government’s policy on refugees.</p>"
                 },
                 new IssueTimeLine
                 {
                     TimelineType = TimeLineType.Present,
-                    HTMLContent = "<p>The Immigration Bill, which changes the law on immigration and asylum, is being debated in Parliament. It will be looked at for the last time by the House of Lords on 12 April before the changes they have made are considered by the House of Commons.</p><p>Peers in the House of Lords recently voted in favour of a new clause to the Immigration Bill 2015 - 16, which would extend asylum seekers' rights to work. As a general rule, asylum seekers are not allowed to work in the UK.The clause did not have Government support.</p><p>The EU Home Affairs Sub - Committee launches a new inquiry into unaccompanied minors in the EU. Unaccompanied minors are migrant children below the age of 18 from non-EU countries who are not accompanied by a parent or customary guardian.The Committee will be questioning Ministers and making recommendations to Government.</p>"
+                    HTMLContent = "<p>The Immigration Bill, which changes the law on immigration and asylum, is being debated in Parliament. It will be looked at for the last time by the House of Lords on 12 April before the changes they have made are considered by the House of Commons.</p><p>Peers in the House of Lords recently voted in favour of a new clause to the Immigration Bill 2015 - 16, which would extend asylum seekers' rights to work. As a general rule, asylum seekers are not allowed to work in the UK. The clause did not have Government support.</p><p>The EU Home Affairs Sub - Committee launches a new inquiry into unaccompanied minors in the EU. Unaccompanied minors are migrant children below the age of 18 from non-EU countries who are not accompanied by a parent or customary guardian.The Committee will be questioning Ministers and making recommendations to Government.</p>"
                 },
                 new IssueTimeLine
                 {
                     TimelineType = TimeLineType.Future,
-                    HTMLContent = "<p>In the House of Lords on 11 April the Government will be asked about the nnumber of refugees who have died in the Mediterranean and Aegean Seas since January 2015.</p>"
+                    HTMLContent = "<p>In the House of Lords on 11 April the Government will be asked about the number of refugees who have died in the Mediterranean and Aegean Seas since January 2015.</p>"
                 }
             };
 
@@ -233,7 +233,7 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds
                 new IssueTimeLine
                 {
                     TimelineType = TimeLineType.Past,
-                    HTMLContent = "<p>In November 2015 Government introduced the a draft version of the Investigatory Powers Bill so it could be considered by Parliament and potentially become law. A small group of MPs and peers were part of a committee which discussed this draft version of the Bill and heard from experts and the public and made recommendations for changes. In March 2016 the Home Office then introduced a new version of the Investigatory Powers Bill alongside written responses to the reports and scrutiny that had taken place so far.</p>"
+                    HTMLContent = "<p>In November 2015 Government introduced a draft version of the Investigatory Powers Bill so it could be considered by Parliament and potentially become law. A small group of MPs and peers were part of a committee which discussed this draft version of the Bill and heard from experts and the public and made recommendations for changes. In March 2016 the Home Office then introduced a new version of the Investigatory Powers Bill alongside written responses to the reports and scrutiny that had taken place so far.</p>"
                 },
                 new IssueTimeLine
                 {
@@ -386,7 +386,7 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds
                 },
                 new IssueFurtherReading
                 {
-                    LinkName = "Investigatory Powers Will Library Briefing Paper",
+                    LinkName = "Investigatory Powers Bill Library Briefing Paper",
                     LinkUrl = "http://researchbriefings.parliament.uk/ResearchBriefing/Summary/CBP-7518",
                     Description = "Read Library Briefing Paper",
                     DisplayExternalIcon = true
@@ -665,7 +665,7 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds
                         {
                             Key = "BasicContent",
                             Content =
-                                "<p>The Electoral Commission will list registered campaigners for and against leaving the EU in mid April. You will be able to find out the registered EU campaign groups on the website</p>"
+                                "<p>The Electoral Commission will list registered campaigners for and against leaving the EU in mid April. You will be able to find out the registered EU campaign groups on the website.</p>"
                         }
                     }
                 },
@@ -855,7 +855,7 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds
                         new IssueActionContent
                         {
                             Key = "BasicContent",
-                            Content = "<p>If you are part of a group who may be affected by this issue and would like to understand more about the stages of the Bill and how and when you can get invovled, book a workshop from Parliament.</p>"
+                            Content = "<p>If you are part of a group who may be affected by this issue and would like to understand more about the stages of the Bill and how and when you can get involved, book a workshop from Parliament.</p>"
                         }
                     }
                 },new IssueAction
