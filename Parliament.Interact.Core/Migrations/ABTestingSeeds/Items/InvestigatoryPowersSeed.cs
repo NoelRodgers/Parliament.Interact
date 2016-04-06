@@ -170,7 +170,7 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds.Items
                 new Issue
                 {
                     Title = "Investigatory Powers",
-                    LogicalOrder = 2,
+                    LogicalOrder = 3,
                     Content = issueContentForInvestigatoryPowers.ToString(),
                     TimeLines = timelinesForInvestigatoryPowers,
                     FurtherReadings = furtherReadingsForInvestigatoryPowers,
