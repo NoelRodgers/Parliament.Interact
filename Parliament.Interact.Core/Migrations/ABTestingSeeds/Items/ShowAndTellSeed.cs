@@ -698,7 +698,7 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds
                         new IssueActionContent
                         {
                             Key = "LinkName",
-                            Content = "Explore the evidence"
+                            Content = "Explore evidence"
                         },
                         new IssueActionContent
                         {

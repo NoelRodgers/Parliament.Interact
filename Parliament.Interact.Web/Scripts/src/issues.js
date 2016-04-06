@@ -1,11 +1,13 @@
 ﻿$(document).ready(function () {
     //setTimeout(callModal, 3000);
 
-    $("#shareIcons").jsSocials({
+    $(".share-icons").jsSocials({
         showLabel: false,
         showCount: false,
-        shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "whatsapp"]
+        shares: ["email", "twitter", "facebook", "googleplus", "whatsapp"]
     });
+
+
 
     //setTimeout(openFirstAccordionItem, 400);
 });
@@ -22,6 +24,11 @@ function callModal() {
 $(".issues-panel").on("show.bs.collapse", function () {
     $(this).find(".parl-expand-collapse").text("CLOSE");
     $(this).addClass("parl-open");
+});
+
+
+$(".issues-panel").on("shown.bs.collapse", function () {
+    $(document).scrollTop($(this).offset().top - 40);
 });
 
 $(".issues-panel").on("hide.bs.collapse", function () {
