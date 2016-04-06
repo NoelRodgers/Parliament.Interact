@@ -21,6 +21,7 @@ namespace Parliament.Interact.Core.IoC
             For<IABTestingItem>().Add<ABTestingSeedC>();
             For<IABTestingItem>().Add<EUReferendumSeeds>();
             For<IABTestingItem>().Add<InvestigatoryPowersSeed>();
+            For<IABTestingItem>().Add<RefugeesPowersSeed>();
         }
     }
 }
