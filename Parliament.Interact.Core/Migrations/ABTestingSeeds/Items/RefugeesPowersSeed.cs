@@ -2,29 +2,25 @@
 using System.Collections.Generic;
 using System.Data.Entity.Migrations;
 using System.IO;
-using System.Linq;
 using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;
 using System.Web;
 using Parliament.Interact.Core.ActionsViewFactory.Enum;
 using Parliament.Interact.Core.Domain;
 using Parliament.Interact.Core.Domain.Context;
 
-namespace Parliament.Interact.Core.Migrations.ABTestingSeeds
+namespace Parliament.Interact.Core.Migrations.ABTestingSeeds.Items
 {
-    //This is the base seed
-    public class ABTestingSeedDefault : IABTestingItem
+    public class RefugeesPowersSeed
     {
-        public string ConfigurationName { get { return "Default"; } }
+        public string ConfigurationName { get { return "Refugees"; } }
         public void Seed(InteractDbContext context)
         {
-            var issueContent = new StringBuilder();
-            issueContent.Append("<p>The Government announced in March 2016 that every primary and secondary state school become an academy. (George Osborne, <a href='http://www.publications.parliament.uk/pa/cm201516/cmhansrd/cm160316/debtext/160316-0001.htm#16031632000621'>Budget Statement, 16 March 2016 <i class='fa fa-external'></i></a>)</p>");
-            issueContent.Append("<p>Academies are state schools, independent of local authority control. They are funded directly by central government rather than by local authorities. By 2015 almost 60% of state-funded secondary schools were academies, up from 6% at the start of 2010.</p>");
-            issueContent.Append("<h5>Should state schools become independent of local authority control?</h5>");
-            issueContent.Append("<p>Government argues that freedom from local authority control brings opportunities for innovation, better leadership and higher attainment and that academies have had a positive impact on other schools in their local area.</p>");
-            issueContent.Append("<p>Others say that the freedoms afforded to academies, and their rapid expansion, have the potential to result in financial problems and lapses in standards. (House of Commons Library, <a href='http://www.parliament.uk/business/publications/research/key-issues-parliament-2015/education/academies-and-free-schools/'>Key Issues for the 2015 Parliament <i class='fa fa-external'></i></a>)</p>");
+            var issueContentForRefugees = new StringBuilder();
+            issueContentForRefugees.Append("<p>The Home Office introduced the Investigatory Powers Bill on 1 March 2016. The Bill covers changes to the operation and regulation of the investigatory powers used by the police and the intelligence and security agencies.</p>");
+            issueContentForRefugees.Append("<p>The Bill’s aims include bringing together current legislation on the interception, retention and use of communications data and create a single body for overseeing warrants to investigatory services led by an Investigatory Powers Commissioner.</p>");
+            issueContentForRefugees.Append("<p>One potential change in the Bill would affect what communications data Police or other agencies could access. Currently Police or other agencies can access communications data such as historic phone bills; the proposed new legislation could allow them to ask firms to hold and share with them more information, such as which online services have been used by an individual.</p>");
+            issueContentForRefugees.Append("<p>There are currently debates and discussions taking place in and outside of Parliament about the arguments for and against the proposed changes in the Bill. </p>");
             var actionItems = new List<ActionItem>
             {
                 new ActionItem {ViewName = ActionViewName.ContactYourMP, ActionContents = new List<ActionContent>()
@@ -104,48 +100,56 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds
                 }
             };
 
-            var timelines = new List<IssueTimeLine>
+            var timelinesForRefugees = new List<IssueTimeLine>
             {
                 new IssueTimeLine
                 {
                     TimelineType = TimeLineType.Past,
-                    HTMLContent = "<p>On 16 March the Chancellor, George Osborne, presented his Budget to Parliament and announced that by the end of 2020, every school in England should be an academy or free school – or be in the process of becoming one.</p>"
+                    HTMLContent = "<p>In November 2015 Government introduced the a draft version of the Investigatory Powers Bill so it could be considered by Parliament and potentially become law. A small group of MPs and peers were part of a committee which discussed this draft version of the Bill and heard from experts and the public and made recommendations for changes. In March 2016 the Home Office then introduced a new version of the Investigatory Powers Bill alongside written responses to the reports and scrutiny that had taken place so far.</p>"
                 },
                 new IssueTimeLine
                 {
                     TimelineType = TimeLineType.Present,
-                    HTMLContent = "<p>The House of Commons Education Committee is running an inquiry into the performance, accountability & governance of Multi-Academy Trusts. <a href='http://www.parliament.uk/business/committees/committees-a-z/commons-select/education-committee/inquiries/parliament-2015/multi-academy-trusts-15-16/'>Inquiry: Multi - Academy Trusts</a> <i class='fa fa-external'></i></p>"
+                    HTMLContent = "<p>A committee of MPs is now in the process of looking at the Bill again in detail, and is currently collecting evidence from people who are interested.</p>"
                 },
                 new IssueTimeLine
                 {
                     TimelineType = TimeLineType.Future,
-                    HTMLContent = "<p>On 27 April, the Education Select Committee is due to question Nicky Morgan, Secretary of State for Education, on the Government's policy 'Educational Excellence Everywhere' which includes the proposal for every school to become a free school or academy.</p>"
+                    HTMLContent = "<p>The committee may suggest changes to the Bill based on their findings. The Bill will then be debated in the House of Commons, followed by the House of Lords where further changes may be made. The House of Commons and the House of Lords will have to agree on a final version before it can become law.</p>"
                 }
             };
 
-            var furtherReadings = new List<IssueFurtherReading>
+            var furtherReadingsForInvestigatoryPowers = new List<IssueFurtherReading>
             {
                 new IssueFurtherReading
                 {
-                    LinkName = "Read a report by the Education Commitee",
-                    LinkUrl = "http://www.parliament.uk/business/committees/committees-a-z/commons-select/education-committee/news/academies-and-free-schools-government-response-to-be-published/",
-                    Description = "about Academies and Free Schools (January 2015)",
+                    LinkName = "UK surveillance powers explained",
+                    LinkUrl = "http://www.bbc.co.uk/news/uk-34713435",
+                    Description = "BBC overview of the Bill",
                     DisplayExternalIcon = true
                 },
                 new IssueFurtherReading
                 {
-                    LinkName = "BBC News article",
-                    LinkUrl = "http://www.bbc.co.uk/news/education-13274090",
-                    Description = "What does it mean to be an Academy School? (BBC News, March 2016)",
+                    LinkName = "Investigatory Powers Bill stages",
+                    LinkUrl = "http://services.parliament.uk/bills/2015-16/investigatorypowers.html",
+                    Description = "Follow the Bill through Parliament",
                     DisplayExternalIcon = true
                 },
                 new IssueFurtherReading
                 {
-                    LinkName = "Nicky Morgan’s Press release",
-                    LinkUrl = "https://www.gov.uk/government/news/nicky-morgan-unveils-new-vision-for-the-education-system",
-                    Description = "Nicky Morgan unveils new vision for the education system (GOV.UK, March 2016)",
+                    LinkName = "Investigatory Powers Bill",
+                    LinkUrl = "http://www.publications.parliament.uk/pa/bills/cbill/2015-2016/0143/cbill_2015-20160143_en_1.htm",
+                    Description = "Read the Bill",
+                    DisplayExternalIcon = true
+                },
+                new IssueFurtherReading
+                {
+                    LinkName = "Investigatory Powers Will Library Briefing Paper",
+                    LinkUrl = "http://researchbriefings.parliament.uk/ResearchBriefing/Summary/CBP-7518",
+                    Description = "Read Library Briefing Paper",
                     DisplayExternalIcon = true
                 }
+
             };
 
             var filename = new UriBuilder(Assembly.GetExecutingAssembly().CodeBase);
@@ -165,11 +169,11 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds
             {
                 new Issue
                 {
-                    Title = "Academy Schools",
-                    LogicalOrder = 1,
-                    Content = issueContent.ToString(),
-                    TimeLines = timelines,
-                    FurtherReadings = furtherReadings,
+                    Title = "Investigatory Powers",
+                    LogicalOrder = 3,
+                    Content = issueContentForRefugees.ToString(),
+                    TimeLines = timelinesForRefugees,
+                    FurtherReadings = furtherReadingsForInvestigatoryPowers,
                     Image = dbImage,
                     ImageType = dbImageType
                 }
@@ -193,7 +197,7 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds
                         new IssueActionContent
                         {
                             Key = "Link",
-                            Content = "http://www.parliament.uk/business/committees/committees-a-z/commons-select/education-committee/inquiries/parliament-2015/multi-academy-trusts-15-16/"
+                            Content = "http://www.parliament.uk/business/news/2016/march/have-your-say-on-the-investigatory-powers-bill/"
                         },
                         new IssueActionContent
                         {
@@ -208,7 +212,42 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds
                         new IssueActionContent
                         {
                             Key = "BasicContent",
-                            Content = "<p>Send your views on groups of academy schools (Multiple-Academy Trusts) to the House of Commons Education Committee. The Committee can use information you provide to help it question Ministers or make recommendations to Government.</p>"
+                            Content = "<p>Give your view on the Investigatory Powers Bill to the House of Commons Public Bill Committee. The Committee can use information you provide to help it question Ministers or make recommendations to Government.</p><p><strong>Submission deadline: Thursday 5 May 2016</strong></p>"
+                        }
+                    }
+                },
+                 new IssueAction
+                {
+                    Issue = issues[0],
+                    ActionItem = actionItems[1],
+                    IsPrimary = true,
+                    LogicalOrder = 2,
+                    IssueActionContents = new List<IssueActionContent>
+                    {
+                        new IssueActionContent
+                        {
+                            Key = "Title",
+                            Content = "Watch debates"
+                        },
+                        new IssueActionContent
+                        {
+                            Key = "Link",
+                            Content = "http://parliamentlive.tv/Search?Keywords=Investigatory+powers+bill&Member=&MemberId=&House=&Business=&Start=22%2F02%2F2016&End=22%2F03%2F2016"
+                        },
+                        new IssueActionContent
+                        {
+                            Key = "LinkName",
+                            Content = "Watch a debate"
+                        },
+                        new IssueActionContent
+                        {
+                            Key = "Eta",
+                            Content = "Over 30mins"
+                        },
+                        new IssueActionContent
+                        {
+                            Key = "BasicContent",
+                            Content = "<p>Watch the most recent debates on this issue from Parliament online with Parliamentlive.tv, a free service from Parliament streaming live and archive coverage of all UK Parliament proceedings taking place in public, including debates and committee meetings.</p>"
                         }
                     }
                 },
@@ -222,8 +261,13 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds
                     {
                         new IssueActionContent
                         {
+                            Key = "BasicContent",
+                            Content = "<p>Sign or start a petition about this issue. The Government must respond to petitions that get 10,000 signatures. A petition that receives 100,000 signatures may be debated in Parliament.</p>"
+                        },
+                        new IssueActionContent
+                        {
                             Key = "Keywords",
-                            Content = "Academy Schools"
+                            Content = "Investigatory Powers"
                         }
                     }
                 },
@@ -252,27 +296,27 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds
                         new IssueActionContent
                         {
                             Key = "Title",
-                            Content = "Volunteer as a school governor"
+                            Content = "Book a community group workshop"
                         },
                         new IssueActionContent
                         {
                             Key = "Link",
-                            Content = "https://www.gov.uk/become-school-college-governor"
+                            Content = "http://www.parliament.uk/get-involved/attend-an-event/events-for-organisations/"
                         },
                         new IssueActionContent
                         {
                             Key = "LinkName",
-                            Content = "Apply Online"
+                            Content = "Book a workshop"
                         },
                         new IssueActionContent
                         {
                             Key = "Eta",
-                            Content = "Over 1hr"
+                            Content = "Approx 10mins"
                         },
                         new IssueActionContent
                         {
                             Key = "BasicContent",
-                            Content = "<p>Could you help set a school's direction and ensure that its budget is properly managed?</p><p><a href=\"https://www.gov.uk/government/get-involved/take-part/volunteer-as-a-school-governor\">Read more on GOV.UK</a></p>"
+                            Content = "<p>If you are part of a group who may be affected by this issue and would like to understand more about the stages of the Bill and how and when you can get invovled, book a workshop from Parliament.</p>"
                         }
                     }
                 },

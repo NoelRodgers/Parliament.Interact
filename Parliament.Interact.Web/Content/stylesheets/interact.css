@@ -49,6 +49,24 @@ h5 {
     border-bottom-right-radius: 0;
 }
 
+.panel-heading .panel-heading-button .btn {
+    color: #333;
+    border: 2px solid #fff;
+    background-color: #ececec; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#fff, #ececec); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#fff, #ececec); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#fff, #ececec); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#fff, #ececec); /* Standard syntax */
+    box-shadow: 0 4px 3.6px 0.4px rgba(51, 51, 51, 0.3);
+}
+
+.parl-open .panel-heading .panel-heading-button .btn {
+    background-image: none;
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
 .parl-bottom-action {
     width: 100%;
     height: 20px;
@@ -64,6 +82,7 @@ h5 {
 
 .blueHeaderBackground .parl-action-items-title {
     background-color: #589e9e;
+    color: #ffffff;
 }
 
 .blueHeaderBackground .panel-body a:not(.btn):not(.parl-button):not(.jssocials-share-link) {
@@ -82,7 +101,7 @@ h5 {
     background-color: rgba(88, 158, 158, 0.2);
 }
 
-.blueHeaderBackgroud .parl-button {
+.blueHeaderBackground .parl-button {
     border: 2px solid #589e9e;
     background: #589e9e; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(#589e9e, #458787); /* For Safari 5.1 to 6.0 */
@@ -92,17 +111,17 @@ h5 {
     box-shadow: 0 4px 3.6px 0.4px rgba(153, 153, 153, 0.3);
 }
 
-.blueHeaderBackgroud .parl-button:active {
-    background: #589e9e; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#458787, #589e9e); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#458787, #589e9e); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#458787, #589e9e); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#458787, #589e9e); /* Standard syntax */
-}
+    .blueHeaderBackgroud .parl-button:active {
+        background: #589e9e; /* For browsers that do not support gradients */
+        background: -webkit-linear-gradient(#458787, #589e9e); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(#458787, #589e9e); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(#458787, #589e9e); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(#458787, #589e9e); /* Standard syntax */
+    }
 
 
 .blueHeaderBackground .parl-small-action-item-last {
-     border-left: 4px solid rgba(88, 158, 158, 0.2);
+    border-left: 4px solid rgba(88, 158, 158, 0.2);
 }
 
 
@@ -147,16 +166,16 @@ h5 {
     box-shadow: 0 4px 3.6px 0.4px rgba(153, 153, 153, 0.3);
 }
 
-.orangeHeaderBackground .parl-button:active {
-    background: #c65d13; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#b14d07, #c65d13); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#b14d07, #c65d13); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#b14d07, #c65d13); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#b14d07, #c65d13); /* Standard syntax */
-}
+    .orangeHeaderBackground .parl-button:active {
+        background: #c65d13; /* For browsers that do not support gradients */
+        background: -webkit-linear-gradient(#b14d07, #c65d13); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(#b14d07, #c65d13); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(#b14d07, #c65d13); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(#b14d07, #c65d13); /* Standard syntax */
+    }
 
 .orangeHeaderBackground .parl-small-action-item-last {
-     border-left: 4px solid rgba(177, 77, 7, 0.2);
+    border-left: 4px solid rgba(177, 77, 7, 0.2);
 }
 
 
@@ -200,13 +219,14 @@ h5 {
     box-shadow: 0 4px 3.6px 0.4px rgba(153, 153, 153, 0.3);
 }
 
-.purpleHeaderBackground .parl-button:active {
-    background: #6e6095; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#4f4175, #6e6095); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#4f4175, #6e6095); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#4f4175, #6e6095); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#4f4175, #6e6095); /* Standard syntax */
-}
+    .purpleHeaderBackground .parl-button:active {
+        background: #6e6095; /* For browsers that do not support gradients */
+        background: -webkit-linear-gradient(#4f4175, #6e6095); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(#4f4175, #6e6095); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(#4f4175, #6e6095); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(#4f4175, #6e6095); /* Standard syntax */
+    }
+
 .purpleHeaderBackground .parl-small-action-item-last {
     border-left: 4px solid rgba(110, 96, 149, 0.2);
 }
@@ -628,12 +648,7 @@ footer div span {
     padding-right: 70px;
 }
 
-    .panel-heading .panel-heading-button .btn {
-        background-image: none;
-        background-color: transparent;
-        color: #ffffff;
-        border: 2px solid #ffffff;
-    }
+
 
 .header-links {
     max-width: 1170px;
