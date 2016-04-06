@@ -300,7 +300,20 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds
                     Issue = issues[0],
                     ActionItem = actionItems[2],
                     IsPrimary = true,
-                    LogicalOrder = 2
+                    LogicalOrder = 2,
+                    IssueActionContents = new List<IssueActionContent>
+                    {
+                        new IssueActionContent
+                        {
+                            Key = "BasicContent",
+                            Content = "<p>Sign or start a petition about this issue. The Government must respond to petitions that get 10,000 signatures. A petition that receives 100,000 signatures may be debated in Parliament.</p>"
+                        },
+                        new IssueActionContent
+                        {
+                            Key = "Keywords",
+                            Content = "Academy Schools"
+                        }
+                    }
                 },
                 new IssueAction
                 {
