@@ -21,15 +21,10 @@ function callModal() {
 
 $(".issues-panel").on("show.bs.collapse", function () {
     $(this).find(".parl-expand-collapse").text("CLOSE");
-    $(".panel-collapse").promise().done(function () {
-        $(this).parent().addClass("parl-open");
-    });
-
+    $(this).addClass("parl-open");
 });
 
 $(".issues-panel").on("hide.bs.collapse", function () {
     $(this).find(".parl-expand-collapse").text("OPEN");
-    $(".panel-collapse").promise().done(function () {
-        $(this).parent().removeClass("parl-open");
-    });
+    $(this).removeClass("parl-open");
 });

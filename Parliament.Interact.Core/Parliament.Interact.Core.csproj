@@ -197,9 +197,7 @@
     <Compile Include="Migrations\ABTestingSeeds\Items\ABTestingSeedC.cs" />
     <Compile Include="Migrations\ABTestingSeeds\IABTestingFactory.cs" />
     <Compile Include="Migrations\ABTestingSeeds\IABTestingItem.cs" />
-    <Compile Include="Migrations\ABTestingSeeds\Items\EUReferendumSeeds.cs" />
-    <Compile Include="Migrations\ABTestingSeeds\Items\InvestigatoryPowersSeed.cs" />
-    <Compile Include="Migrations\ABTestingSeeds\Items\RefugeesPowersSeed.cs" />
+    <Compile Include="Migrations\ABTestingSeeds\Items\ShowAndTellSeed.cs" />
     <Compile Include="Migrations\ABTestingSeeds\Settings\ABTestingSettings.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Petitions\Contract\PetitionContract.cs" />
@@ -289,6 +287,15 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Migrations\eu-referendum.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Migrations\investigatory-powers.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Migrations\refugees.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Migrations\school.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
