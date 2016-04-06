@@ -7,7 +7,7 @@
         shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "whatsapp"]
     });
 
-    setTimeout(openFirstAccordionItem, 400);
+    //setTimeout(openFirstAccordionItem, 400);
 });
 
 function openFirstAccordionItem() {
