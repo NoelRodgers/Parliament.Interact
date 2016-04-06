@@ -19,12 +19,22 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds
         public string ConfigurationName { get { return "EUReferendum"; } }
         public void Seed(InteractDbContext context)
         {
-            var issueContent = new StringBuilder();
-            issueContent.Append("<p>The Government announced in March 2016 that every primary and secondary state school become an academy. (George Osborne, <a href='http://www.publications.parliament.uk/pa/cm201516/cmhansrd/cm160316/debtext/160316-0001.htm#16031632000621'>Budget Statement, 16 March 2016 <i class='fa fa-external'></i></a>)</p>");
-            issueContent.Append("<p>Academies are state schools, independent of local authority control. They are funded directly by central government rather than by local authorities. By 2015 almost 60% of state-funded secondary schools were academies, up from 6% at the start of 2010.</p>");
-            issueContent.Append("<h5>Should state schools become independent of local authority control?</h5>");
-            issueContent.Append("<p>Government argues that freedom from local authority control brings opportunities for innovation, better leadership and higher attainment and that academies have had a positive impact on other schools in their local area.</p>");
-            issueContent.Append("<p>Others say that the freedoms afforded to academies, and their rapid expansion, have the potential to result in financial problems and lapses in standards. (House of Commons Library, <a href='http://www.parliament.uk/business/publications/research/key-issues-parliament-2015/education/academies-and-free-schools/'>Key Issues for the 2015 Parliament <i class='fa fa-external'></i></a>)</p>");
+            var issueContentAcademySchools = new StringBuilder();
+            issueContentAcademySchools.Append("<p>The Government announced in March 2016 that every primary and secondary state school become an academy. (George Osborne, <a href='http://www.publications.parliament.uk/pa/cm201516/cmhansrd/cm160316/debtext/160316-0001.htm#16031632000621'>Budget Statement, 16 March 2016 <i class='fa fa-external'></i></a>)</p>");
+            issueContentAcademySchools.Append("<p>Academies are state schools, independent of local authority control. They are funded directly by central government rather than by local authorities. By 2015 almost 60% of state-funded secondary schools were academies, up from 6% at the start of 2010.</p>");
+            issueContentAcademySchools.Append("<h5>Should state schools become independent of local authority control?</h5>");
+            issueContentAcademySchools.Append("<p>Government argues that freedom from local authority control brings opportunities for innovation, better leadership and higher attainment and that academies have had a positive impact on other schools in their local area.</p>");
+            issueContentAcademySchools.Append("<p>Others say that the freedoms afforded to academies, and their rapid expansion, have the potential to result in financial problems and lapses in standards. (House of Commons Library, <a href='http://www.parliament.uk/business/publications/research/key-issues-parliament-2015/education/academies-and-free-schools/'>Key Issues for the 2015 Parliament</a>)</p>");
+
+            var issueContentEUReferendum = new StringBuilder();
+            issueContentEUReferendum.Append("<p>On 23 June 2016, the United Kingdom will be voting in a referendum asking “Should the United Kingdom remain a member of the European Union or leave the European Union?”</p>");
+            issueContentEUReferendum.Append("<p>The European Union (EU) is an economic and political partnership involving 28 countries. The last referendum was in 1975 when the UK voted to stay in but over the last 40 years there have been calls from both the public and politicians for another vote. Arguments for leaving and staying in the EU are currently being put forward by different groups and individuals.</p>");
+            issueContentEUReferendum.Append("<h5>Arguments for and against the EU Referendum</h5>");
+            issueContentEUReferendum.Append("<p>You can read relevant reports, evidence and information on the impact of leaving or staying in the EU on the Commons and Lords Library’s summary page: <a href='http://www.parliament.uk/business/publications/research/eu-referendum'>The UK’s EU referendum 2016 explained.</a></p>");
+            issueContentEUReferendum.Append("<h5>How can I register to vote?</h5>");
+            issueContentEUReferendum.Append("<p>The Electoral Commission, an independent body, coordinates voter registration, referendums and elections. To vote in the EU Referendum you must register by the 7 June. Registration is quick and simple and can be completed by citizens of England, Scotland or Wales through <a href='http://www.electoralcommission.org.uk/i-am-a/voter'>online voter registration.</a></p>");
+            issueContentEUReferendum.Append("<p>If you are based in Northern Ireland you can download a <a href='http://www.aboutmyvote.co.uk/register-to-vote/register-to-vote-in-northern-ireland'>voter registration form.</a></p>");
+
             var actionItems = new List<ActionItem>
             {
                 new ActionItem {ViewName = ActionViewName.ContactYourMP, ActionContents = new List<ActionContent>()
@@ -104,7 +114,7 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds
                 }
             };
 
-            var timelines = new List<IssueTimeLine>
+            var timeLinesAcademySchools = new List<IssueTimeLine>
             {
                 new IssueTimeLine
                 {
@@ -123,7 +133,27 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds
                 }
             };
 
-            var furtherReadings = new List<IssueFurtherReading>
+            var timeLinesEuReferendum = new List<IssueTimeLine>()
+            {
+                new IssueTimeLine
+                {
+                    TimelineType = TimeLineType.Past,
+                    HTMLContent = "<p>The Prime Minister announced a Referendum will be held on the 23 June 2016 so that members of the public can vote on whether the UK should stay in or leave the EU.</p><p>In February 2016 the Prime Minister agreed a range of changes to the UK's membership of the EU after talks with other Member States' leaders in Brussels. The agreement, would take effect immediately if the UK votes to remain in the EU.</ p >"
+                },
+                new IssueTimeLine
+                {
+                    TimelineType = TimeLineType.Present,
+                    HTMLContent = "<p>Currently a House of Commons Select Committee is investigating the implications for UK businesses should the UK leave the EU, they are accepting evidence from the public until the 15 April 2016.</p>"
+                },
+                new IssueTimeLine
+                {
+                    TimelineType = TimeLineType.Future,
+                    HTMLContent = "<p>The EU Referendum vote will be held on the 23 June 2016. You must be registered to vote by 7 June 2016 to take part.</p>"
+                },
+
+            };
+
+            var furtherReadingsAcademySchools = new List<IssueFurtherReading>
             {
                 new IssueFurtherReading
                 {
@@ -148,6 +178,49 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds
                 }
             };
 
+            var furtherReadingsEuRreferendum = new List<IssueFurtherReading>
+            {
+                new IssueFurtherReading
+                {
+                    LinkName = "The UK’s EU referendum 2016 explained",
+                    LinkUrl =
+                        "http://www.parliament.uk/eu-referendum",
+                    Description = "Parliament information on the EU referendum",
+                    DisplayExternalIcon = true
+                },
+                new IssueFurtherReading
+                {
+                    LinkName = "News updates on EU activity in Parliament",
+                    LinkUrl =
+                        "http://www.parliament.uk/business/news/european-union/",
+                    Description = "Parliament updates",
+                    DisplayExternalIcon = true
+                },
+                new IssueFurtherReading
+                {
+                    LinkName = "Inquiries and reports from the EU Lords Committee",
+                    LinkUrl =
+                        "http://www.parliament.uk/business/committees/committees-a-z/lords-select/eu-select-committee-/news-parliament-2015/eu-visions-report-published/",
+                    Description = "House of Lords EU Committee",
+                    DisplayExternalIcon = true
+                },
+                new IssueFurtherReading
+                {
+                    LinkName = "Electoral Commission website",
+                    LinkUrl =
+                        "http://www.electoralcommission.org.uk/",
+                    Description = "Who can vote and the referendum process",
+                    DisplayExternalIcon = true
+                },
+                new IssueFurtherReading
+                {
+                    LinkName = "The UK's EU vote: All you need to know",
+                    LinkUrl = "http://www.bbc.co.uk/news/politics/eu_referendum",
+                    Description = "BBC on EU referendum",
+                    DisplayExternalIcon = true
+                }
+            };
+
             var filename = new UriBuilder(Assembly.GetExecutingAssembly().CodeBase);
             var path = Uri.UnescapeDataString(filename.Path);
             var directory = Path.GetDirectoryName(path) + "\\Migrations\\school.jpg";
@@ -167,22 +240,22 @@ namespace Parliament.Interact.Core.Migrations.ABTestingSeeds
                 {
                     Title = "Academy Schools",
                     LogicalOrder = 1,
-                    Content = issueContent.ToString(),
-                    TimeLines = timelines,
-                    FurtherReadings = furtherReadings,
+                    Content = issueContentAcademySchools.ToString(),
+                    TimeLines = timeLinesAcademySchools,
+                    FurtherReadings = furtherReadingsAcademySchools,
                     Image = dbImage,
                     ImageType = dbImageType
                 },
-                //new Issue
-                //{
-                //    Title = "EU Referendum",
-                //    LogicalOrder = 2,
-                //    Content = issueContent.ToString(),
-                //    TimeLines = timelines,
-                //    FurtherReadings = furtherReadings,
-                //    Image = dbImage,
-                //    ImageType = dbImageType
-                //}
+                new Issue
+                {
+                    Title = "EU Referendum",
+                    LogicalOrder = 2,
+                    Content = issueContentEUReferendum.ToString(),
+                    TimeLines = timeLinesEuReferendum,
+                    FurtherReadings = furtherReadingsEuRreferendum,
+                    Image = dbImage,
+                    ImageType = dbImageType
+                }
             };
 
             var issueActions = new List<IssueAction>

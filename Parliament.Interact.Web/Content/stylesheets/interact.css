@@ -58,22 +58,161 @@ h5 {
         background: #589e9e;
     }
 
-    .parl-bottom-action.orangeHeaderBackground {
-        background-color: #b14d07;
-    }
+.blueHeaderBackground h2 {
+    color: #589e9e;
+}
 
-    .parl-bottom-action.purpleHeaderBackground {
-        background-color: #6e6095;
-    }
+.blueHeaderBackground .parl-action-items-title {
+    background-color: #589e9e;
+}
+
+.blueHeaderBackground .panel-body a:not(.btn):not(.parl-button):not(.jssocials-share-link) {
+    color: #589e9e;
+}
+
+.blueHeaderBackground .further-reading-link {
+    color: #589e9e;
+}
+
+.blueHeaderBackground .parl-action-item h3 {
+    color: #589e9e;
+}
+
+.blueHeaderBackground .break {
+    background-color: rgba(88, 158, 158, 0.2);
+}
+
+.blueHeaderBackgroud .parl-button {
+    border: 2px solid #589e9e;
+    background: #589e9e; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#589e9e, #458787); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#589e9e, #458787); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#589e9e, #458787); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#589e9e, #458787); /* Standard syntax */
+    box-shadow: 0 4px 3.6px 0.4px rgba(153, 153, 153, 0.3);
+}
+
+.blueHeaderBackgroud .parl-button:active {
+    background: #589e9e; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#458787, #589e9e); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#458787, #589e9e); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#458787, #589e9e); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#458787, #589e9e); /* Standard syntax */
+}
+
+
+
+
+.parl-bottom-action.orangeHeaderBackground {
+    background-color: #b14d07;
+}
+
+.orangeHeaderBackground h2 {
+    color: #b14d07;
+}
+
+.orangeHeaderBackground .parl-action-items-title {
+    background-color: #b14d07;
+    color: #ffffff;
+}
+
+.orangeHeaderBackground .panel-body a:not(.btn):not(.parl-button):not(.jssocials-share-link) {
+    color: #b14d07;
+}
+
+.orangeHeaderBackground .further-reading-link {
+    color: #b14d07;
+}
+
+.orangeHeaderBackground .parl-action-item h3 {
+    color: #b14d07;
+}
+
+.orangeHeaderBackground .break {
+    background-color: rgba(177, 77, 7, 0.2);
+}
+
+
+.orangeHeaderBackground .parl-button {
+    border: 2px solid #b14d07;
+    background: #b14d07; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#b14d07, #7f3707); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#b14d07, #7f3707); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#b14d07, #7f3707); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#b14d07, #7f3707); /* Standard syntax */
+    box-shadow: 0 4px 3.6px 0.4px rgba(153, 153, 153, 0.3);
+}
+
+.orangeHeaderBackground .parl-button:active {
+    background: #b14d07; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#7f3707, #b14d07); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#7f3707, #b14d07); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#7f3707, #b14d07); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#7f3707, #b14d07); /* Standard syntax */
+}
+
+
+
+.parl-bottom-action.purpleHeaderBackground {
+    background-color: #6e6095;
+    color: #ffffff;
+}
+
+.purpleHeaderBackground h2 {
+    color: #6e6095;
+}
+
+.purpleHeaderBackground .parl-action-items-title {
+    background-color: #6e6095;
+    color: #ffffff;
+}
+
+.purpleHeaderBackground .panel-body a:not(.btn):not(.parl-button):not(.jssocials-share-link) {
+    color: #6e6095;
+}
+
+.purpleHeaderBackground .further-reading-link {
+    color: #6e6095;
+}
+
+.purpleHeaderBackground .parl-action-item h3 {
+    color: #6e6095;
+}
+
+.purpleHeaderBackground .break {
+    background-color: rgba(110, 96, 149, 0.2);
+}
+
+.purpleHeaderBackground .parl-button {
+    border: 2px solid #6e6095;
+    background: #6e6095; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#6e6095, #4b4266); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#6e6095, #4b4266); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#6e6095, #4b4266); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#6e6095, #4b4266); /* Standard syntax */
+    box-shadow: 0 4px 3.6px 0.4px rgba(153, 153, 153, 0.3);
+}
+
+.purpleHeaderBackground .parl-button:active {
+    background: #6e6095; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#4b4266, #6e6095); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#4b4266, #6e6095); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#4b4266, #6e6095); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#4b4266, #6e6095); /* Standard syntax */
+}
+
+
+
+
 
 .parl-action-item-sub {
     float: left;
-    margin-top: 100px;    
+    margin-top: 100px;
 }
 
-.parl-action-item-sub #submit-evidence {
-    margin-top: 5px;
-}
+    .parl-action-item-sub #submit-evidence {
+        margin-top: 5px;
+    }
 
 /* Header section */
 
@@ -106,7 +245,6 @@ h5 {
 h2 {
     margin-top: 0;
     font-size: 36px;
-    color: #589e9e;
 }
 
 .parl-expand-collapse {
@@ -258,7 +396,6 @@ h2 {
     margin-top: 0;
     margin-bottom: 0;
     height: 4px;
-    background-color: rgba(88, 158, 158, 0.2);
     clear: both;
 }
 
@@ -303,7 +440,6 @@ h2 {
 /* Actions section */
 
 .parl-action-items-title {
-    background-color: #589e9e;
     padding: 20px 35px;
     color: #ffffff;
 }
@@ -388,25 +524,14 @@ h2.parl-action-items-title {
     font-family: Lato-bold, sans-serif;
     letter-spacing: 0.02em;
     text-align: center;
-    border: 2px solid #589e9e;
     border-radius: 4px;
-    color: #ffffff;
+    color: #ffffff !important;
     text-transform: uppercase;
-    background: #589e9e; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#589e9e, #458787); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#589e9e, #458787); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#589e9e, #458787); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#589e9e, #458787); /* Standard syntax */
-    box-shadow: 0 4px 3.6px 0.4px rgba(153, 153, 153, 0.3);
 }
 
-.parl-button:active {
-    background: #589e9e; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#458787, #589e9e); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#458787, #589e9e); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#458787, #589e9e); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#458787, #589e9e); /* Standard syntax */
-}
+
+
+
 
 .parl-primary-button {
     line-height: 80px;
