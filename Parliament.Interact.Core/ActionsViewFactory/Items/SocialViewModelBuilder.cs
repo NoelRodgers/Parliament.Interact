@@ -13,6 +13,8 @@ namespace Parliament.Interact.Core.ActionsViewFactory.Items
 
         public string ActionView { get { return "_Social"; } }
 
+        public bool DistributeOverTwoColumns { get { return true; } }
+
         public object BuildViewModel(Issue issue, IssueAction issueAction)
         {
             Build(issueAction);

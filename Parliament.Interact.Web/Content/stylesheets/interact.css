@@ -66,6 +66,15 @@ h5 {
         background-color: #6e6095;
     }
 
+.parl-action-item-sub {
+    float: left;
+    margin-top: 100px;    
+}
+
+.parl-action-item-sub #submit-evidence {
+    margin-top: 5px;
+}
+
 /* Header section */
 
 .header-links li {
@@ -523,8 +532,13 @@ footer div span {
         line-height: 38px;
     }
 
-    .panel-body h5 {
-        padding: 20px 0;
+    .parl-action-item-sub {
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+
+    .parl-action-item-sub-start {
+        margin-bottom: 30px;
     }
 
     .header-links {
